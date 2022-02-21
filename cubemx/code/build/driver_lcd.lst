@@ -1,0 +1,655 @@
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccrgfYtH.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 1
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"driver_lcd.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.LCD_Write,"ax",%progbits
+  16              		.align	1
+  17              		.arch armv7-m
+  18              		.syntax unified
+  19              		.thumb
+  20              		.thumb_func
+  21              		.fpu softvfp
+  23              	LCD_Write:
+  24              	.LVL0:
+  25              	.LFB69:
+  26              		.file 1 "../Core/Src/driver_lcd.c"
+   1:../Core/Src/driver_lcd.c **** 
+  27              		.loc 1 19 1 view -0
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 0, uses_anonymous_args = 0
+  31              		@ link register save eliminated.
+  32              		.loc 1 20 2 view .LVU1
+  33              		.loc 1 20 29 is_stmt 0 view .LVU2
+  34 0000 4001     		lsls	r0, r0, #5
+  35              	.LVL1:
+  36              		.loc 1 20 29 view .LVU3
+  37 0002 00F02000 		and	r0, r0, #32
+  38              		.loc 1 20 42 view .LVU4
+  39 0006 01F00F01 		and	r1, r1, #15
+  40              	.LVL2:
+  41              		.loc 1 20 35 view .LVU5
+  42 000a 0843     		orrs	r0, r0, r1
+  43              		.loc 1 20 13 view .LVU6
+  44 000c 054B     		ldr	r3, .L2
+  45 000e D860     		str	r0, [r3, #12]
+  46              		.loc 1 21 2 is_stmt 1 view .LVU7
+  47              		.loc 1 21 13 is_stmt 0 view .LVU8
+  48 0010 DA68     		ldr	r2, [r3, #12]
+  49 0012 42F04002 		orr	r2, r2, #64
+  50 0016 DA60     		str	r2, [r3, #12]
+  51              		.loc 1 22 2 is_stmt 1 view .LVU9
+  52              		.loc 1 22 13 is_stmt 0 view .LVU10
+  53 0018 DA68     		ldr	r2, [r3, #12]
+  54 001a 22F04002 		bic	r2, r2, #64
+  55 001e DA60     		str	r2, [r3, #12]
+  56              		.loc 1 23 1 view .LVU11
+  57 0020 7047     		bx	lr
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccrgfYtH.s 			page 2
+
+
+  58              	.L3:
+  59 0022 00BF     		.align	2
+  60              	.L2:
+  61 0024 00100140 		.word	1073811456
+  62              		.cfi_endproc
+  63              	.LFE69:
+  65              		.section	.text.LCD_CommandInit,"ax",%progbits
+  66              		.align	1
+  67              		.syntax unified
+  68              		.thumb
+  69              		.thumb_func
+  70              		.fpu softvfp
+  72              	LCD_CommandInit:
+  73              	.LVL3:
+  74              	.LFB70:
+  75              		.loc 1 26 1 is_stmt 1 view -0
+  76              		.cfi_startproc
+  77              		@ args = 0, pretend = 0, frame = 0
+  78              		@ frame_needed = 0, uses_anonymous_args = 0
+  79              		.loc 1 26 1 is_stmt 0 view .LVU13
+  80 0000 70B5     		push	{r4, r5, r6, lr}
+  81              	.LCFI0:
+  82              		.cfi_def_cfa_offset 16
+  83              		.cfi_offset 4, -16
+  84              		.cfi_offset 5, -12
+  85              		.cfi_offset 6, -8
+  86              		.cfi_offset 14, -4
+  87 0002 0546     		mov	r5, r0
+  88 0004 0C46     		mov	r4, r1
+  89              		.loc 1 27 2 is_stmt 1 view .LVU14
+  90 0006 0909     		lsrs	r1, r1, #4
+  91              	.LVL4:
+  92              		.loc 1 27 2 is_stmt 0 view .LVU15
+  93 0008 044E     		ldr	r6, .L6
+  94 000a B047     		blx	r6
+  95              	.LVL5:
+  96              		.loc 1 28 2 is_stmt 1 view .LVU16
+  97 000c 2146     		mov	r1, r4
+  98 000e 2846     		mov	r0, r5
+  99 0010 B047     		blx	r6
+ 100              	.LVL6:
+ 101              		.loc 1 29 2 view .LVU17
+ 102 0012 0220     		movs	r0, #2
+ 103 0014 024B     		ldr	r3, .L6+4
+ 104 0016 9847     		blx	r3
+ 105              	.LVL7:
+ 106              		.loc 1 30 1 is_stmt 0 view .LVU18
+ 107 0018 70BD     		pop	{r4, r5, r6, pc}
+ 108              	.L7:
+ 109 001a 00BF     		.align	2
+ 110              	.L6:
+ 111 001c 00000000 		.word	LCD_Write
+ 112 0020 00000000 		.word	vTaskDelay
+ 113              		.cfi_endproc
+ 114              	.LFE70:
+ 116              		.section	.text.LCD_Task,"ax",%progbits
+ 117              		.align	1
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccrgfYtH.s 			page 3
+
+
+ 118              		.syntax unified
+ 119              		.thumb
+ 120              		.thumb_func
+ 121              		.fpu softvfp
+ 123              	LCD_Task:
+ 124              	.LVL8:
+ 125              	.LFB71:
+ 126              		.loc 1 34 1 is_stmt 1 view -0
+ 127              		.cfi_startproc
+ 128              		@ Volatile: function does not return.
+ 129              		@ args = 0, pretend = 0, frame = 8
+ 130              		@ frame_needed = 0, uses_anonymous_args = 0
+ 131              		.loc 1 34 1 is_stmt 0 view .LVU20
+ 132 0000 00B5     		push	{lr}
+ 133              	.LCFI1:
+ 134              		.cfi_def_cfa_offset 4
+ 135              		.cfi_offset 14, -4
+ 136 0002 83B0     		sub	sp, sp, #12
+ 137              	.LCFI2:
+ 138              		.cfi_def_cfa_offset 16
+ 139              		.loc 1 35 2 is_stmt 1 view .LVU21
+ 140 0004 1420     		movs	r0, #20
+ 141              	.LVL9:
+ 142              		.loc 1 35 2 is_stmt 0 view .LVU22
+ 143 0006 114C     		ldr	r4, .L11
+ 144 0008 A047     		blx	r4
+ 145              	.LVL10:
+ 146              		.loc 1 36 2 is_stmt 1 view .LVU23
+ 147 000a 0221     		movs	r1, #2
+ 148 000c 0020     		movs	r0, #0
+ 149 000e 104B     		ldr	r3, .L11+4
+ 150 0010 9847     		blx	r3
+ 151              	.LVL11:
+ 152              		.loc 1 37 2 view .LVU24
+ 153 0012 0220     		movs	r0, #2
+ 154 0014 A047     		blx	r4
+ 155              	.LVL12:
+ 156              		.loc 1 38 2 view .LVU25
+ 157 0016 2821     		movs	r1, #40
+ 158 0018 0020     		movs	r0, #0
+ 159 001a 0E4C     		ldr	r4, .L11+8
+ 160 001c A047     		blx	r4
+ 161              	.LVL13:
+ 162              		.loc 1 39 2 view .LVU26
+ 163 001e 0C21     		movs	r1, #12
+ 164 0020 0020     		movs	r0, #0
+ 165 0022 A047     		blx	r4
+ 166              	.LVL14:
+ 167              		.loc 1 40 2 view .LVU27
+ 168 0024 0621     		movs	r1, #6
+ 169 0026 0020     		movs	r0, #0
+ 170 0028 A047     		blx	r4
+ 171              	.LVL15:
+ 172              		.loc 1 41 2 view .LVU28
+ 173 002a 0221     		movs	r1, #2
+ 174 002c 0020     		movs	r0, #0
+ 175 002e A047     		blx	r4
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccrgfYtH.s 			page 4
+
+
+ 176              	.LVL16:
+ 177              	.L9:
+ 178              		.loc 1 43 2 discriminator 1 view .LVU29
+ 179              		.loc 1 44 2 discriminator 1 view .LVU30
+ 180              		.loc 1 46 3 discriminator 1 view .LVU31
+ 181 0030 4FF0FF32 		mov	r2, #-1
+ 182 0034 01A9     		add	r1, sp, #4
+ 183 0036 084B     		ldr	r3, .L11+12
+ 184 0038 1868     		ldr	r0, [r3]
+ 185 003a 084B     		ldr	r3, .L11+16
+ 186 003c 9847     		blx	r3
+ 187              	.LVL17:
+ 188              		.loc 1 47 3 discriminator 1 view .LVU32
+ 189 003e 9DF80510 		ldrb	r1, [sp, #5]	@ zero_extendqisi2
+ 190 0042 9DF80400 		ldrb	r0, [sp, #4]	@ zero_extendqisi2
+ 191 0046 034B     		ldr	r3, .L11+8
+ 192 0048 9847     		blx	r3
+ 193              	.LVL18:
+ 194              		.loc 1 44 8 discriminator 1 view .LVU33
+ 195 004a F1E7     		b	.L9
+ 196              	.L12:
+ 197              		.align	2
+ 198              	.L11:
+ 199 004c 00000000 		.word	vTaskDelay
+ 200 0050 00000000 		.word	LCD_Write
+ 201 0054 00000000 		.word	LCD_CommandInit
+ 202 0058 00000000 		.word	.LANCHOR0
+ 203 005c 00000000 		.word	xQueueReceive
+ 204              		.cfi_endproc
+ 205              	.LFE71:
+ 207              		.section	.text.LCD_CommandEnqueue,"ax",%progbits
+ 208              		.align	1
+ 209              		.global	LCD_CommandEnqueue
+ 210              		.syntax unified
+ 211              		.thumb
+ 212              		.thumb_func
+ 213              		.fpu softvfp
+ 215              	LCD_CommandEnqueue:
+ 216              	.LVL19:
+ 217              	.LFB72:
+ 218              		.loc 1 53 1 view -0
+ 219              		.cfi_startproc
+ 220              		@ args = 0, pretend = 0, frame = 8
+ 221              		@ frame_needed = 0, uses_anonymous_args = 0
+ 222              		.loc 1 53 1 is_stmt 0 view .LVU35
+ 223 0000 10B5     		push	{r4, lr}
+ 224              	.LCFI3:
+ 225              		.cfi_def_cfa_offset 8
+ 226              		.cfi_offset 4, -8
+ 227              		.cfi_offset 14, -4
+ 228 0002 82B0     		sub	sp, sp, #8
+ 229              	.LCFI4:
+ 230              		.cfi_def_cfa_offset 16
+ 231              		.loc 1 54 2 is_stmt 1 view .LVU36
+ 232              		.loc 1 55 2 view .LVU37
+ 233              		.loc 1 55 10 is_stmt 0 view .LVU38
+ 234 0004 8DF80400 		strb	r0, [sp, #4]
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccrgfYtH.s 			page 5
+
+
+ 235              		.loc 1 56 2 is_stmt 1 view .LVU39
+ 236              		.loc 1 56 10 is_stmt 0 view .LVU40
+ 237 0008 8DF80510 		strb	r1, [sp, #5]
+ 238              		.loc 1 57 2 is_stmt 1 view .LVU41
+ 239 000c 0023     		movs	r3, #0
+ 240 000e 4FF0FF32 		mov	r2, #-1
+ 241 0012 01A9     		add	r1, sp, #4
+ 242              	.LVL20:
+ 243              		.loc 1 57 2 is_stmt 0 view .LVU42
+ 244 0014 0248     		ldr	r0, .L15
+ 245              	.LVL21:
+ 246              		.loc 1 57 2 view .LVU43
+ 247 0016 0068     		ldr	r0, [r0]
+ 248 0018 024C     		ldr	r4, .L15+4
+ 249 001a A047     		blx	r4
+ 250              	.LVL22:
+ 251              		.loc 1 58 1 view .LVU44
+ 252 001c 02B0     		add	sp, sp, #8
+ 253              	.LCFI5:
+ 254              		.cfi_def_cfa_offset 8
+ 255              		@ sp needed
+ 256 001e 10BD     		pop	{r4, pc}
+ 257              	.L16:
+ 258              		.align	2
+ 259              	.L15:
+ 260 0020 00000000 		.word	.LANCHOR0
+ 261 0024 00000000 		.word	xQueueGenericSend
+ 262              		.cfi_endproc
+ 263              	.LFE72:
+ 265              		.section	.text.LCD_CommandEnqueueFromISR,"ax",%progbits
+ 266              		.align	1
+ 267              		.global	LCD_CommandEnqueueFromISR
+ 268              		.syntax unified
+ 269              		.thumb
+ 270              		.thumb_func
+ 271              		.fpu softvfp
+ 273              	LCD_CommandEnqueueFromISR:
+ 274              	.LVL23:
+ 275              	.LFB73:
+ 276              		.loc 1 62 1 is_stmt 1 view -0
+ 277              		.cfi_startproc
+ 278              		@ args = 0, pretend = 0, frame = 8
+ 279              		@ frame_needed = 0, uses_anonymous_args = 0
+ 280              		.loc 1 62 1 is_stmt 0 view .LVU46
+ 281 0000 10B5     		push	{r4, lr}
+ 282              	.LCFI6:
+ 283              		.cfi_def_cfa_offset 8
+ 284              		.cfi_offset 4, -8
+ 285              		.cfi_offset 14, -4
+ 286 0002 82B0     		sub	sp, sp, #8
+ 287              	.LCFI7:
+ 288              		.cfi_def_cfa_offset 16
+ 289              		.loc 1 63 2 is_stmt 1 view .LVU47
+ 290              		.loc 1 64 2 view .LVU48
+ 291              		.loc 1 64 10 is_stmt 0 view .LVU49
+ 292 0004 8DF80400 		strb	r0, [sp, #4]
+ 293              		.loc 1 65 2 is_stmt 1 view .LVU50
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccrgfYtH.s 			page 6
+
+
+ 294              		.loc 1 65 10 is_stmt 0 view .LVU51
+ 295 0008 8DF80510 		strb	r1, [sp, #5]
+ 296              		.loc 1 66 2 is_stmt 1 view .LVU52
+ 297 000c 0023     		movs	r3, #0
+ 298 000e 01A9     		add	r1, sp, #4
+ 299              	.LVL24:
+ 300              		.loc 1 66 2 is_stmt 0 view .LVU53
+ 301 0010 0248     		ldr	r0, .L19
+ 302              	.LVL25:
+ 303              		.loc 1 66 2 view .LVU54
+ 304 0012 0068     		ldr	r0, [r0]
+ 305 0014 024C     		ldr	r4, .L19+4
+ 306 0016 A047     		blx	r4
+ 307              	.LVL26:
+ 308              		.loc 1 67 1 view .LVU55
+ 309 0018 02B0     		add	sp, sp, #8
+ 310              	.LCFI8:
+ 311              		.cfi_def_cfa_offset 8
+ 312              		@ sp needed
+ 313 001a 10BD     		pop	{r4, pc}
+ 314              	.L20:
+ 315              		.align	2
+ 316              	.L19:
+ 317 001c 00000000 		.word	.LANCHOR0
+ 318 0020 00000000 		.word	xQueueGenericSendFromISR
+ 319              		.cfi_endproc
+ 320              	.LFE73:
+ 322              		.section	.rodata.LCD_ShowTemperature.str1.4,"aMS",%progbits,1
+ 323              		.align	2
+ 324              	.LC0:
+ 325 0000 54656D70 		.ascii	"Temperatura: \000"
+ 325      65726174 
+ 325      7572613A 
+ 325      2000
+ 326              		.section	.text.LCD_ShowTemperature,"ax",%progbits
+ 327              		.align	1
+ 328              		.global	LCD_ShowTemperature
+ 329              		.syntax unified
+ 330              		.thumb
+ 331              		.thumb_func
+ 332              		.fpu softvfp
+ 334              	LCD_ShowTemperature:
+ 335              	.LVL27:
+ 336              	.LFB74:
+ 337              		.loc 1 71 1 is_stmt 1 view -0
+ 338              		.cfi_startproc
+ 339              		@ args = 0, pretend = 0, frame = 24
+ 340              		@ frame_needed = 0, uses_anonymous_args = 0
+ 341              		.loc 1 71 1 is_stmt 0 view .LVU57
+ 342 0000 30B5     		push	{r4, r5, lr}
+ 343              	.LCFI9:
+ 344              		.cfi_def_cfa_offset 12
+ 345              		.cfi_offset 4, -12
+ 346              		.cfi_offset 5, -8
+ 347              		.cfi_offset 14, -4
+ 348 0002 87B0     		sub	sp, sp, #28
+ 349              	.LCFI10:
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccrgfYtH.s 			page 7
+
+
+ 350              		.cfi_def_cfa_offset 40
+ 351 0004 0546     		mov	r5, r0
+ 352              		.loc 1 73 2 is_stmt 1 view .LVU58
+ 353 0006 8D21     		movs	r1, #141
+ 354 0008 0020     		movs	r0, #0
+ 355              	.LVL28:
+ 356              		.loc 1 73 2 is_stmt 0 view .LVU59
+ 357 000a 204B     		ldr	r3, .L31
+ 358 000c 9847     		blx	r3
+ 359              	.LVL29:
+ 360              		.loc 1 74 2 is_stmt 1 view .LVU60
+ 361              		.loc 1 75 2 view .LVU61
+ 362              	.LBB2:
+ 363              		.loc 1 75 7 view .LVU62
+ 364              		.loc 1 75 16 is_stmt 0 view .LVU63
+ 365 000e 0024     		movs	r4, #0
+ 366              		.loc 1 75 2 view .LVU64
+ 367 0010 04E0     		b	.L22
+ 368              	.LVL30:
+ 369              	.L23:
+ 370              		.loc 1 77 3 is_stmt 1 discriminator 3 view .LVU65
+ 371 0012 2021     		movs	r1, #32
+ 372 0014 0120     		movs	r0, #1
+ 373 0016 1D4B     		ldr	r3, .L31
+ 374 0018 9847     		blx	r3
+ 375              	.LVL31:
+ 376              		.loc 1 75 30 discriminator 3 view .LVU66
+ 377              		.loc 1 75 31 is_stmt 0 discriminator 3 view .LVU67
+ 378 001a 0134     		adds	r4, r4, #1
+ 379              	.LVL32:
+ 380              	.L22:
+ 381              		.loc 1 75 23 is_stmt 1 discriminator 1 view .LVU68
+ 382              		.loc 1 75 2 is_stmt 0 discriminator 1 view .LVU69
+ 383 001c 022C     		cmp	r4, #2
+ 384 001e F8D9     		bls	.L23
+ 385              	.LBE2:
+ 386              		.loc 1 81 2 is_stmt 1 view .LVU70
+ 387 0020 8021     		movs	r1, #128
+ 388 0022 0020     		movs	r0, #0
+ 389 0024 194B     		ldr	r3, .L31
+ 390 0026 9847     		blx	r3
+ 391              	.LVL33:
+ 392              		.loc 1 82 2 view .LVU71
+ 393              		.loc 1 82 7 is_stmt 0 view .LVU72
+ 394 0028 194B     		ldr	r3, .L31+4
+ 395 002a 02AC     		add	r4, sp, #8
+ 396              	.LVL34:
+ 397              		.loc 1 82 7 view .LVU73
+ 398 002c 0FCB     		ldm	r3, {r0, r1, r2, r3}
+ 399 002e 07C4     		stmia	r4!, {r0, r1, r2}
+ 400 0030 2370     		strb	r3, [r4]
+ 401              		.loc 1 83 2 is_stmt 1 view .LVU74
+ 402              	.LBB3:
+ 403              		.loc 1 83 7 view .LVU75
+ 404              	.LVL35:
+ 405              		.loc 1 83 16 is_stmt 0 view .LVU76
+ 406 0032 0024     		movs	r4, #0
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccrgfYtH.s 			page 8
+
+
+ 407              		.loc 1 83 2 view .LVU77
+ 408 0034 07E0     		b	.L24
+ 409              	.LVL36:
+ 410              	.L25:
+ 411              		.loc 1 85 3 is_stmt 1 discriminator 3 view .LVU78
+ 412              		.loc 1 85 35 is_stmt 0 discriminator 3 view .LVU79
+ 413 0036 06AB     		add	r3, sp, #24
+ 414 0038 2344     		add	r3, r3, r4
+ 415              		.loc 1 85 3 discriminator 3 view .LVU80
+ 416 003a 13F8101C 		ldrb	r1, [r3, #-16]	@ zero_extendqisi2
+ 417 003e 0120     		movs	r0, #1
+ 418 0040 124B     		ldr	r3, .L31
+ 419 0042 9847     		blx	r3
+ 420              	.LVL37:
+ 421              		.loc 1 83 31 is_stmt 1 discriminator 3 view .LVU81
+ 422              		.loc 1 83 32 is_stmt 0 discriminator 3 view .LVU82
+ 423 0044 0134     		adds	r4, r4, #1
+ 424              	.LVL38:
+ 425              	.L24:
+ 426              		.loc 1 83 23 is_stmt 1 discriminator 1 view .LVU83
+ 427              		.loc 1 83 2 is_stmt 0 discriminator 1 view .LVU84
+ 428 0046 0C2C     		cmp	r4, #12
+ 429 0048 F5D9     		bls	.L25
+ 430              	.LBE3:
+ 431              		.loc 1 89 11 view .LVU85
+ 432 004a 0324     		movs	r4, #3
+ 433              	.LVL39:
+ 434              		.loc 1 89 11 view .LVU86
+ 435 004c 0FE0     		b	.L26
+ 436              	.LVL40:
+ 437              	.L27:
+ 438              		.loc 1 92 3 is_stmt 1 view .LVU87
+ 439              		.loc 1 92 32 is_stmt 0 view .LVU88
+ 440 004e 114B     		ldr	r3, .L31+8
+ 441 0050 A3FB0523 		umull	r2, r3, r3, r5
+ 442 0054 DB08     		lsrs	r3, r3, #3
+ 443 0056 1A46     		mov	r2, r3
+ 444 0058 03EB8303 		add	r3, r3, r3, lsl #2
+ 445 005c A5EB4303 		sub	r3, r5, r3, lsl #1
+ 446              		.loc 1 92 19 view .LVU89
+ 447 0060 013C     		subs	r4, r4, #1
+ 448              	.LVL41:
+ 449              		.loc 1 92 25 view .LVU90
+ 450 0062 3033     		adds	r3, r3, #48
+ 451              		.loc 1 92 19 view .LVU91
+ 452 0064 06A9     		add	r1, sp, #24
+ 453 0066 2144     		add	r1, r1, r4
+ 454 0068 01F8143C 		strb	r3, [r1, #-20]
+ 455              		.loc 1 93 3 is_stmt 1 view .LVU92
+ 456              		.loc 1 93 8 is_stmt 0 view .LVU93
+ 457 006c 1546     		mov	r5, r2
+ 458              	.LVL42:
+ 459              	.L26:
+ 460              		.loc 1 90 8 is_stmt 1 view .LVU94
+ 461 006e 002D     		cmp	r5, #0
+ 462 0070 EDD1     		bne	.L27
+ 463 0072 07E0     		b	.L28
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccrgfYtH.s 			page 9
+
+
+ 464              	.LVL43:
+ 465              	.L29:
+ 466              	.LBB4:
+ 467              		.loc 1 98 3 discriminator 3 view .LVU95
+ 468              		.loc 1 98 38 is_stmt 0 discriminator 3 view .LVU96
+ 469 0074 06AB     		add	r3, sp, #24
+ 470 0076 2344     		add	r3, r3, r4
+ 471              		.loc 1 98 3 discriminator 3 view .LVU97
+ 472 0078 13F8141C 		ldrb	r1, [r3, #-20]	@ zero_extendqisi2
+ 473 007c 0120     		movs	r0, #1
+ 474 007e 034B     		ldr	r3, .L31
+ 475 0080 9847     		blx	r3
+ 476              	.LVL44:
+ 477              		.loc 1 96 34 is_stmt 1 discriminator 3 view .LVU98
+ 478              		.loc 1 96 35 is_stmt 0 discriminator 3 view .LVU99
+ 479 0082 0134     		adds	r4, r4, #1
+ 480              	.LVL45:
+ 481              	.L28:
+ 482              		.loc 1 96 27 is_stmt 1 discriminator 1 view .LVU100
+ 483              		.loc 1 96 2 is_stmt 0 discriminator 1 view .LVU101
+ 484 0084 022C     		cmp	r4, #2
+ 485 0086 F5D9     		bls	.L29
+ 486              	.LBE4:
+ 487              		.loc 1 101 1 view .LVU102
+ 488 0088 07B0     		add	sp, sp, #28
+ 489              	.LCFI11:
+ 490              		.cfi_def_cfa_offset 12
+ 491              		@ sp needed
+ 492 008a 30BD     		pop	{r4, r5, pc}
+ 493              	.LVL46:
+ 494              	.L32:
+ 495              		.loc 1 101 1 view .LVU103
+ 496              		.align	2
+ 497              	.L31:
+ 498 008c 00000000 		.word	LCD_CommandEnqueue
+ 499 0090 00000000 		.word	.LC0
+ 500 0094 CDCCCCCC 		.word	-858993459
+ 501              		.cfi_endproc
+ 502              	.LFE74:
+ 504              		.section	.rodata.LCD_Init.str1.4,"aMS",%progbits,1
+ 505              		.align	2
+ 506              	.LC1:
+ 507 0000 4C43445F 		.ascii	"LCD_Task\000"
+ 507      5461736B 
+ 507      00
+ 508              		.section	.text.LCD_Init,"ax",%progbits
+ 509              		.align	1
+ 510              		.global	LCD_Init
+ 511              		.syntax unified
+ 512              		.thumb
+ 513              		.thumb_func
+ 514              		.fpu softvfp
+ 516              	LCD_Init:
+ 517              	.LFB75:
+ 518              		.loc 1 105 1 is_stmt 1 view -0
+ 519              		.cfi_startproc
+ 520              		@ args = 0, pretend = 0, frame = 0
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccrgfYtH.s 			page 10
+
+
+ 521              		@ frame_needed = 0, uses_anonymous_args = 0
+ 522 0000 10B5     		push	{r4, lr}
+ 523              	.LCFI12:
+ 524              		.cfi_def_cfa_offset 8
+ 525              		.cfi_offset 4, -8
+ 526              		.cfi_offset 14, -4
+ 527 0002 82B0     		sub	sp, sp, #8
+ 528              	.LCFI13:
+ 529              		.cfi_def_cfa_offset 16
+ 530              		.loc 1 106 2 view .LVU105
+ 531              		.loc 1 106 20 is_stmt 0 view .LVU106
+ 532 0004 0022     		movs	r2, #0
+ 533 0006 0221     		movs	r1, #2
+ 534 0008 4020     		movs	r0, #64
+ 535 000a 084B     		ldr	r3, .L35
+ 536 000c 9847     		blx	r3
+ 537              	.LVL47:
+ 538              		.loc 1 106 18 view .LVU107
+ 539 000e 084B     		ldr	r3, .L35+4
+ 540 0010 1860     		str	r0, [r3]
+ 541              		.loc 1 107 2 is_stmt 1 view .LVU108
+ 542 0012 084B     		ldr	r3, .L35+8
+ 543 0014 0193     		str	r3, [sp, #4]
+ 544 0016 0523     		movs	r3, #5
+ 545 0018 0093     		str	r3, [sp]
+ 546 001a 0023     		movs	r3, #0
+ 547 001c 4022     		movs	r2, #64
+ 548 001e 0649     		ldr	r1, .L35+12
+ 549 0020 0648     		ldr	r0, .L35+16
+ 550 0022 074C     		ldr	r4, .L35+20
+ 551 0024 A047     		blx	r4
+ 552              	.LVL48:
+ 553              		.loc 1 108 1 is_stmt 0 view .LVU109
+ 554 0026 02B0     		add	sp, sp, #8
+ 555              	.LCFI14:
+ 556              		.cfi_def_cfa_offset 8
+ 557              		@ sp needed
+ 558 0028 10BD     		pop	{r4, pc}
+ 559              	.L36:
+ 560 002a 00BF     		.align	2
+ 561              	.L35:
+ 562 002c 00000000 		.word	xQueueGenericCreate
+ 563 0030 00000000 		.word	.LANCHOR0
+ 564 0034 00000000 		.word	.LANCHOR1
+ 565 0038 00000000 		.word	.LC1
+ 566 003c 00000000 		.word	LCD_Task
+ 567 0040 00000000 		.word	xTaskCreate
+ 568              		.cfi_endproc
+ 569              	.LFE75:
+ 571              		.global	LCD_QueueHandle
+ 572              		.section	.bss.LCD_QueueHandle,"aw",%nobits
+ 573              		.align	2
+ 574              		.set	.LANCHOR0,. + 0
+ 577              	LCD_QueueHandle:
+ 578 0000 00000000 		.space	4
+ 579              		.section	.bss.LCD_TaskHandle,"aw",%nobits
+ 580              		.align	2
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccrgfYtH.s 			page 11
+
+
+ 581              		.set	.LANCHOR1,. + 0
+ 584              	LCD_TaskHandle:
+ 585 0000 00000000 		.space	4
+ 586              		.text
+ 587              	.Letext0:
+ 588              		.file 2 "../c:\\users\\test\\desktop\\gnu mcu\\arm-none-eabi-gcc-10.2.1-1.1\\arm-none-eabi\\includ
+ 589              		.file 3 "../c:\\users\\test\\desktop\\gnu mcu\\arm-none-eabi-gcc-10.2.1-1.1\\arm-none-eabi\\includ
+ 590              		.file 4 "../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/portmacro.h"
+ 591              		.file 5 "../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h"
+ 592              		.file 6 "../Middlewares/Third_Party/FreeRTOS/Source/include/task.h"
+ 593              		.file 7 "../Core/Inc/driver_lcd.h"
+ 594              		.file 8 "../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103x6.h"
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccrgfYtH.s 			page 12
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 driver_lcd.c
+C:\Users\Test\AppData\Local\Temp\ccrgfYtH.s:16     .text.LCD_Write:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\ccrgfYtH.s:23     .text.LCD_Write:0000000000000000 LCD_Write
+C:\Users\Test\AppData\Local\Temp\ccrgfYtH.s:61     .text.LCD_Write:0000000000000024 $d
+C:\Users\Test\AppData\Local\Temp\ccrgfYtH.s:66     .text.LCD_CommandInit:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\ccrgfYtH.s:72     .text.LCD_CommandInit:0000000000000000 LCD_CommandInit
+C:\Users\Test\AppData\Local\Temp\ccrgfYtH.s:111    .text.LCD_CommandInit:000000000000001c $d
+C:\Users\Test\AppData\Local\Temp\ccrgfYtH.s:117    .text.LCD_Task:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\ccrgfYtH.s:123    .text.LCD_Task:0000000000000000 LCD_Task
+C:\Users\Test\AppData\Local\Temp\ccrgfYtH.s:199    .text.LCD_Task:000000000000004c $d
+C:\Users\Test\AppData\Local\Temp\ccrgfYtH.s:208    .text.LCD_CommandEnqueue:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\ccrgfYtH.s:215    .text.LCD_CommandEnqueue:0000000000000000 LCD_CommandEnqueue
+C:\Users\Test\AppData\Local\Temp\ccrgfYtH.s:260    .text.LCD_CommandEnqueue:0000000000000020 $d
+C:\Users\Test\AppData\Local\Temp\ccrgfYtH.s:266    .text.LCD_CommandEnqueueFromISR:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\ccrgfYtH.s:273    .text.LCD_CommandEnqueueFromISR:0000000000000000 LCD_CommandEnqueueFromISR
+C:\Users\Test\AppData\Local\Temp\ccrgfYtH.s:317    .text.LCD_CommandEnqueueFromISR:000000000000001c $d
+C:\Users\Test\AppData\Local\Temp\ccrgfYtH.s:323    .rodata.LCD_ShowTemperature.str1.4:0000000000000000 $d
+C:\Users\Test\AppData\Local\Temp\ccrgfYtH.s:327    .text.LCD_ShowTemperature:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\ccrgfYtH.s:334    .text.LCD_ShowTemperature:0000000000000000 LCD_ShowTemperature
+C:\Users\Test\AppData\Local\Temp\ccrgfYtH.s:498    .text.LCD_ShowTemperature:000000000000008c $d
+C:\Users\Test\AppData\Local\Temp\ccrgfYtH.s:505    .rodata.LCD_Init.str1.4:0000000000000000 $d
+C:\Users\Test\AppData\Local\Temp\ccrgfYtH.s:509    .text.LCD_Init:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\ccrgfYtH.s:516    .text.LCD_Init:0000000000000000 LCD_Init
+C:\Users\Test\AppData\Local\Temp\ccrgfYtH.s:562    .text.LCD_Init:000000000000002c $d
+C:\Users\Test\AppData\Local\Temp\ccrgfYtH.s:577    .bss.LCD_QueueHandle:0000000000000000 LCD_QueueHandle
+C:\Users\Test\AppData\Local\Temp\ccrgfYtH.s:573    .bss.LCD_QueueHandle:0000000000000000 $d
+C:\Users\Test\AppData\Local\Temp\ccrgfYtH.s:580    .bss.LCD_TaskHandle:0000000000000000 $d
+C:\Users\Test\AppData\Local\Temp\ccrgfYtH.s:584    .bss.LCD_TaskHandle:0000000000000000 LCD_TaskHandle
+
+UNDEFINED SYMBOLS
+vTaskDelay
+xQueueReceive
+xQueueGenericSend
+xQueueGenericSendFromISR
+xQueueGenericCreate
+xTaskCreate

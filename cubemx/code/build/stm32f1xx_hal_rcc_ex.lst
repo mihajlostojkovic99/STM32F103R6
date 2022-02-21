@@ -1,0 +1,638 @@
+ARM GAS  C:\Users\Test\AppData\Local\Temp\cczSbcq3.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 1
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"stm32f1xx_hal_rcc_ex.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.HAL_RCCEx_PeriphCLKConfig,"ax",%progbits
+  16              		.align	1
+  17              		.global	HAL_RCCEx_PeriphCLKConfig
+  18              		.arch armv7-m
+  19              		.syntax unified
+  20              		.thumb
+  21              		.thumb_func
+  22              		.fpu softvfp
+  24              	HAL_RCCEx_PeriphCLKConfig:
+  25              	.LVL0:
+  26              	.LFB65:
+  27              		.file 1 "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c"
+   1:../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** 
+  28              		.loc 1 101 1 view -0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 8
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              		.loc 1 101 1 is_stmt 0 view .LVU1
+  33 0000 70B5     		push	{r4, r5, r6, lr}
+  34              	.LCFI0:
+  35              		.cfi_def_cfa_offset 16
+  36              		.cfi_offset 4, -16
+  37              		.cfi_offset 5, -12
+  38              		.cfi_offset 6, -8
+  39              		.cfi_offset 14, -4
+  40 0002 82B0     		sub	sp, sp, #8
+  41              	.LCFI1:
+  42              		.cfi_def_cfa_offset 24
+  43 0004 0446     		mov	r4, r0
+  44              		.loc 1 102 3 is_stmt 1 view .LVU2
+  45              	.LVL1:
+  46              		.loc 1 108 3 view .LVU3
+  47              		.loc 1 111 3 view .LVU4
+  48              		.loc 1 111 23 is_stmt 0 view .LVU5
+  49 0006 0368     		ldr	r3, [r0]
+  50              		.loc 1 111 6 view .LVU6
+  51 0008 13F0010F 		tst	r3, #1
+  52 000c 36D0     		beq	.L2
+  53              	.LBB2:
+  54              		.loc 1 113 5 is_stmt 1 view .LVU7
+  55              	.LVL2:
+  56              		.loc 1 116 5 view .LVU8
+  57              		.loc 1 121 5 view .LVU9
+ARM GAS  C:\Users\Test\AppData\Local\Temp\cczSbcq3.s 			page 2
+
+
+  58              		.loc 1 121 9 is_stmt 0 view .LVU10
+  59 000e 3F4B     		ldr	r3, .L20
+  60 0010 DB69     		ldr	r3, [r3, #28]
+  61              		.loc 1 121 8 view .LVU11
+  62 0012 13F0805F 		tst	r3, #268435456
+  63 0016 49D1     		bne	.L12
+  64              		.loc 1 123 7 is_stmt 1 view .LVU12
+  65              	.LBB3:
+  66              		.loc 1 123 7 view .LVU13
+  67              		.loc 1 123 7 view .LVU14
+  68 0018 3C4B     		ldr	r3, .L20
+  69 001a DA69     		ldr	r2, [r3, #28]
+  70 001c 42F08052 		orr	r2, r2, #268435456
+  71 0020 DA61     		str	r2, [r3, #28]
+  72              		.loc 1 123 7 view .LVU15
+  73 0022 DB69     		ldr	r3, [r3, #28]
+  74 0024 03F08053 		and	r3, r3, #268435456
+  75 0028 0193     		str	r3, [sp, #4]
+  76              		.loc 1 123 7 view .LVU16
+  77 002a 019B     		ldr	r3, [sp, #4]
+  78              	.LBE3:
+  79              		.loc 1 123 7 view .LVU17
+  80              		.loc 1 124 7 view .LVU18
+  81              	.LVL3:
+  82              		.loc 1 124 21 is_stmt 0 view .LVU19
+  83 002c 0125     		movs	r5, #1
+  84              	.LVL4:
+  85              	.L3:
+  86              		.loc 1 127 5 is_stmt 1 view .LVU20
+  87              		.loc 1 127 9 is_stmt 0 view .LVU21
+  88 002e 384B     		ldr	r3, .L20+4
+  89 0030 1B68     		ldr	r3, [r3]
+  90              		.loc 1 127 8 view .LVU22
+  91 0032 13F4807F 		tst	r3, #256
+  92 0036 3BD0     		beq	.L17
+  93              	.LVL5:
+  94              	.L4:
+  95              		.loc 1 145 5 is_stmt 1 view .LVU23
+  96              		.loc 1 145 20 is_stmt 0 view .LVU24
+  97 0038 344B     		ldr	r3, .L20
+  98 003a 1B6A     		ldr	r3, [r3, #32]
+  99              	.LVL6:
+ 100              		.loc 1 146 5 is_stmt 1 view .LVU25
+ 101              		.loc 1 146 8 is_stmt 0 view .LVU26
+ 102 003c 13F44073 		ands	r3, r3, #768
+ 103              	.LVL7:
+ 104              		.loc 1 146 8 view .LVU27
+ 105 0040 13D0     		beq	.L8
+ 106              		.loc 1 146 65 discriminator 1 view .LVU28
+ 107 0042 6268     		ldr	r2, [r4, #4]
+ 108              		.loc 1 146 85 discriminator 1 view .LVU29
+ 109 0044 02F44072 		and	r2, r2, #768
+ 110              		.loc 1 146 35 discriminator 1 view .LVU30
+ 111 0048 9A42     		cmp	r2, r3
+ 112 004a 0ED0     		beq	.L8
+ 113              		.loc 1 149 7 is_stmt 1 view .LVU31
+ 114              		.loc 1 149 22 is_stmt 0 view .LVU32
+ARM GAS  C:\Users\Test\AppData\Local\Temp\cczSbcq3.s 			page 3
+
+
+ 115 004c 2F4A     		ldr	r2, .L20
+ 116 004e 136A     		ldr	r3, [r2, #32]
+ 117              	.LVL8:
+ 118              		.loc 1 149 16 view .LVU33
+ 119 0050 23F44070 		bic	r0, r3, #768
+ 120              	.LVL9:
+ 121              		.loc 1 151 7 is_stmt 1 view .LVU34
+ 122 0054 2F49     		ldr	r1, .L20+8
+ 123 0056 0126     		movs	r6, #1
+ 124 0058 C1F84064 		str	r6, [r1, #1088]
+ 125              		.loc 1 152 7 view .LVU35
+ 126 005c 0026     		movs	r6, #0
+ 127 005e C1F84064 		str	r6, [r1, #1088]
+ 128              		.loc 1 154 7 view .LVU36
+ 129              		.loc 1 154 17 is_stmt 0 view .LVU37
+ 130 0062 1062     		str	r0, [r2, #32]
+ 131              		.loc 1 157 7 is_stmt 1 view .LVU38
+ 132              		.loc 1 157 10 is_stmt 0 view .LVU39
+ 133 0064 13F0010F 		tst	r3, #1
+ 134 0068 36D1     		bne	.L18
+ 135              	.LVL10:
+ 136              	.L8:
+ 137              		.loc 1 172 5 is_stmt 1 view .LVU40
+ 138 006a 284A     		ldr	r2, .L20
+ 139 006c 136A     		ldr	r3, [r2, #32]
+ 140 006e 23F44073 		bic	r3, r3, #768
+ 141 0072 6168     		ldr	r1, [r4, #4]
+ 142 0074 0B43     		orrs	r3, r3, r1
+ 143 0076 1362     		str	r3, [r2, #32]
+ 144              		.loc 1 175 5 view .LVU41
+ 145              		.loc 1 175 8 is_stmt 0 view .LVU42
+ 146 0078 002D     		cmp	r5, #0
+ 147 007a 3ED1     		bne	.L19
+ 148              	.LVL11:
+ 149              	.L2:
+ 150              		.loc 1 175 8 view .LVU43
+ 151              	.LBE2:
+ 152              		.loc 1 182 3 is_stmt 1 view .LVU44
+ 153              		.loc 1 182 22 is_stmt 0 view .LVU45
+ 154 007c 2368     		ldr	r3, [r4]
+ 155              		.loc 1 182 6 view .LVU46
+ 156 007e 13F0020F 		tst	r3, #2
+ 157 0082 06D0     		beq	.L11
+ 158              		.loc 1 185 5 is_stmt 1 view .LVU47
+ 159              		.loc 1 188 5 view .LVU48
+ 160 0084 214A     		ldr	r2, .L20
+ 161 0086 5368     		ldr	r3, [r2, #4]
+ 162 0088 23F44043 		bic	r3, r3, #49152
+ 163 008c A168     		ldr	r1, [r4, #8]
+ 164 008e 0B43     		orrs	r3, r3, r1
+ 165 0090 5360     		str	r3, [r2, #4]
+ 166              	.L11:
+ 167              		.loc 1 274 3 view .LVU49
+ 168              		.loc 1 274 22 is_stmt 0 view .LVU50
+ 169 0092 2368     		ldr	r3, [r4]
+ 170              		.loc 1 274 6 view .LVU51
+ 171 0094 13F0100F 		tst	r3, #16
+ARM GAS  C:\Users\Test\AppData\Local\Temp\cczSbcq3.s 			page 4
+
+
+ 172 0098 34D0     		beq	.L15
+ 173              		.loc 1 277 5 is_stmt 1 view .LVU52
+ 174              		.loc 1 280 5 view .LVU53
+ 175 009a 1C4A     		ldr	r2, .L20
+ 176 009c 5368     		ldr	r3, [r2, #4]
+ 177 009e 23F48003 		bic	r3, r3, #4194304
+ 178 00a2 E168     		ldr	r1, [r4, #12]
+ 179 00a4 0B43     		orrs	r3, r3, r1
+ 180 00a6 5360     		str	r3, [r2, #4]
+ 181              		.loc 1 284 10 is_stmt 0 view .LVU54
+ 182 00a8 0020     		movs	r0, #0
+ 183 00aa 2CE0     		b	.L6
+ 184              	.LVL12:
+ 185              	.L12:
+ 186              	.LBB4:
+ 187              		.loc 1 113 16 view .LVU55
+ 188 00ac 0025     		movs	r5, #0
+ 189 00ae BEE7     		b	.L3
+ 190              	.LVL13:
+ 191              	.L17:
+ 192              		.loc 1 130 7 is_stmt 1 view .LVU56
+ 193 00b0 174A     		ldr	r2, .L20+4
+ 194 00b2 1368     		ldr	r3, [r2]
+ 195 00b4 43F48073 		orr	r3, r3, #256
+ 196 00b8 1360     		str	r3, [r2]
+ 197              		.loc 1 133 7 view .LVU57
+ 198              		.loc 1 133 19 is_stmt 0 view .LVU58
+ 199 00ba 174B     		ldr	r3, .L20+12
+ 200 00bc 9847     		blx	r3
+ 201              	.LVL14:
+ 202              		.loc 1 133 19 view .LVU59
+ 203 00be 0646     		mov	r6, r0
+ 204              	.LVL15:
+ 205              		.loc 1 135 7 is_stmt 1 view .LVU60
+ 206              	.L5:
+ 207              		.loc 1 135 13 view .LVU61
+ 208              		.loc 1 135 14 is_stmt 0 view .LVU62
+ 209 00c0 134B     		ldr	r3, .L20+4
+ 210 00c2 1B68     		ldr	r3, [r3]
+ 211              		.loc 1 135 13 view .LVU63
+ 212 00c4 13F4807F 		tst	r3, #256
+ 213 00c8 B6D1     		bne	.L4
+ 214              		.loc 1 137 9 is_stmt 1 view .LVU64
+ 215              		.loc 1 137 14 is_stmt 0 view .LVU65
+ 216 00ca 134B     		ldr	r3, .L20+12
+ 217 00cc 9847     		blx	r3
+ 218              	.LVL16:
+ 219              		.loc 1 137 28 view .LVU66
+ 220 00ce 801B     		subs	r0, r0, r6
+ 221              		.loc 1 137 12 view .LVU67
+ 222 00d0 6428     		cmp	r0, #100
+ 223 00d2 F5D9     		bls	.L5
+ 224              		.loc 1 139 18 view .LVU68
+ 225 00d4 0320     		movs	r0, #3
+ 226 00d6 16E0     		b	.L6
+ 227              	.LVL17:
+ 228              	.L18:
+ARM GAS  C:\Users\Test\AppData\Local\Temp\cczSbcq3.s 			page 5
+
+
+ 229              		.loc 1 160 9 is_stmt 1 view .LVU69
+ 230              		.loc 1 160 21 is_stmt 0 view .LVU70
+ 231 00d8 0F4B     		ldr	r3, .L20+12
+ 232 00da 9847     		blx	r3
+ 233              	.LVL18:
+ 234              		.loc 1 160 21 view .LVU71
+ 235 00dc 0646     		mov	r6, r0
+ 236              	.LVL19:
+ 237              		.loc 1 163 9 is_stmt 1 view .LVU72
+ 238              	.L9:
+ 239              		.loc 1 163 15 view .LVU73
+ 240              		.loc 1 163 16 is_stmt 0 view .LVU74
+ 241 00de 0B4B     		ldr	r3, .L20
+ 242 00e0 1B6A     		ldr	r3, [r3, #32]
+ 243              		.loc 1 163 15 view .LVU75
+ 244 00e2 13F0020F 		tst	r3, #2
+ 245 00e6 C0D1     		bne	.L8
+ 246              		.loc 1 165 11 is_stmt 1 view .LVU76
+ 247              		.loc 1 165 16 is_stmt 0 view .LVU77
+ 248 00e8 0B4B     		ldr	r3, .L20+12
+ 249 00ea 9847     		blx	r3
+ 250              	.LVL20:
+ 251              		.loc 1 165 30 view .LVU78
+ 252 00ec 801B     		subs	r0, r0, r6
+ 253              		.loc 1 165 14 view .LVU79
+ 254 00ee 41F28833 		movw	r3, #5000
+ 255 00f2 9842     		cmp	r0, r3
+ 256 00f4 F3D9     		bls	.L9
+ 257              		.loc 1 167 20 view .LVU80
+ 258 00f6 0320     		movs	r0, #3
+ 259 00f8 05E0     		b	.L6
+ 260              	.LVL21:
+ 261              	.L19:
+ 262              		.loc 1 177 7 is_stmt 1 view .LVU81
+ 263 00fa D369     		ldr	r3, [r2, #28]
+ 264 00fc 23F08053 		bic	r3, r3, #268435456
+ 265 0100 D361     		str	r3, [r2, #28]
+ 266 0102 BBE7     		b	.L2
+ 267              	.LVL22:
+ 268              	.L15:
+ 269              		.loc 1 177 7 is_stmt 0 view .LVU82
+ 270              	.LBE4:
+ 271              		.loc 1 284 10 view .LVU83
+ 272 0104 0020     		movs	r0, #0
+ 273              	.L6:
+ 274              		.loc 1 285 1 view .LVU84
+ 275 0106 02B0     		add	sp, sp, #8
+ 276              	.LCFI2:
+ 277              		.cfi_def_cfa_offset 16
+ 278              		@ sp needed
+ 279 0108 70BD     		pop	{r4, r5, r6, pc}
+ 280              	.LVL23:
+ 281              	.L21:
+ 282              		.loc 1 285 1 view .LVU85
+ 283 010a 00BF     		.align	2
+ 284              	.L20:
+ 285 010c 00100240 		.word	1073876992
+ARM GAS  C:\Users\Test\AppData\Local\Temp\cczSbcq3.s 			page 6
+
+
+ 286 0110 00700040 		.word	1073770496
+ 287 0114 00004242 		.word	1111621632
+ 288 0118 00000000 		.word	HAL_GetTick
+ 289              		.cfi_endproc
+ 290              	.LFE65:
+ 292              		.section	.text.HAL_RCCEx_GetPeriphCLKConfig,"ax",%progbits
+ 293              		.align	1
+ 294              		.global	HAL_RCCEx_GetPeriphCLKConfig
+ 295              		.syntax unified
+ 296              		.thumb
+ 297              		.thumb_func
+ 298              		.fpu softvfp
+ 300              	HAL_RCCEx_GetPeriphCLKConfig:
+ 301              	.LVL24:
+ 302              	.LFB66:
+ 303              		.loc 1 295 1 is_stmt 1 view -0
+ 304              		.cfi_startproc
+ 305              		@ args = 0, pretend = 0, frame = 0
+ 306              		@ frame_needed = 0, uses_anonymous_args = 0
+ 307              		@ link register save eliminated.
+ 308              		.loc 1 296 3 view .LVU87
+ 309              		.loc 1 299 3 view .LVU88
+ 310              		.loc 1 299 39 is_stmt 0 view .LVU89
+ 311 0000 0123     		movs	r3, #1
+ 312 0002 0360     		str	r3, [r0]
+ 313              		.loc 1 302 3 is_stmt 1 view .LVU90
+ 314              		.loc 1 302 12 is_stmt 0 view .LVU91
+ 315 0004 084B     		ldr	r3, .L23
+ 316 0006 1A6A     		ldr	r2, [r3, #32]
+ 317              		.loc 1 302 10 view .LVU92
+ 318 0008 02F44072 		and	r2, r2, #768
+ 319              	.LVL25:
+ 320              		.loc 1 304 3 is_stmt 1 view .LVU93
+ 321              		.loc 1 304 36 is_stmt 0 view .LVU94
+ 322 000c 4260     		str	r2, [r0, #4]
+ 323              		.loc 1 307 3 is_stmt 1 view .LVU95
+ 324              		.loc 1 307 39 is_stmt 0 view .LVU96
+ 325 000e 0322     		movs	r2, #3
+ 326              	.LVL26:
+ 327              		.loc 1 307 39 view .LVU97
+ 328 0010 0260     		str	r2, [r0]
+ 329              		.loc 1 308 3 is_stmt 1 view .LVU98
+ 330              		.loc 1 308 38 is_stmt 0 view .LVU99
+ 331 0012 5A68     		ldr	r2, [r3, #4]
+ 332 0014 02F44042 		and	r2, r2, #49152
+ 333              		.loc 1 308 36 view .LVU100
+ 334 0018 8260     		str	r2, [r0, #8]
+ 335              		.loc 1 336 3 is_stmt 1 view .LVU101
+ 336              		.loc 1 336 39 is_stmt 0 view .LVU102
+ 337 001a 1322     		movs	r2, #19
+ 338 001c 0260     		str	r2, [r0]
+ 339              		.loc 1 337 3 is_stmt 1 view .LVU103
+ 340              		.loc 1 337 38 is_stmt 0 view .LVU104
+ 341 001e 5B68     		ldr	r3, [r3, #4]
+ 342 0020 03F48003 		and	r3, r3, #4194304
+ 343              		.loc 1 337 36 view .LVU105
+ 344 0024 C360     		str	r3, [r0, #12]
+ARM GAS  C:\Users\Test\AppData\Local\Temp\cczSbcq3.s 			page 7
+
+
+ 345              		.loc 1 339 1 view .LVU106
+ 346 0026 7047     		bx	lr
+ 347              	.L24:
+ 348              		.align	2
+ 349              	.L23:
+ 350 0028 00100240 		.word	1073876992
+ 351              		.cfi_endproc
+ 352              	.LFE66:
+ 354              		.section	.rodata.HAL_RCCEx_GetPeriphCLKFreq.str1.4,"aMS",%progbits,1
+ 355              		.align	2
+ 356              	.LC0:
+ 357 0000 02030405 		.ascii	"\002\003\004\005\006\007\010\011\012\013\014\015\016"
+ 357      06070809 
+ 357      0A0B0C0D 
+ 357      0E
+ 358 000d 0F101000 		.ascii	"\017\020\020\000"
+ 359              		.section	.text.HAL_RCCEx_GetPeriphCLKFreq,"ax",%progbits
+ 360              		.align	1
+ 361              		.global	HAL_RCCEx_GetPeriphCLKFreq
+ 362              		.syntax unified
+ 363              		.thumb
+ 364              		.thumb_func
+ 365              		.fpu softvfp
+ 367              	HAL_RCCEx_GetPeriphCLKFreq:
+ 368              	.LVL27:
+ 369              	.LFB67:
+ 370              		.loc 1 388 1 is_stmt 1 view -0
+ 371              		.cfi_startproc
+ 372              		@ args = 0, pretend = 0, frame = 24
+ 373              		@ frame_needed = 0, uses_anonymous_args = 0
+ 374              		.loc 1 388 1 is_stmt 0 view .LVU108
+ 375 0000 00B5     		push	{lr}
+ 376              	.LCFI3:
+ 377              		.cfi_def_cfa_offset 4
+ 378              		.cfi_offset 14, -4
+ 379 0002 87B0     		sub	sp, sp, #28
+ 380              	.LCFI4:
+ 381              		.cfi_def_cfa_offset 32
+ 382 0004 8446     		mov	ip, r0
+ 383              		.loc 1 398 3 is_stmt 1 view .LVU109
+ 384              		.loc 1 398 17 is_stmt 0 view .LVU110
+ 385 0006 384B     		ldr	r3, .L40
+ 386 0008 0FCB     		ldm	r3, {r0, r1, r2, r3}
+ 387              	.LVL28:
+ 388              		.loc 1 398 17 view .LVU111
+ 389 000a 0DF1180E 		add	lr, sp, #24
+ 390 000e 0EE90F00 		stmdb	lr, {r0, r1, r2, r3}
+ 391              		.loc 1 399 3 is_stmt 1 view .LVU112
+ 392              		.loc 1 399 17 is_stmt 0 view .LVU113
+ 393 0012 40F20123 		movw	r3, #513
+ 394 0016 ADF80430 		strh	r3, [sp, #4]	@ movhi
+ 395              		.loc 1 401 3 is_stmt 1 view .LVU114
+ 396              	.LVL29:
+ 397              		.loc 1 403 3 view .LVU115
+ 398              		.loc 1 406 3 view .LVU116
+ 399              		.loc 1 408 3 view .LVU117
+ 400 001a BCF1020F 		cmp	ip, #2
+ARM GAS  C:\Users\Test\AppData\Local\Temp\cczSbcq3.s 			page 8
+
+
+ 401 001e 55D0     		beq	.L26
+ 402 0020 BCF1100F 		cmp	ip, #16
+ 403 0024 06D0     		beq	.L27
+ 404 0026 BCF1010F 		cmp	ip, #1
+ 405 002a 2DD0     		beq	.L28
+ 406 002c 0020     		movs	r0, #0
+ 407              	.LVL30:
+ 408              	.L25:
+ 409              		.loc 1 585 1 is_stmt 0 view .LVU118
+ 410 002e 07B0     		add	sp, sp, #28
+ 411              	.LCFI5:
+ 412              		.cfi_remember_state
+ 413              		.cfi_def_cfa_offset 4
+ 414              		@ sp needed
+ 415 0030 5DF804FB 		ldr	pc, [sp], #4
+ 416              	.LVL31:
+ 417              	.L27:
+ 418              	.LCFI6:
+ 419              		.cfi_restore_state
+ 420              		.loc 1 416 7 is_stmt 1 view .LVU119
+ 421              		.loc 1 416 16 is_stmt 0 view .LVU120
+ 422 0034 2D4B     		ldr	r3, .L40+4
+ 423 0036 5A68     		ldr	r2, [r3, #4]
+ 424              	.LVL32:
+ 425              		.loc 1 419 7 is_stmt 1 view .LVU121
+ 426              		.loc 1 419 11 is_stmt 0 view .LVU122
+ 427 0038 1868     		ldr	r0, [r3]
+ 428              		.loc 1 419 10 view .LVU123
+ 429 003a 10F08070 		ands	r0, r0, #16777216
+ 430 003e F6D0     		beq	.L25
+ 431              		.loc 1 421 9 is_stmt 1 view .LVU124
+ 432              		.loc 1 421 77 is_stmt 0 view .LVU125
+ 433 0040 C2F38343 		ubfx	r3, r2, #18, #4
+ 434              		.loc 1 421 36 view .LVU126
+ 435 0044 06A9     		add	r1, sp, #24
+ 436 0046 0B44     		add	r3, r3, r1
+ 437 0048 13F8100C 		ldrb	r0, [r3, #-16]	@ zero_extendqisi2
+ 438              	.LVL33:
+ 439              		.loc 1 422 9 is_stmt 1 view .LVU127
+ 440              		.loc 1 422 12 is_stmt 0 view .LVU128
+ 441 004c 12F4803F 		tst	r2, #65536
+ 442 0050 16D0     		beq	.L30
+ 443              		.loc 1 428 11 is_stmt 1 view .LVU129
+ 444              		.loc 1 428 54 is_stmt 0 view .LVU130
+ 445 0052 264B     		ldr	r3, .L40+4
+ 446 0054 5B68     		ldr	r3, [r3, #4]
+ 447              		.loc 1 428 82 view .LVU131
+ 448 0056 C3F34043 		ubfx	r3, r3, #17, #1
+ 449              		.loc 1 428 39 view .LVU132
+ 450 005a 0B44     		add	r3, r3, r1
+ 451 005c 13F8142C 		ldrb	r2, [r3, #-20]	@ zero_extendqisi2
+ 452              	.LVL34:
+ 453              		.loc 1 453 11 is_stmt 1 view .LVU133
+ 454              		.loc 1 456 13 view .LVU134
+ 455              		.loc 1 456 44 is_stmt 0 view .LVU135
+ 456 0060 234B     		ldr	r3, .L40+8
+ 457 0062 B3FBF2F3 		udiv	r3, r3, r2
+ARM GAS  C:\Users\Test\AppData\Local\Temp\cczSbcq3.s 			page 9
+
+
+ 458              		.loc 1 456 20 view .LVU136
+ 459 0066 03FB00F0 		mul	r0, r3, r0
+ 460              	.LVL35:
+ 461              	.L31:
+ 462              		.loc 1 481 9 is_stmt 1 view .LVU137
+ 463              		.loc 1 481 13 is_stmt 0 view .LVU138
+ 464 006a 204B     		ldr	r3, .L40+4
+ 465 006c 5B68     		ldr	r3, [r3, #4]
+ 466              		.loc 1 481 12 view .LVU139
+ 467 006e 13F4800F 		tst	r3, #4194304
+ 468 0072 DCD1     		bne	.L25
+ 469              		.loc 1 489 11 is_stmt 1 view .LVU140
+ 470              		.loc 1 489 31 is_stmt 0 view .LVU141
+ 471 0074 4000     		lsls	r0, r0, #1
+ 472              	.LVL36:
+ 473              		.loc 1 489 21 view .LVU142
+ 474 0076 1F4B     		ldr	r3, .L40+12
+ 475 0078 A3FB0030 		umull	r3, r0, r3, r0
+ 476 007c 4008     		lsrs	r0, r0, #1
+ 477              	.LVL37:
+ 478              		.loc 1 489 21 view .LVU143
+ 479 007e D6E7     		b	.L25
+ 480              	.LVL38:
+ 481              	.L30:
+ 482              		.loc 1 463 11 is_stmt 1 view .LVU144
+ 483              		.loc 1 463 18 is_stmt 0 view .LVU145
+ 484 0080 1D4B     		ldr	r3, .L40+16
+ 485 0082 03FB00F0 		mul	r0, r3, r0
+ 486              	.LVL39:
+ 487              		.loc 1 463 18 view .LVU146
+ 488 0086 F0E7     		b	.L31
+ 489              	.LVL40:
+ 490              	.L28:
+ 491              		.loc 1 551 7 is_stmt 1 view .LVU147
+ 492              		.loc 1 551 16 is_stmt 0 view .LVU148
+ 493 0088 184B     		ldr	r3, .L40+4
+ 494 008a 1B6A     		ldr	r3, [r3, #32]
+ 495              	.LVL41:
+ 496              		.loc 1 554 7 is_stmt 1 view .LVU149
+ 497              		.loc 1 554 66 is_stmt 0 view .LVU150
+ 498 008c 40F20232 		movw	r2, #770
+ 499 0090 1A40     		ands	r2, r2, r3
+ 500              		.loc 1 554 10 view .LVU151
+ 501 0092 B2F5817F 		cmp	r2, #258
+ 502 0096 24D0     		beq	.L33
+ 503              		.loc 1 559 12 is_stmt 1 view .LVU152
+ 504              		.loc 1 559 27 is_stmt 0 view .LVU153
+ 505 0098 03F44073 		and	r3, r3, #768
+ 506              	.LVL42:
+ 507              		.loc 1 559 15 view .LVU154
+ 508 009c B3F5007F 		cmp	r3, #512
+ 509 00a0 04D0     		beq	.L38
+ 510              	.L32:
+ 511              		.loc 1 563 12 is_stmt 1 view .LVU155
+ 512              		.loc 1 563 15 is_stmt 0 view .LVU156
+ 513 00a2 B3F5407F 		cmp	r3, #768
+ 514 00a6 09D0     		beq	.L39
+ARM GAS  C:\Users\Test\AppData\Local\Temp\cczSbcq3.s 			page 10
+
+
+ 515              		.loc 1 403 27 view .LVU157
+ 516 00a8 0020     		movs	r0, #0
+ 517 00aa C0E7     		b	.L25
+ 518              	.L38:
+ 519              		.loc 1 559 75 discriminator 1 view .LVU158
+ 520 00ac 0F4A     		ldr	r2, .L40+4
+ 521 00ae 526A     		ldr	r2, [r2, #36]
+ 522              		.loc 1 559 71 discriminator 1 view .LVU159
+ 523 00b0 12F0020F 		tst	r2, #2
+ 524 00b4 F5D0     		beq	.L32
+ 525              		.loc 1 561 19 view .LVU160
+ 526 00b6 49F64040 		movw	r0, #40000
+ 527 00ba B8E7     		b	.L25
+ 528              	.L39:
+ 529              		.loc 1 563 82 discriminator 1 view .LVU161
+ 530 00bc 0B4B     		ldr	r3, .L40+4
+ 531 00be 1868     		ldr	r0, [r3]
+ 532              		.loc 1 563 78 discriminator 1 view .LVU162
+ 533 00c0 10F40030 		ands	r0, r0, #131072
+ 534 00c4 B3D0     		beq	.L25
+ 535              		.loc 1 565 19 view .LVU163
+ 536 00c6 4FF22440 		movw	r0, #62500
+ 537              	.LVL43:
+ 538              		.loc 1 584 3 is_stmt 1 view .LVU164
+ 539              		.loc 1 584 10 is_stmt 0 view .LVU165
+ 540 00ca B0E7     		b	.L25
+ 541              	.LVL44:
+ 542              	.L26:
+ 543              		.loc 1 576 7 is_stmt 1 view .LVU166
+ 544              		.loc 1 576 19 is_stmt 0 view .LVU167
+ 545 00cc 0B4B     		ldr	r3, .L40+20
+ 546 00ce 9847     		blx	r3
+ 547              	.LVL45:
+ 548              		.loc 1 576 47 view .LVU168
+ 549 00d0 064B     		ldr	r3, .L40+4
+ 550 00d2 5B68     		ldr	r3, [r3, #4]
+ 551              		.loc 1 576 74 view .LVU169
+ 552 00d4 C3F38133 		ubfx	r3, r3, #14, #2
+ 553              		.loc 1 576 98 view .LVU170
+ 554 00d8 0133     		adds	r3, r3, #1
+ 555              		.loc 1 576 103 view .LVU171
+ 556 00da 5B00     		lsls	r3, r3, #1
+ 557              		.loc 1 576 17 view .LVU172
+ 558 00dc B0FBF3F0 		udiv	r0, r0, r3
+ 559              	.LVL46:
+ 560              		.loc 1 577 7 is_stmt 1 view .LVU173
+ 561 00e0 A5E7     		b	.L25
+ 562              	.LVL47:
+ 563              	.L33:
+ 564              		.loc 1 556 19 is_stmt 0 view .LVU174
+ 565 00e2 4FF40040 		mov	r0, #32768
+ 566 00e6 A2E7     		b	.L25
+ 567              	.L41:
+ 568              		.align	2
+ 569              	.L40:
+ 570 00e8 00000000 		.word	.LC0
+ 571 00ec 00100240 		.word	1073876992
+ARM GAS  C:\Users\Test\AppData\Local\Temp\cczSbcq3.s 			page 11
+
+
+ 572 00f0 00127A00 		.word	8000000
+ 573 00f4 ABAAAAAA 		.word	-1431655765
+ 574 00f8 00093D00 		.word	4000000
+ 575 00fc 00000000 		.word	HAL_RCC_GetPCLK2Freq
+ 576              		.cfi_endproc
+ 577              	.LFE67:
+ 579              		.text
+ 580              	.Letext0:
+ 581              		.file 2 "../c:\\users\\test\\desktop\\gnu mcu\\arm-none-eabi-gcc-10.2.1-1.1\\arm-none-eabi\\includ
+ 582              		.file 3 "../c:\\users\\test\\desktop\\gnu mcu\\arm-none-eabi-gcc-10.2.1-1.1\\arm-none-eabi\\includ
+ 583              		.file 4 "../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103x6.h"
+ 584              		.file 5 "../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h"
+ 585              		.file 6 "../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
+ 586              		.file 7 "../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h"
+ 587              		.file 8 "../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h"
+ 588              		.file 9 "../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
+ARM GAS  C:\Users\Test\AppData\Local\Temp\cczSbcq3.s 			page 12
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 stm32f1xx_hal_rcc_ex.c
+C:\Users\Test\AppData\Local\Temp\cczSbcq3.s:16     .text.HAL_RCCEx_PeriphCLKConfig:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\cczSbcq3.s:24     .text.HAL_RCCEx_PeriphCLKConfig:0000000000000000 HAL_RCCEx_PeriphCLKConfig
+C:\Users\Test\AppData\Local\Temp\cczSbcq3.s:285    .text.HAL_RCCEx_PeriphCLKConfig:000000000000010c $d
+C:\Users\Test\AppData\Local\Temp\cczSbcq3.s:293    .text.HAL_RCCEx_GetPeriphCLKConfig:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\cczSbcq3.s:300    .text.HAL_RCCEx_GetPeriphCLKConfig:0000000000000000 HAL_RCCEx_GetPeriphCLKConfig
+C:\Users\Test\AppData\Local\Temp\cczSbcq3.s:350    .text.HAL_RCCEx_GetPeriphCLKConfig:0000000000000028 $d
+C:\Users\Test\AppData\Local\Temp\cczSbcq3.s:355    .rodata.HAL_RCCEx_GetPeriphCLKFreq.str1.4:0000000000000000 $d
+C:\Users\Test\AppData\Local\Temp\cczSbcq3.s:360    .text.HAL_RCCEx_GetPeriphCLKFreq:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\cczSbcq3.s:367    .text.HAL_RCCEx_GetPeriphCLKFreq:0000000000000000 HAL_RCCEx_GetPeriphCLKFreq
+C:\Users\Test\AppData\Local\Temp\cczSbcq3.s:570    .text.HAL_RCCEx_GetPeriphCLKFreq:00000000000000e8 $d
+
+UNDEFINED SYMBOLS
+HAL_GetTick
+HAL_RCC_GetPCLK2Freq

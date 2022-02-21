@@ -1,0 +1,386 @@
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccr1QNbS.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 1
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"main.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.HAL_TIM_PeriodElapsedCallback,"ax",%progbits
+  16              		.align	1
+  17              		.global	HAL_TIM_PeriodElapsedCallback
+  18              		.arch armv7-m
+  19              		.syntax unified
+  20              		.thumb
+  21              		.thumb_func
+  22              		.fpu softvfp
+  24              	HAL_TIM_PeriodElapsedCallback:
+  25              	.LVL0:
+  26              	.LFB71:
+  27              		.file 1 "../Core/Src/main.c"
+   1:../Core/Src/main.c **** 
+  28              		.loc 1 172 1 view -0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              		.loc 1 172 1 is_stmt 0 view .LVU1
+  33 0000 08B5     		push	{r3, lr}
+  34              	.LCFI0:
+  35              		.cfi_def_cfa_offset 8
+  36              		.cfi_offset 3, -8
+  37              		.cfi_offset 14, -4
+  38              		.loc 1 176 3 is_stmt 1 view .LVU2
+  39              		.loc 1 176 11 is_stmt 0 view .LVU3
+  40 0002 0268     		ldr	r2, [r0]
+  41              		.loc 1 176 6 view .LVU4
+  42 0004 034B     		ldr	r3, .L5
+  43 0006 9A42     		cmp	r2, r3
+  44 0008 00D0     		beq	.L4
+  45              	.LVL1:
+  46              	.L1:
+  47              		.loc 1 182 1 view .LVU5
+  48 000a 08BD     		pop	{r3, pc}
+  49              	.LVL2:
+  50              	.L4:
+  51              		.loc 1 177 5 is_stmt 1 view .LVU6
+  52 000c 024B     		ldr	r3, .L5+4
+  53 000e 9847     		blx	r3
+  54              	.LVL3:
+  55              		.loc 1 182 1 is_stmt 0 view .LVU7
+  56 0010 FBE7     		b	.L1
+  57              	.L6:
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccr1QNbS.s 			page 2
+
+
+  58 0012 00BF     		.align	2
+  59              	.L5:
+  60 0014 002C0140 		.word	1073818624
+  61 0018 00000000 		.word	HAL_IncTick
+  62              		.cfi_endproc
+  63              	.LFE71:
+  65              		.section	.text.Error_Handler,"ax",%progbits
+  66              		.align	1
+  67              		.global	Error_Handler
+  68              		.syntax unified
+  69              		.thumb
+  70              		.thumb_func
+  71              		.fpu softvfp
+  73              	Error_Handler:
+  74              	.LFB72:
+  75              		.loc 1 189 1 is_stmt 1 view -0
+  76              		.cfi_startproc
+  77              		@ Volatile: function does not return.
+  78              		@ args = 0, pretend = 0, frame = 0
+  79              		@ frame_needed = 0, uses_anonymous_args = 0
+  80              		@ link register save eliminated.
+  81              		.loc 1 192 3 view .LVU9
+  82              	.LBB4:
+  83              	.LBI4:
+  84              		.file 2 "../Drivers/CMSIS/Include/cmsis_gcc.h"
+   1:../Drivers/CMSIS/Include/cmsis_gcc.h **** 
+  85              		.loc 2 140 27 view .LVU10
+  86              	.LBB5:
+  87              		.loc 2 142 3 view .LVU11
+  88              		.syntax unified
+  89              	@ 142 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+  90 0000 72B6     		cpsid i
+  91              	@ 0 "" 2
+  92              		.thumb
+  93              		.syntax unified
+  94              	.L8:
+  95              	.LBE5:
+  96              	.LBE4:
+  97              		.loc 1 193 3 discriminator 1 view .LVU12
+  98              		.loc 1 195 3 discriminator 1 view .LVU13
+  99              		.loc 1 193 9 discriminator 1 view .LVU14
+ 100 0002 FEE7     		b	.L8
+ 101              		.cfi_endproc
+ 102              	.LFE72:
+ 104              		.section	.text.SystemClock_Config,"ax",%progbits
+ 105              		.align	1
+ 106              		.global	SystemClock_Config
+ 107              		.syntax unified
+ 108              		.thumb
+ 109              		.thumb_func
+ 110              		.fpu softvfp
+ 112              	SystemClock_Config:
+ 113              	.LFB70:
+ 114              		.loc 1 122 1 view -0
+ 115              		.cfi_startproc
+ 116              		@ args = 0, pretend = 0, frame = 80
+ 117              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccr1QNbS.s 			page 3
+
+
+ 118 0000 00B5     		push	{lr}
+ 119              	.LCFI1:
+ 120              		.cfi_def_cfa_offset 4
+ 121              		.cfi_offset 14, -4
+ 122 0002 95B0     		sub	sp, sp, #84
+ 123              	.LCFI2:
+ 124              		.cfi_def_cfa_offset 88
+ 125              		.loc 1 123 3 view .LVU16
+ 126              		.loc 1 123 22 is_stmt 0 view .LVU17
+ 127 0004 2822     		movs	r2, #40
+ 128 0006 0021     		movs	r1, #0
+ 129 0008 0DEB0200 		add	r0, sp, r2
+ 130 000c 184B     		ldr	r3, .L17
+ 131 000e 9847     		blx	r3
+ 132              	.LVL4:
+ 133              		.loc 1 124 3 is_stmt 1 view .LVU18
+ 134              		.loc 1 124 22 is_stmt 0 view .LVU19
+ 135 0010 0023     		movs	r3, #0
+ 136 0012 0593     		str	r3, [sp, #20]
+ 137 0014 0693     		str	r3, [sp, #24]
+ 138 0016 0793     		str	r3, [sp, #28]
+ 139 0018 0893     		str	r3, [sp, #32]
+ 140 001a 0993     		str	r3, [sp, #36]
+ 141              		.loc 1 125 3 is_stmt 1 view .LVU20
+ 142              		.loc 1 125 28 is_stmt 0 view .LVU21
+ 143 001c 0193     		str	r3, [sp, #4]
+ 144 001e 0293     		str	r3, [sp, #8]
+ 145 0020 0393     		str	r3, [sp, #12]
+ 146 0022 0493     		str	r3, [sp, #16]
+ 147              		.loc 1 130 3 is_stmt 1 view .LVU22
+ 148              		.loc 1 130 36 is_stmt 0 view .LVU23
+ 149 0024 0223     		movs	r3, #2
+ 150 0026 0A93     		str	r3, [sp, #40]
+ 151              		.loc 1 131 3 is_stmt 1 view .LVU24
+ 152              		.loc 1 131 30 is_stmt 0 view .LVU25
+ 153 0028 0123     		movs	r3, #1
+ 154 002a 0E93     		str	r3, [sp, #56]
+ 155              		.loc 1 132 3 is_stmt 1 view .LVU26
+ 156              		.loc 1 132 41 is_stmt 0 view .LVU27
+ 157 002c 1023     		movs	r3, #16
+ 158 002e 0F93     		str	r3, [sp, #60]
+ 159              		.loc 1 133 3 is_stmt 1 view .LVU28
+ 160              		.loc 1 134 3 view .LVU29
+ 161              		.loc 1 134 7 is_stmt 0 view .LVU30
+ 162 0030 0AA8     		add	r0, sp, #40
+ 163 0032 104B     		ldr	r3, .L17+4
+ 164 0034 9847     		blx	r3
+ 165              	.LVL5:
+ 166              		.loc 1 134 6 view .LVU31
+ 167 0036 A8B9     		cbnz	r0, .L14
+ 168              		.loc 1 140 3 is_stmt 1 view .LVU32
+ 169              		.loc 1 140 31 is_stmt 0 view .LVU33
+ 170 0038 0F23     		movs	r3, #15
+ 171 003a 0593     		str	r3, [sp, #20]
+ 172              		.loc 1 142 3 is_stmt 1 view .LVU34
+ 173              		.loc 1 142 34 is_stmt 0 view .LVU35
+ 174 003c 0021     		movs	r1, #0
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccr1QNbS.s 			page 4
+
+
+ 175 003e 0691     		str	r1, [sp, #24]
+ 176              		.loc 1 143 3 is_stmt 1 view .LVU36
+ 177              		.loc 1 143 35 is_stmt 0 view .LVU37
+ 178 0040 0791     		str	r1, [sp, #28]
+ 179              		.loc 1 144 3 is_stmt 1 view .LVU38
+ 180              		.loc 1 144 36 is_stmt 0 view .LVU39
+ 181 0042 0891     		str	r1, [sp, #32]
+ 182              		.loc 1 145 3 is_stmt 1 view .LVU40
+ 183              		.loc 1 145 36 is_stmt 0 view .LVU41
+ 184 0044 0991     		str	r1, [sp, #36]
+ 185              		.loc 1 147 3 is_stmt 1 view .LVU42
+ 186              		.loc 1 147 7 is_stmt 0 view .LVU43
+ 187 0046 05A8     		add	r0, sp, #20
+ 188 0048 0B4B     		ldr	r3, .L17+8
+ 189 004a 9847     		blx	r3
+ 190              	.LVL6:
+ 191              		.loc 1 147 6 view .LVU44
+ 192 004c 60B9     		cbnz	r0, .L15
+ 193              		.loc 1 151 3 is_stmt 1 view .LVU45
+ 194              		.loc 1 151 38 is_stmt 0 view .LVU46
+ 195 004e 0223     		movs	r3, #2
+ 196 0050 0193     		str	r3, [sp, #4]
+ 197              		.loc 1 152 3 is_stmt 1 view .LVU47
+ 198              		.loc 1 152 35 is_stmt 0 view .LVU48
+ 199 0052 0023     		movs	r3, #0
+ 200 0054 0393     		str	r3, [sp, #12]
+ 201              		.loc 1 153 3 is_stmt 1 view .LVU49
+ 202              		.loc 1 153 7 is_stmt 0 view .LVU50
+ 203 0056 01A8     		add	r0, sp, #4
+ 204 0058 084B     		ldr	r3, .L17+12
+ 205 005a 9847     		blx	r3
+ 206              	.LVL7:
+ 207              		.loc 1 153 6 view .LVU51
+ 208 005c 30B9     		cbnz	r0, .L16
+ 209              		.loc 1 157 1 view .LVU52
+ 210 005e 15B0     		add	sp, sp, #84
+ 211              	.LCFI3:
+ 212              		.cfi_remember_state
+ 213              		.cfi_def_cfa_offset 4
+ 214              		@ sp needed
+ 215 0060 5DF804FB 		ldr	pc, [sp], #4
+ 216              	.L14:
+ 217              	.LCFI4:
+ 218              		.cfi_restore_state
+ 219              		.loc 1 136 5 is_stmt 1 view .LVU53
+ 220 0064 064B     		ldr	r3, .L17+16
+ 221 0066 9847     		blx	r3
+ 222              	.LVL8:
+ 223              	.L15:
+ 224              		.loc 1 149 5 view .LVU54
+ 225 0068 054B     		ldr	r3, .L17+16
+ 226 006a 9847     		blx	r3
+ 227              	.LVL9:
+ 228              	.L16:
+ 229              		.loc 1 155 5 view .LVU55
+ 230 006c 044B     		ldr	r3, .L17+16
+ 231 006e 9847     		blx	r3
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccr1QNbS.s 			page 5
+
+
+ 232              	.LVL10:
+ 233              	.L18:
+ 234              		.align	2
+ 235              	.L17:
+ 236 0070 00000000 		.word	memset
+ 237 0074 00000000 		.word	HAL_RCC_OscConfig
+ 238 0078 00000000 		.word	HAL_RCC_ClockConfig
+ 239 007c 00000000 		.word	HAL_RCCEx_PeriphCLKConfig
+ 240 0080 00000000 		.word	Error_Handler
+ 241              		.cfi_endproc
+ 242              	.LFE70:
+ 244              		.section	.text.main,"ax",%progbits
+ 245              		.align	1
+ 246              		.global	main
+ 247              		.syntax unified
+ 248              		.thumb
+ 249              		.thumb_func
+ 250              		.fpu softvfp
+ 252              	main:
+ 253              	.LFB69:
+ 254              		.loc 1 69 1 view -0
+ 255              		.cfi_startproc
+ 256              		@ Volatile: function does not return.
+ 257              		@ args = 0, pretend = 0, frame = 0
+ 258              		@ frame_needed = 0, uses_anonymous_args = 0
+ 259 0000 08B5     		push	{r3, lr}
+ 260              	.LCFI5:
+ 261              		.cfi_def_cfa_offset 8
+ 262              		.cfi_offset 3, -8
+ 263              		.cfi_offset 14, -4
+ 264              		.loc 1 77 3 view .LVU57
+ 265 0002 0A4B     		ldr	r3, .L22
+ 266 0004 9847     		blx	r3
+ 267              	.LVL11:
+ 268              		.loc 1 84 3 view .LVU58
+ 269 0006 0A4B     		ldr	r3, .L22+4
+ 270 0008 9847     		blx	r3
+ 271              	.LVL12:
+ 272              		.loc 1 91 3 view .LVU59
+ 273 000a 0A4B     		ldr	r3, .L22+8
+ 274 000c 9847     		blx	r3
+ 275              	.LVL13:
+ 276              		.loc 1 92 3 view .LVU60
+ 277 000e 0A4B     		ldr	r3, .L22+12
+ 278 0010 9847     		blx	r3
+ 279              	.LVL14:
+ 280              		.loc 1 93 3 view .LVU61
+ 281 0012 0A4B     		ldr	r3, .L22+16
+ 282 0014 9847     		blx	r3
+ 283              	.LVL15:
+ 284              		.loc 1 94 3 view .LVU62
+ 285 0016 0A4B     		ldr	r3, .L22+20
+ 286 0018 9847     		blx	r3
+ 287              	.LVL16:
+ 288              		.loc 1 96 3 view .LVU63
+ 289 001a 0A4B     		ldr	r3, .L22+24
+ 290 001c 9847     		blx	r3
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccr1QNbS.s 			page 6
+
+
+ 291              	.LVL17:
+ 292              		.loc 1 100 3 view .LVU64
+ 293 001e 0A4B     		ldr	r3, .L22+28
+ 294 0020 9847     		blx	r3
+ 295              	.LVL18:
+ 296              		.loc 1 101 3 view .LVU65
+ 297 0022 0A4B     		ldr	r3, .L22+32
+ 298 0024 9847     		blx	r3
+ 299              	.LVL19:
+ 300              		.loc 1 103 3 view .LVU66
+ 301 0026 0A4B     		ldr	r3, .L22+36
+ 302 0028 9847     		blx	r3
+ 303              	.LVL20:
+ 304              	.L20:
+ 305              		.loc 1 108 3 discriminator 1 view .LVU67
+ 306              		.loc 1 113 3 discriminator 1 view .LVU68
+ 307              		.loc 1 108 9 discriminator 1 view .LVU69
+ 308 002a FEE7     		b	.L20
+ 309              	.L23:
+ 310              		.align	2
+ 311              	.L22:
+ 312 002c 00000000 		.word	HAL_Init
+ 313 0030 00000000 		.word	SystemClock_Config
+ 314 0034 00000000 		.word	MX_GPIO_Init
+ 315 0038 00000000 		.word	MX_ADC1_Init
+ 316 003c 00000000 		.word	MX_TIM3_Init
+ 317 0040 00000000 		.word	MX_USART1_UART_Init
+ 318 0044 00000000 		.word	exampleInit
+ 319 0048 00000000 		.word	osKernelInitialize
+ 320 004c 00000000 		.word	MX_FREERTOS_Init
+ 321 0050 00000000 		.word	osKernelStart
+ 322              		.cfi_endproc
+ 323              	.LFE69:
+ 325              		.text
+ 326              	.Letext0:
+ 327              		.file 3 "../c:\\users\\test\\desktop\\gnu mcu\\arm-none-eabi-gcc-10.2.1-1.1\\arm-none-eabi\\includ
+ 328              		.file 4 "../c:\\users\\test\\desktop\\gnu mcu\\arm-none-eabi-gcc-10.2.1-1.1\\arm-none-eabi\\includ
+ 329              		.file 5 "../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103x6.h"
+ 330              		.file 6 "../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
+ 331              		.file 7 "../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h"
+ 332              		.file 8 "../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h"
+ 333              		.file 9 "../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h"
+ 334              		.file 10 "../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h"
+ 335              		.file 11 "../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
+ 336              		.file 12 "../Core/Inc/gpio.h"
+ 337              		.file 13 "../Core/Inc/adc.h"
+ 338              		.file 14 "../Core/Inc/tim.h"
+ 339              		.file 15 "../Core/Inc/usart.h"
+ 340              		.file 16 "../Core/Inc/example.h"
+ 341              		.file 17 "../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h"
+ 342              		.file 18 "../<built-in>"
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccr1QNbS.s 			page 7
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 main.c
+C:\Users\Test\AppData\Local\Temp\ccr1QNbS.s:16     .text.HAL_TIM_PeriodElapsedCallback:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\ccr1QNbS.s:24     .text.HAL_TIM_PeriodElapsedCallback:0000000000000000 HAL_TIM_PeriodElapsedCallback
+C:\Users\Test\AppData\Local\Temp\ccr1QNbS.s:60     .text.HAL_TIM_PeriodElapsedCallback:0000000000000014 $d
+C:\Users\Test\AppData\Local\Temp\ccr1QNbS.s:66     .text.Error_Handler:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\ccr1QNbS.s:73     .text.Error_Handler:0000000000000000 Error_Handler
+C:\Users\Test\AppData\Local\Temp\ccr1QNbS.s:105    .text.SystemClock_Config:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\ccr1QNbS.s:112    .text.SystemClock_Config:0000000000000000 SystemClock_Config
+C:\Users\Test\AppData\Local\Temp\ccr1QNbS.s:236    .text.SystemClock_Config:0000000000000070 $d
+C:\Users\Test\AppData\Local\Temp\ccr1QNbS.s:245    .text.main:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\ccr1QNbS.s:252    .text.main:0000000000000000 main
+C:\Users\Test\AppData\Local\Temp\ccr1QNbS.s:312    .text.main:000000000000002c $d
+
+UNDEFINED SYMBOLS
+HAL_IncTick
+memset
+HAL_RCC_OscConfig
+HAL_RCC_ClockConfig
+HAL_RCCEx_PeriphCLKConfig
+HAL_Init
+MX_GPIO_Init
+MX_ADC1_Init
+MX_TIM3_Init
+MX_USART1_UART_Init
+exampleInit
+osKernelInitialize
+MX_FREERTOS_Init
+osKernelStart

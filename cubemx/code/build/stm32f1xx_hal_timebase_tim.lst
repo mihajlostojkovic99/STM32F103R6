@@ -1,0 +1,273 @@
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccuYtuTG.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 1
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"stm32f1xx_hal_timebase_tim.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.HAL_InitTick,"ax",%progbits
+  16              		.align	1
+  17              		.global	HAL_InitTick
+  18              		.arch armv7-m
+  19              		.syntax unified
+  20              		.thumb
+  21              		.thumb_func
+  22              		.fpu softvfp
+  24              	HAL_InitTick:
+  25              	.LVL0:
+  26              	.LFB65:
+  27              		.file 1 "../Core/Src/stm32f1xx_hal_timebase_tim.c"
+   1:../Core/Src/stm32f1xx_hal_timebase_tim.c **** 
+  28              		.loc 1 42 1 view -0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 32
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              		.loc 1 42 1 is_stmt 0 view .LVU1
+  33 0000 00B5     		push	{lr}
+  34              	.LCFI0:
+  35              		.cfi_def_cfa_offset 4
+  36              		.cfi_offset 14, -4
+  37 0002 89B0     		sub	sp, sp, #36
+  38              	.LCFI1:
+  39              		.cfi_def_cfa_offset 40
+  40 0004 0146     		mov	r1, r0
+  41              		.loc 1 43 3 is_stmt 1 view .LVU2
+  42              		.loc 1 44 3 view .LVU3
+  43              	.LVL1:
+  44              		.loc 1 45 3 view .LVU4
+  45              		.loc 1 46 3 view .LVU5
+  46              		.loc 1 48 3 view .LVU6
+  47 0006 0022     		movs	r2, #0
+  48 0008 1920     		movs	r0, #25
+  49              	.LVL2:
+  50              		.loc 1 48 3 is_stmt 0 view .LVU7
+  51 000a 174B     		ldr	r3, .L6
+  52 000c 9847     		blx	r3
+  53              	.LVL3:
+  54              		.loc 1 51 3 is_stmt 1 view .LVU8
+  55 000e 1920     		movs	r0, #25
+  56 0010 164B     		ldr	r3, .L6+4
+  57 0012 9847     		blx	r3
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccuYtuTG.s 			page 2
+
+
+  58              	.LVL4:
+  59              		.loc 1 54 3 view .LVU9
+  60              	.LBB2:
+  61              		.loc 1 54 3 view .LVU10
+  62              		.loc 1 54 3 view .LVU11
+  63 0014 164B     		ldr	r3, .L6+8
+  64 0016 9A69     		ldr	r2, [r3, #24]
+  65 0018 42F40062 		orr	r2, r2, #2048
+  66 001c 9A61     		str	r2, [r3, #24]
+  67              		.loc 1 54 3 view .LVU12
+  68 001e 9B69     		ldr	r3, [r3, #24]
+  69 0020 03F40063 		and	r3, r3, #2048
+  70 0024 0193     		str	r3, [sp, #4]
+  71              		.loc 1 54 3 view .LVU13
+  72 0026 019B     		ldr	r3, [sp, #4]
+  73              	.LBE2:
+  74              		.loc 1 54 3 view .LVU14
+  75              		.loc 1 57 3 view .LVU15
+  76 0028 02A9     		add	r1, sp, #8
+  77 002a 03A8     		add	r0, sp, #12
+  78 002c 114B     		ldr	r3, .L6+12
+  79 002e 9847     		blx	r3
+  80              	.LVL5:
+  81              		.loc 1 60 3 view .LVU16
+  82              		.loc 1 60 16 is_stmt 0 view .LVU17
+  83 0030 114B     		ldr	r3, .L6+16
+  84 0032 9847     		blx	r3
+  85              	.LVL6:
+  86              		.loc 1 62 3 is_stmt 1 view .LVU18
+  87              		.loc 1 62 46 is_stmt 0 view .LVU19
+  88 0034 114B     		ldr	r3, .L6+20
+  89 0036 A3FB0023 		umull	r2, r3, r3, r0
+  90 003a 9B0C     		lsrs	r3, r3, #18
+  91              		.loc 1 62 20 view .LVU20
+  92 003c 013B     		subs	r3, r3, #1
+  93              	.LVL7:
+  94              		.loc 1 65 3 is_stmt 1 view .LVU21
+  95              		.loc 1 65 18 is_stmt 0 view .LVU22
+  96 003e 1048     		ldr	r0, .L6+24
+  97              	.LVL8:
+  98              		.loc 1 65 18 view .LVU23
+  99 0040 104A     		ldr	r2, .L6+28
+ 100 0042 0260     		str	r2, [r0]
+ 101              		.loc 1 73 3 is_stmt 1 view .LVU24
+ 102              		.loc 1 73 21 is_stmt 0 view .LVU25
+ 103 0044 40F2E732 		movw	r2, #999
+ 104 0048 C260     		str	r2, [r0, #12]
+ 105              		.loc 1 74 3 is_stmt 1 view .LVU26
+ 106              		.loc 1 74 24 is_stmt 0 view .LVU27
+ 107 004a 4360     		str	r3, [r0, #4]
+ 108              		.loc 1 75 3 is_stmt 1 view .LVU28
+ 109              		.loc 1 75 28 is_stmt 0 view .LVU29
+ 110 004c 0023     		movs	r3, #0
+ 111              	.LVL9:
+ 112              		.loc 1 75 28 view .LVU30
+ 113 004e 0361     		str	r3, [r0, #16]
+ 114              		.loc 1 76 3 is_stmt 1 view .LVU31
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccuYtuTG.s 			page 3
+
+
+ 115              		.loc 1 76 26 is_stmt 0 view .LVU32
+ 116 0050 8360     		str	r3, [r0, #8]
+ 117              		.loc 1 78 3 is_stmt 1 view .LVU33
+ 118              		.loc 1 78 6 is_stmt 0 view .LVU34
+ 119 0052 0D4B     		ldr	r3, .L6+32
+ 120 0054 9847     		blx	r3
+ 121              	.LVL10:
+ 122              		.loc 1 78 5 view .LVU35
+ 123 0056 18B1     		cbz	r0, .L5
+ 124              		.loc 1 85 10 view .LVU36
+ 125 0058 0120     		movs	r0, #1
+ 126              	.L2:
+ 127              		.loc 1 86 1 view .LVU37
+ 128 005a 09B0     		add	sp, sp, #36
+ 129              	.LCFI2:
+ 130              		.cfi_remember_state
+ 131              		.cfi_def_cfa_offset 4
+ 132              		@ sp needed
+ 133 005c 5DF804FB 		ldr	pc, [sp], #4
+ 134              	.L5:
+ 135              	.LCFI3:
+ 136              		.cfi_restore_state
+ 137              		.loc 1 81 5 is_stmt 1 view .LVU38
+ 138              		.loc 1 81 12 is_stmt 0 view .LVU39
+ 139 0060 0748     		ldr	r0, .L6+24
+ 140 0062 0A4B     		ldr	r3, .L6+36
+ 141 0064 9847     		blx	r3
+ 142              	.LVL11:
+ 143 0066 F8E7     		b	.L2
+ 144              	.L7:
+ 145              		.align	2
+ 146              	.L6:
+ 147 0068 00000000 		.word	HAL_NVIC_SetPriority
+ 148 006c 00000000 		.word	HAL_NVIC_EnableIRQ
+ 149 0070 00100240 		.word	1073876992
+ 150 0074 00000000 		.word	HAL_RCC_GetClockConfig
+ 151 0078 00000000 		.word	HAL_RCC_GetPCLK2Freq
+ 152 007c 83DE1B43 		.word	1125899907
+ 153 0080 00000000 		.word	.LANCHOR0
+ 154 0084 002C0140 		.word	1073818624
+ 155 0088 00000000 		.word	HAL_TIM_Base_Init
+ 156 008c 00000000 		.word	HAL_TIM_Base_Start_IT
+ 157              		.cfi_endproc
+ 158              	.LFE65:
+ 160              		.section	.text.HAL_SuspendTick,"ax",%progbits
+ 161              		.align	1
+ 162              		.global	HAL_SuspendTick
+ 163              		.syntax unified
+ 164              		.thumb
+ 165              		.thumb_func
+ 166              		.fpu softvfp
+ 168              	HAL_SuspendTick:
+ 169              	.LFB66:
+ 170              		.loc 1 95 1 is_stmt 1 view -0
+ 171              		.cfi_startproc
+ 172              		@ args = 0, pretend = 0, frame = 0
+ 173              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccuYtuTG.s 			page 4
+
+
+ 174              		@ link register save eliminated.
+ 175              		.loc 1 97 3 view .LVU41
+ 176 0000 034B     		ldr	r3, .L9
+ 177 0002 1A68     		ldr	r2, [r3]
+ 178 0004 D368     		ldr	r3, [r2, #12]
+ 179 0006 23F00103 		bic	r3, r3, #1
+ 180 000a D360     		str	r3, [r2, #12]
+ 181              		.loc 1 98 1 is_stmt 0 view .LVU42
+ 182 000c 7047     		bx	lr
+ 183              	.L10:
+ 184 000e 00BF     		.align	2
+ 185              	.L9:
+ 186 0010 00000000 		.word	.LANCHOR0
+ 187              		.cfi_endproc
+ 188              	.LFE66:
+ 190              		.section	.text.HAL_ResumeTick,"ax",%progbits
+ 191              		.align	1
+ 192              		.global	HAL_ResumeTick
+ 193              		.syntax unified
+ 194              		.thumb
+ 195              		.thumb_func
+ 196              		.fpu softvfp
+ 198              	HAL_ResumeTick:
+ 199              	.LFB67:
+ 200              		.loc 1 107 1 is_stmt 1 view -0
+ 201              		.cfi_startproc
+ 202              		@ args = 0, pretend = 0, frame = 0
+ 203              		@ frame_needed = 0, uses_anonymous_args = 0
+ 204              		@ link register save eliminated.
+ 205              		.loc 1 109 3 view .LVU44
+ 206 0000 034B     		ldr	r3, .L12
+ 207 0002 1A68     		ldr	r2, [r3]
+ 208 0004 D368     		ldr	r3, [r2, #12]
+ 209 0006 43F00103 		orr	r3, r3, #1
+ 210 000a D360     		str	r3, [r2, #12]
+ 211              		.loc 1 110 1 is_stmt 0 view .LVU45
+ 212 000c 7047     		bx	lr
+ 213              	.L13:
+ 214 000e 00BF     		.align	2
+ 215              	.L12:
+ 216 0010 00000000 		.word	.LANCHOR0
+ 217              		.cfi_endproc
+ 218              	.LFE67:
+ 220              		.global	htim1
+ 221              		.section	.bss.htim1,"aw",%nobits
+ 222              		.align	2
+ 223              		.set	.LANCHOR0,. + 0
+ 226              	htim1:
+ 227 0000 00000000 		.space	72
+ 227      00000000 
+ 227      00000000 
+ 227      00000000 
+ 227      00000000 
+ 228              		.text
+ 229              	.Letext0:
+ 230              		.file 2 "../c:\\users\\test\\desktop\\gnu mcu\\arm-none-eabi-gcc-10.2.1-1.1\\arm-none-eabi\\includ
+ 231              		.file 3 "../c:\\users\\test\\desktop\\gnu mcu\\arm-none-eabi-gcc-10.2.1-1.1\\arm-none-eabi\\includ
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccuYtuTG.s 			page 5
+
+
+ 232              		.file 4 "../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103x6.h"
+ 233              		.file 5 "../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
+ 234              		.file 6 "../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h"
+ 235              		.file 7 "../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h"
+ 236              		.file 8 "../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h"
+ 237              		.file 9 "../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h"
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccuYtuTG.s 			page 6
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 stm32f1xx_hal_timebase_tim.c
+C:\Users\Test\AppData\Local\Temp\ccuYtuTG.s:16     .text.HAL_InitTick:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\ccuYtuTG.s:24     .text.HAL_InitTick:0000000000000000 HAL_InitTick
+C:\Users\Test\AppData\Local\Temp\ccuYtuTG.s:147    .text.HAL_InitTick:0000000000000068 $d
+C:\Users\Test\AppData\Local\Temp\ccuYtuTG.s:161    .text.HAL_SuspendTick:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\ccuYtuTG.s:168    .text.HAL_SuspendTick:0000000000000000 HAL_SuspendTick
+C:\Users\Test\AppData\Local\Temp\ccuYtuTG.s:186    .text.HAL_SuspendTick:0000000000000010 $d
+C:\Users\Test\AppData\Local\Temp\ccuYtuTG.s:191    .text.HAL_ResumeTick:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\ccuYtuTG.s:198    .text.HAL_ResumeTick:0000000000000000 HAL_ResumeTick
+C:\Users\Test\AppData\Local\Temp\ccuYtuTG.s:216    .text.HAL_ResumeTick:0000000000000010 $d
+C:\Users\Test\AppData\Local\Temp\ccuYtuTG.s:226    .bss.htim1:0000000000000000 htim1
+C:\Users\Test\AppData\Local\Temp\ccuYtuTG.s:222    .bss.htim1:0000000000000000 $d
+
+UNDEFINED SYMBOLS
+HAL_NVIC_SetPriority
+HAL_NVIC_EnableIRQ
+HAL_RCC_GetClockConfig
+HAL_RCC_GetPCLK2Freq
+HAL_TIM_Base_Init
+HAL_TIM_Base_Start_IT

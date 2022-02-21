@@ -1,0 +1,264 @@
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccTFeMjG.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 1
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"example.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.global	__aeabi_fcmple
+  16              		.global	__aeabi_fcmpgt
+  17              		.global	__aeabi_f2uiz
+  18              		.section	.text.ExampleTask,"ax",%progbits
+  19              		.align	1
+  20              		.arch armv7-m
+  21              		.syntax unified
+  22              		.thumb
+  23              		.thumb_func
+  24              		.fpu softvfp
+  26              	ExampleTask:
+  27              	.LFB69:
+  28              		.file 1 "../Core/Src/example.c"
+   1:../Core/Src/example.c **** 
+  29              		.loc 1 16 1 view -0
+  30              		.cfi_startproc
+  31              		@ args = 0, pretend = 0, frame = 0
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33              	.LVL0:
+  34              		.loc 1 16 1 is_stmt 0 view .LVU1
+  35 0000 10B5     		push	{r4, lr}
+  36              	.LCFI0:
+  37              		.cfi_def_cfa_offset 8
+  38              		.cfi_offset 4, -8
+  39              		.cfi_offset 14, -4
+  40 0002 1AE0     		b	.L9
+  41              	.LVL1:
+  42              	.L14:
+  43              		.loc 1 23 8 is_stmt 1 view .LVU2
+  44              		.loc 1 23 11 is_stmt 0 view .LVU3
+  45 0004 1549     		ldr	r1, .L18
+  46 0006 2046     		mov	r0, r4
+  47 0008 154B     		ldr	r3, .L18+4
+  48 000a 9847     		blx	r3
+  49              	.LVL2:
+  50 000c 20B1     		cbz	r0, .L5
+  51              		.loc 1 23 24 discriminator 1 view .LVU4
+  52 000e 1549     		ldr	r1, .L18+8
+  53 0010 2046     		mov	r0, r4
+  54 0012 154B     		ldr	r3, .L18+12
+  55 0014 9847     		blx	r3
+  56              	.LVL3:
+  57 0016 D8B9     		cbnz	r0, .L16
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccTFeMjG.s 			page 2
+
+
+  58              	.L5:
+  59              		.loc 1 24 8 is_stmt 1 view .LVU5
+  60              		.loc 1 24 11 is_stmt 0 view .LVU6
+  61 0018 1249     		ldr	r1, .L18+8
+  62 001a 2046     		mov	r0, r4
+  63 001c 104B     		ldr	r3, .L18+4
+  64 001e 9847     		blx	r3
+  65              	.LVL4:
+  66 0020 C8B9     		cbnz	r0, .L17
+  67              	.L4:
+  68              		.loc 1 26 3 is_stmt 1 view .LVU7
+  69 0022 2046     		mov	r0, r4
+  70 0024 114B     		ldr	r3, .L18+16
+  71 0026 9847     		blx	r3
+  72              	.LVL5:
+  73 0028 0446     		mov	r4, r0
+  74              	.LVL6:
+  75              		.loc 1 26 3 is_stmt 0 view .LVU8
+  76 002a 114B     		ldr	r3, .L18+20
+  77 002c 9847     		blx	r3
+  78              	.LVL7:
+  79              		.loc 1 27 3 is_stmt 1 view .LVU9
+  80 002e 2046     		mov	r0, r4
+  81 0030 104B     		ldr	r3, .L18+24
+  82 0032 9847     		blx	r3
+  83              	.LVL8:
+  84              		.loc 1 28 3 view .LVU10
+  85 0034 C820     		movs	r0, #200
+  86 0036 104B     		ldr	r3, .L18+28
+  87 0038 9847     		blx	r3
+  88              	.LVL9:
+  89              		.loc 1 18 8 view .LVU11
+  90              	.L9:
+  91              		.loc 1 18 2 view .LVU12
+  92              		.loc 1 20 3 view .LVU13
+  93              		.loc 1 20 10 is_stmt 0 view .LVU14
+  94 003a 104B     		ldr	r3, .L18+32
+  95 003c 9847     		blx	r3
+  96              	.LVL10:
+  97 003e 0446     		mov	r4, r0
+  98              	.LVL11:
+  99              		.loc 1 22 3 is_stmt 1 view .LVU15
+ 100              		.loc 1 22 6 is_stmt 0 view .LVU16
+ 101 0040 0649     		ldr	r1, .L18
+ 102 0042 094B     		ldr	r3, .L18+12
+ 103 0044 9847     		blx	r3
+ 104              	.LVL12:
+ 105              		.loc 1 22 6 view .LVU17
+ 106 0046 0028     		cmp	r0, #0
+ 107 0048 DCD0     		beq	.L14
+ 108              		.loc 1 22 21 is_stmt 1 discriminator 1 view .LVU18
+ 109 004a 0D4B     		ldr	r3, .L18+36
+ 110 004c 9847     		blx	r3
+ 111              	.LVL13:
+ 112 004e E8E7     		b	.L4
+ 113              	.L16:
+ 114              		.loc 1 23 41 discriminator 2 view .LVU19
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccTFeMjG.s 			page 3
+
+
+ 115 0050 0C4B     		ldr	r3, .L18+40
+ 116 0052 9847     		blx	r3
+ 117              	.LVL14:
+ 118 0054 E5E7     		b	.L4
+ 119              	.L17:
+ 120              		.loc 1 24 25 discriminator 1 view .LVU20
+ 121 0056 0C4B     		ldr	r3, .L18+44
+ 122 0058 9847     		blx	r3
+ 123              	.LVL15:
+ 124 005a E2E7     		b	.L4
+ 125              	.L19:
+ 126              		.align	2
+ 127              	.L18:
+ 128 005c 0000F041 		.word	1106247680
+ 129 0060 00000000 		.word	__aeabi_fcmpgt
+ 130 0064 00000C42 		.word	1108082688
+ 131 0068 00000000 		.word	__aeabi_fcmple
+ 132 006c 00000000 		.word	__aeabi_f2uiz
+ 133 0070 00000000 		.word	LCD_ShowTemperature
+ 134 0074 00000000 		.word	UART_AsyncTransmitTemperature
+ 135 0078 00000000 		.word	vTaskDelay
+ 136 007c 00000000 		.word	TEMP_GetCurrentValue
+ 137 0080 00000000 		.word	MOTOR_Off
+ 138 0084 00000000 		.word	MOTOR_HalfSpeed
+ 139 0088 00000000 		.word	MOTOR_FullSpeed
+ 140              		.cfi_endproc
+ 141              	.LFE69:
+ 143              		.section	.rodata.exampleInit.str1.4,"aMS",%progbits,1
+ 144              		.align	2
+ 145              	.LC0:
+ 146 0000 4578616D 		.ascii	"ExampleTask\000"
+ 146      706C6554 
+ 146      61736B00 
+ 147              		.section	.text.exampleInit,"ax",%progbits
+ 148              		.align	1
+ 149              		.global	exampleInit
+ 150              		.syntax unified
+ 151              		.thumb
+ 152              		.thumb_func
+ 153              		.fpu softvfp
+ 155              	exampleInit:
+ 156              	.LFB70:
+ 157              		.loc 1 33 1 view -0
+ 158              		.cfi_startproc
+ 159              		@ args = 0, pretend = 0, frame = 0
+ 160              		@ frame_needed = 0, uses_anonymous_args = 0
+ 161 0000 10B5     		push	{r4, lr}
+ 162              	.LCFI1:
+ 163              		.cfi_def_cfa_offset 8
+ 164              		.cfi_offset 4, -8
+ 165              		.cfi_offset 14, -4
+ 166 0002 82B0     		sub	sp, sp, #8
+ 167              	.LCFI2:
+ 168              		.cfi_def_cfa_offset 16
+ 169              		.loc 1 34 2 view .LVU22
+ 170 0004 094B     		ldr	r3, .L22
+ 171 0006 9847     		blx	r3
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccTFeMjG.s 			page 4
+
+
+ 172              	.LVL16:
+ 173              		.loc 1 35 2 view .LVU23
+ 174 0008 094B     		ldr	r3, .L22+4
+ 175 000a 9847     		blx	r3
+ 176              	.LVL17:
+ 177              		.loc 1 36 2 view .LVU24
+ 178 000c 094B     		ldr	r3, .L22+8
+ 179 000e 9847     		blx	r3
+ 180              	.LVL18:
+ 181              		.loc 1 37 2 view .LVU25
+ 182 0010 094B     		ldr	r3, .L22+12
+ 183 0012 9847     		blx	r3
+ 184              	.LVL19:
+ 185              		.loc 1 39 2 view .LVU26
+ 186 0014 0023     		movs	r3, #0
+ 187 0016 0193     		str	r3, [sp, #4]
+ 188 0018 0222     		movs	r2, #2
+ 189 001a 0092     		str	r2, [sp]
+ 190 001c 4022     		movs	r2, #64
+ 191 001e 0749     		ldr	r1, .L22+16
+ 192 0020 0748     		ldr	r0, .L22+20
+ 193 0022 084C     		ldr	r4, .L22+24
+ 194 0024 A047     		blx	r4
+ 195              	.LVL20:
+ 196              		.loc 1 41 1 is_stmt 0 view .LVU27
+ 197 0026 02B0     		add	sp, sp, #8
+ 198              	.LCFI3:
+ 199              		.cfi_def_cfa_offset 8
+ 200              		@ sp needed
+ 201 0028 10BD     		pop	{r4, pc}
+ 202              	.L23:
+ 203 002a 00BF     		.align	2
+ 204              	.L22:
+ 205 002c 00000000 		.word	MOTOR_Init
+ 206 0030 00000000 		.word	UART_Init
+ 207 0034 00000000 		.word	LCD_Init
+ 208 0038 00000000 		.word	TEMP_Init
+ 209 003c 00000000 		.word	.LC0
+ 210 0040 00000000 		.word	ExampleTask
+ 211 0044 00000000 		.word	xTaskCreate
+ 212              		.cfi_endproc
+ 213              	.LFE70:
+ 215              		.text
+ 216              	.Letext0:
+ 217              		.file 2 "../c:\\users\\test\\desktop\\gnu mcu\\arm-none-eabi-gcc-10.2.1-1.1\\arm-none-eabi\\includ
+ 218              		.file 3 "../c:\\users\\test\\desktop\\gnu mcu\\arm-none-eabi-gcc-10.2.1-1.1\\arm-none-eabi\\includ
+ 219              		.file 4 "../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/portmacro.h"
+ 220              		.file 5 "../Core/Inc/driver_motor.h"
+ 221              		.file 6 "../Core/Inc/driver_console.h"
+ 222              		.file 7 "../Core/Inc/driver_lcd.h"
+ 223              		.file 8 "../Core/Inc/driver_temp.h"
+ 224              		.file 9 "../Middlewares/Third_Party/FreeRTOS/Source/include/task.h"
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccTFeMjG.s 			page 5
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 example.c
+C:\Users\Test\AppData\Local\Temp\ccTFeMjG.s:19     .text.ExampleTask:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\ccTFeMjG.s:26     .text.ExampleTask:0000000000000000 ExampleTask
+C:\Users\Test\AppData\Local\Temp\ccTFeMjG.s:128    .text.ExampleTask:000000000000005c $d
+C:\Users\Test\AppData\Local\Temp\ccTFeMjG.s:144    .rodata.exampleInit.str1.4:0000000000000000 $d
+C:\Users\Test\AppData\Local\Temp\ccTFeMjG.s:148    .text.exampleInit:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\ccTFeMjG.s:155    .text.exampleInit:0000000000000000 exampleInit
+C:\Users\Test\AppData\Local\Temp\ccTFeMjG.s:205    .text.exampleInit:000000000000002c $d
+
+UNDEFINED SYMBOLS
+__aeabi_fcmple
+__aeabi_fcmpgt
+__aeabi_f2uiz
+LCD_ShowTemperature
+UART_AsyncTransmitTemperature
+vTaskDelay
+TEMP_GetCurrentValue
+MOTOR_Off
+MOTOR_HalfSpeed
+MOTOR_FullSpeed
+MOTOR_Init
+UART_Init
+LCD_Init
+TEMP_Init
+xTaskCreate

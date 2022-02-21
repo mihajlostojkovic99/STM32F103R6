@@ -1,0 +1,484 @@
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccbeiz8q.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 1
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"driver_console.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.UART_TransmitTask,"ax",%progbits
+  16              		.align	1
+  17              		.arch armv7-m
+  18              		.syntax unified
+  19              		.thumb
+  20              		.thumb_func
+  21              		.fpu softvfp
+  23              	UART_TransmitTask:
+  24              	.LFB69:
+  25              		.file 1 "../Core/Src/driver_console.c"
+   1:../Core/Src/driver_console.c **** 
+  26              		.loc 1 18 1 view -0
+  27              		.cfi_startproc
+  28              		@ Volatile: function does not return.
+  29              		@ args = 0, pretend = 0, frame = 8
+  30              		@ frame_needed = 0, uses_anonymous_args = 0
+  31              	.LVL0:
+  32              		.loc 1 18 1 is_stmt 0 view .LVU1
+  33 0000 00B5     		push	{lr}
+  34              	.LCFI0:
+  35              		.cfi_def_cfa_offset 4
+  36              		.cfi_offset 14, -4
+  37 0002 83B0     		sub	sp, sp, #12
+  38              	.LCFI1:
+  39              		.cfi_def_cfa_offset 16
+  40              	.LVL1:
+  41              	.L2:
+  42              		.loc 1 19 2 is_stmt 1 discriminator 1 view .LVU2
+  43              		.loc 1 20 2 discriminator 1 view .LVU3
+  44              		.loc 1 22 3 discriminator 1 view .LVU4
+  45 0004 4FF0FF32 		mov	r2, #-1
+  46 0008 0DF10701 		add	r1, sp, #7
+  47 000c 074B     		ldr	r3, .L4
+  48 000e 1868     		ldr	r0, [r3]
+  49 0010 074B     		ldr	r3, .L4+4
+  50 0012 9847     		blx	r3
+  51              	.LVL2:
+  52              		.loc 1 23 3 discriminator 1 view .LVU5
+  53 0014 0122     		movs	r2, #1
+  54 0016 0DF10701 		add	r1, sp, #7
+  55 001a 0648     		ldr	r0, .L4+8
+  56 001c 064B     		ldr	r3, .L4+12
+  57 001e 9847     		blx	r3
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccbeiz8q.s 			page 2
+
+
+  58              	.LVL3:
+  59              		.loc 1 24 3 discriminator 1 view .LVU6
+  60 0020 4FF0FF31 		mov	r1, #-1
+  61 0024 0120     		movs	r0, #1
+  62 0026 054B     		ldr	r3, .L4+16
+  63 0028 9847     		blx	r3
+  64              	.LVL4:
+  65              		.loc 1 20 7 discriminator 1 view .LVU7
+  66 002a EBE7     		b	.L2
+  67              	.L5:
+  68              		.align	2
+  69              	.L4:
+  70 002c 00000000 		.word	.LANCHOR0
+  71 0030 00000000 		.word	xQueueReceive
+  72 0034 00000000 		.word	huart1
+  73 0038 00000000 		.word	HAL_UART_Transmit_IT
+  74 003c 00000000 		.word	ulTaskNotifyTake
+  75              		.cfi_endproc
+  76              	.LFE69:
+  78              		.section	.text.HAL_UART_TxCpltCallback,"ax",%progbits
+  79              		.align	1
+  80              		.global	HAL_UART_TxCpltCallback
+  81              		.syntax unified
+  82              		.thumb
+  83              		.thumb_func
+  84              		.fpu softvfp
+  86              	HAL_UART_TxCpltCallback:
+  87              	.LVL5:
+  88              	.LFB70:
+  89              		.loc 1 30 1 view -0
+  90              		.cfi_startproc
+  91              		@ args = 0, pretend = 0, frame = 8
+  92              		@ frame_needed = 0, uses_anonymous_args = 0
+  93              		.loc 1 31 2 view .LVU9
+  94              		.loc 1 31 11 is_stmt 0 view .LVU10
+  95 0000 0268     		ldr	r2, [r0]
+  96              		.loc 1 31 31 view .LVU11
+  97 0002 0E4B     		ldr	r3, .L14
+  98 0004 1B68     		ldr	r3, [r3]
+  99              		.loc 1 31 5 view .LVU12
+ 100 0006 9A42     		cmp	r2, r3
+ 101 0008 00D0     		beq	.L13
+ 102 000a 7047     		bx	lr
+ 103              	.L13:
+ 104              		.loc 1 30 1 view .LVU13
+ 105 000c 00B5     		push	{lr}
+ 106              	.LCFI2:
+ 107              		.cfi_def_cfa_offset 4
+ 108              		.cfi_offset 14, -4
+ 109 000e 83B0     		sub	sp, sp, #12
+ 110              	.LCFI3:
+ 111              		.cfi_def_cfa_offset 16
+ 112              	.LBB2:
+ 113              		.loc 1 33 3 is_stmt 1 view .LVU14
+ 114              		.loc 1 33 14 is_stmt 0 view .LVU15
+ 115 0010 0023     		movs	r3, #0
+ 116 0012 0193     		str	r3, [sp, #4]
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccbeiz8q.s 			page 3
+
+
+ 117              		.loc 1 34 3 is_stmt 1 view .LVU16
+ 118 0014 01A9     		add	r1, sp, #4
+ 119 0016 0A4B     		ldr	r3, .L14+4
+ 120 0018 1868     		ldr	r0, [r3]
+ 121              	.LVL6:
+ 122              		.loc 1 34 3 is_stmt 0 view .LVU17
+ 123 001a 0A4B     		ldr	r3, .L14+8
+ 124 001c 9847     		blx	r3
+ 125              	.LVL7:
+ 126              		.loc 1 35 3 is_stmt 1 view .LVU18
+ 127 001e 019B     		ldr	r3, [sp, #4]
+ 128 0020 4BB1     		cbz	r3, .L6
+ 129              		.loc 1 35 3 discriminator 1 view .LVU19
+ 130 0022 4FF0E023 		mov	r3, #-536813568
+ 131 0026 4FF08052 		mov	r2, #268435456
+ 132 002a C3F8042D 		str	r2, [r3, #3332]
+ 133              		.loc 1 35 3 discriminator 1 view .LVU20
+ 134              		.syntax unified
+ 135              	@ 35 "Core/Src/driver_console.c" 1
+ 136 002e BFF34F8F 		dsb
+ 137              	@ 0 "" 2
+ 138              		.loc 1 35 3 discriminator 1 view .LVU21
+ 139              	@ 35 "Core/Src/driver_console.c" 1
+ 140 0032 BFF36F8F 		isb
+ 141              	@ 0 "" 2
+ 142              		.loc 1 35 28 discriminator 1 view .LVU22
+ 143              		.thumb
+ 144              		.syntax unified
+ 145              	.L6:
+ 146              	.LBE2:
+ 147              		.loc 1 37 1 is_stmt 0 view .LVU23
+ 148 0036 03B0     		add	sp, sp, #12
+ 149              	.LCFI4:
+ 150              		.cfi_def_cfa_offset 4
+ 151              		@ sp needed
+ 152 0038 5DF804FB 		ldr	pc, [sp], #4
+ 153              	.L15:
+ 154              		.align	2
+ 155              	.L14:
+ 156 003c 00000000 		.word	huart1
+ 157 0040 00000000 		.word	.LANCHOR1
+ 158 0044 00000000 		.word	vTaskNotifyGiveFromISR
+ 159              		.cfi_endproc
+ 160              	.LFE70:
+ 162              		.section	.rodata.UART_AsyncTransmitTemperature.str1.4,"aMS",%progbits,1
+ 163              		.align	2
+ 164              	.LC0:
+ 165 0000 54656D70 		.ascii	"Temperatura: \000"
+ 165      65726174 
+ 165      7572613A 
+ 165      2000
+ 166              		.section	.text.UART_AsyncTransmitTemperature,"ax",%progbits
+ 167              		.align	1
+ 168              		.global	UART_AsyncTransmitTemperature
+ 169              		.syntax unified
+ 170              		.thumb
+ 171              		.thumb_func
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccbeiz8q.s 			page 4
+
+
+ 172              		.fpu softvfp
+ 174              	UART_AsyncTransmitTemperature:
+ 175              	.LVL8:
+ 176              	.LFB71:
+ 177              		.loc 1 41 1 is_stmt 1 view -0
+ 178              		.cfi_startproc
+ 179              		@ args = 0, pretend = 0, frame = 24
+ 180              		@ frame_needed = 0, uses_anonymous_args = 0
+ 181              		.loc 1 41 1 is_stmt 0 view .LVU25
+ 182 0000 70B5     		push	{r4, r5, r6, lr}
+ 183              	.LCFI5:
+ 184              		.cfi_def_cfa_offset 16
+ 185              		.cfi_offset 4, -16
+ 186              		.cfi_offset 5, -12
+ 187              		.cfi_offset 6, -8
+ 188              		.cfi_offset 14, -4
+ 189 0002 86B0     		sub	sp, sp, #24
+ 190              	.LCFI6:
+ 191              		.cfi_def_cfa_offset 40
+ 192 0004 0646     		mov	r6, r0
+ 193              		.loc 1 43 2 is_stmt 1 view .LVU26
+ 194              		.loc 1 43 7 is_stmt 0 view .LVU27
+ 195 0006 0823     		movs	r3, #8
+ 196 0008 8DF81730 		strb	r3, [sp, #23]
+ 197              		.loc 1 44 2 is_stmt 1 view .LVU28
+ 198              	.LBB3:
+ 199              		.loc 1 44 7 view .LVU29
+ 200              	.LVL9:
+ 201              		.loc 1 44 16 is_stmt 0 view .LVU30
+ 202 000c 0024     		movs	r4, #0
+ 203              		.loc 1 44 2 view .LVU31
+ 204 000e 09E0     		b	.L17
+ 205              	.LVL10:
+ 206              	.L18:
+ 207              		.loc 1 46 3 is_stmt 1 discriminator 3 view .LVU32
+ 208 0010 0023     		movs	r3, #0
+ 209 0012 4FF0FF32 		mov	r2, #-1
+ 210 0016 0DF11701 		add	r1, sp, #23
+ 211 001a 1E48     		ldr	r0, .L26
+ 212 001c 0068     		ldr	r0, [r0]
+ 213 001e 1E4D     		ldr	r5, .L26+4
+ 214 0020 A847     		blx	r5
+ 215              	.LVL11:
+ 216              		.loc 1 44 31 discriminator 3 view .LVU33
+ 217              		.loc 1 44 32 is_stmt 0 discriminator 3 view .LVU34
+ 218 0022 0134     		adds	r4, r4, #1
+ 219              	.LVL12:
+ 220              	.L17:
+ 221              		.loc 1 44 23 is_stmt 1 discriminator 1 view .LVU35
+ 222              		.loc 1 44 2 is_stmt 0 discriminator 1 view .LVU36
+ 223 0024 0F2C     		cmp	r4, #15
+ 224 0026 F3D9     		bls	.L18
+ 225              	.LBE3:
+ 226              		.loc 1 50 2 is_stmt 1 view .LVU37
+ 227              		.loc 1 50 7 is_stmt 0 view .LVU38
+ 228 0028 1C4B     		ldr	r3, .L26+8
+ 229 002a 02AC     		add	r4, sp, #8
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccbeiz8q.s 			page 5
+
+
+ 230              	.LVL13:
+ 231              		.loc 1 50 7 view .LVU39
+ 232 002c 0FCB     		ldm	r3, {r0, r1, r2, r3}
+ 233 002e 07C4     		stmia	r4!, {r0, r1, r2}
+ 234 0030 2370     		strb	r3, [r4]
+ 235              		.loc 1 51 2 is_stmt 1 view .LVU40
+ 236              	.LBB4:
+ 237              		.loc 1 51 7 view .LVU41
+ 238              	.LVL14:
+ 239              		.loc 1 51 16 is_stmt 0 view .LVU42
+ 240 0032 0024     		movs	r4, #0
+ 241              		.loc 1 51 2 view .LVU43
+ 242 0034 09E0     		b	.L19
+ 243              	.LVL15:
+ 244              	.L20:
+ 245              		.loc 1 53 3 is_stmt 1 discriminator 3 view .LVU44
+ 246 0036 0023     		movs	r3, #0
+ 247 0038 4FF0FF32 		mov	r2, #-1
+ 248 003c 02A9     		add	r1, sp, #8
+ 249 003e 2144     		add	r1, r1, r4
+ 250 0040 1448     		ldr	r0, .L26
+ 251 0042 0068     		ldr	r0, [r0]
+ 252 0044 144D     		ldr	r5, .L26+4
+ 253 0046 A847     		blx	r5
+ 254              	.LVL16:
+ 255              		.loc 1 51 31 discriminator 3 view .LVU45
+ 256              		.loc 1 51 32 is_stmt 0 discriminator 3 view .LVU46
+ 257 0048 0134     		adds	r4, r4, #1
+ 258              	.LVL17:
+ 259              	.L19:
+ 260              		.loc 1 51 23 is_stmt 1 discriminator 1 view .LVU47
+ 261              		.loc 1 51 2 is_stmt 0 discriminator 1 view .LVU48
+ 262 004a 0C2C     		cmp	r4, #12
+ 263 004c F3D9     		bls	.L20
+ 264              	.LBE4:
+ 265              		.loc 1 57 11 view .LVU49
+ 266 004e 0324     		movs	r4, #3
+ 267              	.LVL18:
+ 268              		.loc 1 57 11 view .LVU50
+ 269 0050 0FE0     		b	.L21
+ 270              	.LVL19:
+ 271              	.L22:
+ 272              		.loc 1 60 3 is_stmt 1 view .LVU51
+ 273              		.loc 1 60 32 is_stmt 0 view .LVU52
+ 274 0052 134B     		ldr	r3, .L26+12
+ 275 0054 A3FB0623 		umull	r2, r3, r3, r6
+ 276 0058 DB08     		lsrs	r3, r3, #3
+ 277 005a 1A46     		mov	r2, r3
+ 278 005c 03EB8303 		add	r3, r3, r3, lsl #2
+ 279 0060 A6EB4303 		sub	r3, r6, r3, lsl #1
+ 280              		.loc 1 60 19 view .LVU53
+ 281 0064 013C     		subs	r4, r4, #1
+ 282              	.LVL20:
+ 283              		.loc 1 60 25 view .LVU54
+ 284 0066 3033     		adds	r3, r3, #48
+ 285              		.loc 1 60 19 view .LVU55
+ 286 0068 06A9     		add	r1, sp, #24
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccbeiz8q.s 			page 6
+
+
+ 287 006a 2144     		add	r1, r1, r4
+ 288 006c 01F8143C 		strb	r3, [r1, #-20]
+ 289              		.loc 1 61 3 is_stmt 1 view .LVU56
+ 290              		.loc 1 61 8 is_stmt 0 view .LVU57
+ 291 0070 1646     		mov	r6, r2
+ 292              	.LVL21:
+ 293              	.L21:
+ 294              		.loc 1 58 8 is_stmt 1 view .LVU58
+ 295 0072 002E     		cmp	r6, #0
+ 296 0074 EDD1     		bne	.L22
+ 297 0076 09E0     		b	.L23
+ 298              	.LVL22:
+ 299              	.L24:
+ 300              	.LBB5:
+ 301              		.loc 1 66 4 discriminator 3 view .LVU59
+ 302 0078 0023     		movs	r3, #0
+ 303 007a 4FF0FF32 		mov	r2, #-1
+ 304 007e 01A9     		add	r1, sp, #4
+ 305 0080 2144     		add	r1, r1, r4
+ 306 0082 0448     		ldr	r0, .L26
+ 307 0084 0068     		ldr	r0, [r0]
+ 308 0086 044D     		ldr	r5, .L26+4
+ 309 0088 A847     		blx	r5
+ 310              	.LVL23:
+ 311              		.loc 1 64 34 discriminator 3 view .LVU60
+ 312              		.loc 1 64 35 is_stmt 0 discriminator 3 view .LVU61
+ 313 008a 0134     		adds	r4, r4, #1
+ 314              	.LVL24:
+ 315              	.L23:
+ 316              		.loc 1 64 27 is_stmt 1 discriminator 1 view .LVU62
+ 317              		.loc 1 64 2 is_stmt 0 discriminator 1 view .LVU63
+ 318 008c 022C     		cmp	r4, #2
+ 319 008e F3D9     		bls	.L24
+ 320              	.LBE5:
+ 321              		.loc 1 70 1 view .LVU64
+ 322 0090 06B0     		add	sp, sp, #24
+ 323              	.LCFI7:
+ 324              		.cfi_def_cfa_offset 16
+ 325              		@ sp needed
+ 326 0092 70BD     		pop	{r4, r5, r6, pc}
+ 327              	.LVL25:
+ 328              	.L27:
+ 329              		.loc 1 70 1 view .LVU65
+ 330              		.align	2
+ 331              	.L26:
+ 332 0094 00000000 		.word	.LANCHOR0
+ 333 0098 00000000 		.word	xQueueGenericSend
+ 334 009c 00000000 		.word	.LC0
+ 335 00a0 CDCCCCCC 		.word	-858993459
+ 336              		.cfi_endproc
+ 337              	.LFE71:
+ 339              		.section	.rodata.UART_Init.str1.4,"aMS",%progbits,1
+ 340              		.align	2
+ 341              	.LC1:
+ 342 0000 55415254 		.ascii	"UART_TransmitTask\000"
+ 342      5F547261 
+ 342      6E736D69 
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccbeiz8q.s 			page 7
+
+
+ 342      74546173 
+ 342      6B00
+ 343              		.section	.text.UART_Init,"ax",%progbits
+ 344              		.align	1
+ 345              		.global	UART_Init
+ 346              		.syntax unified
+ 347              		.thumb
+ 348              		.thumb_func
+ 349              		.fpu softvfp
+ 351              	UART_Init:
+ 352              	.LFB72:
+ 353              		.loc 1 74 1 is_stmt 1 view -0
+ 354              		.cfi_startproc
+ 355              		@ args = 0, pretend = 0, frame = 0
+ 356              		@ frame_needed = 0, uses_anonymous_args = 0
+ 357 0000 10B5     		push	{r4, lr}
+ 358              	.LCFI8:
+ 359              		.cfi_def_cfa_offset 8
+ 360              		.cfi_offset 4, -8
+ 361              		.cfi_offset 14, -4
+ 362 0002 82B0     		sub	sp, sp, #8
+ 363              	.LCFI9:
+ 364              		.cfi_def_cfa_offset 16
+ 365              		.loc 1 75 2 view .LVU67
+ 366 0004 094B     		ldr	r3, .L30
+ 367 0006 0193     		str	r3, [sp, #4]
+ 368 0008 0523     		movs	r3, #5
+ 369 000a 0093     		str	r3, [sp]
+ 370 000c 0023     		movs	r3, #0
+ 371 000e 4022     		movs	r2, #64
+ 372 0010 0749     		ldr	r1, .L30+4
+ 373 0012 0848     		ldr	r0, .L30+8
+ 374 0014 084C     		ldr	r4, .L30+12
+ 375 0016 A047     		blx	r4
+ 376              	.LVL26:
+ 377              		.loc 1 76 2 view .LVU68
+ 378              		.loc 1 76 29 is_stmt 0 view .LVU69
+ 379 0018 0022     		movs	r2, #0
+ 380 001a 0121     		movs	r1, #1
+ 381 001c 4020     		movs	r0, #64
+ 382 001e 074B     		ldr	r3, .L30+16
+ 383 0020 9847     		blx	r3
+ 384              	.LVL27:
+ 385              		.loc 1 76 27 view .LVU70
+ 386 0022 074B     		ldr	r3, .L30+20
+ 387 0024 1860     		str	r0, [r3]
+ 388              		.loc 1 77 1 view .LVU71
+ 389 0026 02B0     		add	sp, sp, #8
+ 390              	.LCFI10:
+ 391              		.cfi_def_cfa_offset 8
+ 392              		@ sp needed
+ 393 0028 10BD     		pop	{r4, pc}
+ 394              	.L31:
+ 395 002a 00BF     		.align	2
+ 396              	.L30:
+ 397 002c 00000000 		.word	.LANCHOR1
+ 398 0030 00000000 		.word	.LC1
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccbeiz8q.s 			page 8
+
+
+ 399 0034 00000000 		.word	UART_TransmitTask
+ 400 0038 00000000 		.word	xTaskCreate
+ 401 003c 00000000 		.word	xQueueGenericCreate
+ 402 0040 00000000 		.word	.LANCHOR0
+ 403              		.cfi_endproc
+ 404              	.LFE72:
+ 406              		.section	.bss.TransmitTaskHandle,"aw",%nobits
+ 407              		.align	2
+ 408              		.set	.LANCHOR1,. + 0
+ 411              	TransmitTaskHandle:
+ 412 0000 00000000 		.space	4
+ 413              		.section	.bss.UART_TransmitQueueHandle,"aw",%nobits
+ 414              		.align	2
+ 415              		.set	.LANCHOR0,. + 0
+ 418              	UART_TransmitQueueHandle:
+ 419 0000 00000000 		.space	4
+ 420              		.text
+ 421              	.Letext0:
+ 422              		.file 2 "../c:\\users\\test\\desktop\\gnu mcu\\arm-none-eabi-gcc-10.2.1-1.1\\arm-none-eabi\\includ
+ 423              		.file 3 "../c:\\users\\test\\desktop\\gnu mcu\\arm-none-eabi-gcc-10.2.1-1.1\\arm-none-eabi\\includ
+ 424              		.file 4 "../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/portmacro.h"
+ 425              		.file 5 "../Middlewares/Third_Party/FreeRTOS/Source/include/task.h"
+ 426              		.file 6 "../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h"
+ 427              		.file 7 "../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103x6.h"
+ 428              		.file 8 "../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
+ 429              		.file 9 "../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h"
+ 430              		.file 10 "../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h"
+ 431              		.file 11 "../Core/Inc/usart.h"
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccbeiz8q.s 			page 9
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 driver_console.c
+C:\Users\Test\AppData\Local\Temp\ccbeiz8q.s:16     .text.UART_TransmitTask:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\ccbeiz8q.s:23     .text.UART_TransmitTask:0000000000000000 UART_TransmitTask
+C:\Users\Test\AppData\Local\Temp\ccbeiz8q.s:70     .text.UART_TransmitTask:000000000000002c $d
+C:\Users\Test\AppData\Local\Temp\ccbeiz8q.s:79     .text.HAL_UART_TxCpltCallback:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\ccbeiz8q.s:86     .text.HAL_UART_TxCpltCallback:0000000000000000 HAL_UART_TxCpltCallback
+C:\Users\Test\AppData\Local\Temp\ccbeiz8q.s:156    .text.HAL_UART_TxCpltCallback:000000000000003c $d
+C:\Users\Test\AppData\Local\Temp\ccbeiz8q.s:163    .rodata.UART_AsyncTransmitTemperature.str1.4:0000000000000000 $d
+C:\Users\Test\AppData\Local\Temp\ccbeiz8q.s:167    .text.UART_AsyncTransmitTemperature:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\ccbeiz8q.s:174    .text.UART_AsyncTransmitTemperature:0000000000000000 UART_AsyncTransmitTemperature
+C:\Users\Test\AppData\Local\Temp\ccbeiz8q.s:332    .text.UART_AsyncTransmitTemperature:0000000000000094 $d
+C:\Users\Test\AppData\Local\Temp\ccbeiz8q.s:340    .rodata.UART_Init.str1.4:0000000000000000 $d
+C:\Users\Test\AppData\Local\Temp\ccbeiz8q.s:344    .text.UART_Init:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\ccbeiz8q.s:351    .text.UART_Init:0000000000000000 UART_Init
+C:\Users\Test\AppData\Local\Temp\ccbeiz8q.s:397    .text.UART_Init:000000000000002c $d
+C:\Users\Test\AppData\Local\Temp\ccbeiz8q.s:407    .bss.TransmitTaskHandle:0000000000000000 $d
+C:\Users\Test\AppData\Local\Temp\ccbeiz8q.s:411    .bss.TransmitTaskHandle:0000000000000000 TransmitTaskHandle
+C:\Users\Test\AppData\Local\Temp\ccbeiz8q.s:414    .bss.UART_TransmitQueueHandle:0000000000000000 $d
+C:\Users\Test\AppData\Local\Temp\ccbeiz8q.s:418    .bss.UART_TransmitQueueHandle:0000000000000000 UART_TransmitQueueHandle
+
+UNDEFINED SYMBOLS
+xQueueReceive
+huart1
+HAL_UART_Transmit_IT
+ulTaskNotifyTake
+vTaskNotifyGiveFromISR
+xQueueGenericSend
+xTaskCreate
+xQueueGenericCreate

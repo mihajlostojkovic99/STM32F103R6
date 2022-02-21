@@ -1,0 +1,247 @@
+ARM GAS  C:\Users\Test\AppData\Local\Temp\cc4Ihuv5.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 1
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"system_stm32f1xx.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.SystemInit,"ax",%progbits
+  16              		.align	1
+  17              		.global	SystemInit
+  18              		.arch armv7-m
+  19              		.syntax unified
+  20              		.thumb
+  21              		.thumb_func
+  22              		.fpu softvfp
+  24              	SystemInit:
+  25              	.LFB65:
+  26              		.file 1 "../Core/Src/system_stm32f1xx.c"
+   1:../Core/Src/system_stm32f1xx.c **** 
+  27              		.loc 1 177 1 view -0
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 0, uses_anonymous_args = 0
+  31              		@ link register save eliminated.
+  32              		.loc 1 188 1 view .LVU1
+  33 0000 7047     		bx	lr
+  34              		.cfi_endproc
+  35              	.LFE65:
+  37              		.section	.text.SystemCoreClockUpdate,"ax",%progbits
+  38              		.align	1
+  39              		.global	SystemCoreClockUpdate
+  40              		.syntax unified
+  41              		.thumb
+  42              		.thumb_func
+  43              		.fpu softvfp
+  45              	SystemCoreClockUpdate:
+  46              	.LFB66:
+  47              		.loc 1 226 1 view -0
+  48              		.cfi_startproc
+  49              		@ args = 0, pretend = 0, frame = 0
+  50              		@ frame_needed = 0, uses_anonymous_args = 0
+  51              		@ link register save eliminated.
+  52              		.loc 1 227 3 view .LVU3
+  53              	.LVL0:
+  54              		.loc 1 238 3 view .LVU4
+  55              		.loc 1 238 12 is_stmt 0 view .LVU5
+  56 0000 1F4B     		ldr	r3, .L10
+  57 0002 5B68     		ldr	r3, [r3, #4]
+  58              		.loc 1 238 7 view .LVU6
+  59 0004 03F00C03 		and	r3, r3, #12
+ARM GAS  C:\Users\Test\AppData\Local\Temp\cc4Ihuv5.s 			page 2
+
+
+  60              	.LVL1:
+  61              		.loc 1 240 3 is_stmt 1 view .LVU7
+  62 0008 042B     		cmp	r3, #4
+  63 000a 14D0     		beq	.L3
+  64 000c 082B     		cmp	r3, #8
+  65 000e 16D0     		beq	.L4
+  66 0010 1BB1     		cbz	r3, .L9
+  67              		.loc 1 322 7 view .LVU8
+  68              		.loc 1 322 23 is_stmt 0 view .LVU9
+  69 0012 1C4B     		ldr	r3, .L10+4
+  70              	.LVL2:
+  71              		.loc 1 322 23 view .LVU10
+  72 0014 1C4A     		ldr	r2, .L10+8
+  73 0016 1A60     		str	r2, [r3]
+  74              		.loc 1 323 7 is_stmt 1 view .LVU11
+  75 0018 02E0     		b	.L6
+  76              	.LVL3:
+  77              	.L9:
+  78              		.loc 1 243 7 view .LVU12
+  79              		.loc 1 243 23 is_stmt 0 view .LVU13
+  80 001a 1A4B     		ldr	r3, .L10+4
+  81              	.LVL4:
+  82              		.loc 1 243 23 view .LVU14
+  83 001c 1A4A     		ldr	r2, .L10+8
+  84 001e 1A60     		str	r2, [r3]
+  85              		.loc 1 244 7 is_stmt 1 view .LVU15
+  86              	.LVL5:
+  87              	.L6:
+  88              		.loc 1 328 3 view .LVU16
+  89              		.loc 1 328 28 is_stmt 0 view .LVU17
+  90 0020 174B     		ldr	r3, .L10
+  91 0022 5B68     		ldr	r3, [r3, #4]
+  92              		.loc 1 328 52 view .LVU18
+  93 0024 C3F30313 		ubfx	r3, r3, #4, #4
+  94              		.loc 1 328 22 view .LVU19
+  95 0028 184A     		ldr	r2, .L10+12
+  96 002a D15C     		ldrb	r1, [r2, r3]	@ zero_extendqisi2
+  97              	.LVL6:
+  98              		.loc 1 330 3 is_stmt 1 view .LVU20
+  99              		.loc 1 330 19 is_stmt 0 view .LVU21
+ 100 002c 154A     		ldr	r2, .L10+4
+ 101 002e 1368     		ldr	r3, [r2]
+ 102 0030 CB40     		lsrs	r3, r3, r1
+ 103 0032 1360     		str	r3, [r2]
+ 104              		.loc 1 331 1 view .LVU22
+ 105 0034 7047     		bx	lr
+ 106              	.LVL7:
+ 107              	.L3:
+ 108              		.loc 1 246 7 is_stmt 1 view .LVU23
+ 109              		.loc 1 246 23 is_stmt 0 view .LVU24
+ 110 0036 134B     		ldr	r3, .L10+4
+ 111              	.LVL8:
+ 112              		.loc 1 246 23 view .LVU25
+ 113 0038 134A     		ldr	r2, .L10+8
+ 114 003a 1A60     		str	r2, [r3]
+ 115              		.loc 1 247 7 is_stmt 1 view .LVU26
+ 116 003c F0E7     		b	.L6
+ARM GAS  C:\Users\Test\AppData\Local\Temp\cc4Ihuv5.s 			page 3
+
+
+ 117              	.LVL9:
+ 118              	.L4:
+ 119              		.loc 1 251 7 view .LVU27
+ 120              		.loc 1 251 20 is_stmt 0 view .LVU28
+ 121 003e 104A     		ldr	r2, .L10
+ 122 0040 5368     		ldr	r3, [r2, #4]
+ 123              	.LVL10:
+ 124              		.loc 1 252 7 is_stmt 1 view .LVU29
+ 125              		.loc 1 252 22 is_stmt 0 view .LVU30
+ 126 0042 5268     		ldr	r2, [r2, #4]
+ 127              	.LVL11:
+ 128              		.loc 1 255 7 is_stmt 1 view .LVU31
+ 129              		.loc 1 255 27 is_stmt 0 view .LVU32
+ 130 0044 C3F38343 		ubfx	r3, r3, #18, #4
+ 131              	.LVL12:
+ 132              		.loc 1 255 15 view .LVU33
+ 133 0048 0233     		adds	r3, r3, #2
+ 134              	.LVL13:
+ 135              		.loc 1 257 7 is_stmt 1 view .LVU34
+ 136              		.loc 1 257 10 is_stmt 0 view .LVU35
+ 137 004a 12F4803F 		tst	r2, #65536
+ 138 004e 05D1     		bne	.L7
+ 139              		.loc 1 260 9 is_stmt 1 view .LVU36
+ 140              		.loc 1 260 45 is_stmt 0 view .LVU37
+ 141 0050 0F4A     		ldr	r2, .L10+16
+ 142              	.LVL14:
+ 143              		.loc 1 260 45 view .LVU38
+ 144 0052 02FB03F3 		mul	r3, r2, r3
+ 145              	.LVL15:
+ 146              		.loc 1 260 25 view .LVU39
+ 147 0056 0B4A     		ldr	r2, .L10+4
+ 148 0058 1360     		str	r3, [r2]
+ 149 005a E1E7     		b	.L6
+ 150              	.LVL16:
+ 151              	.L7:
+ 152              		.loc 1 270 9 is_stmt 1 view .LVU40
+ 153              		.loc 1 270 17 is_stmt 0 view .LVU41
+ 154 005c 084A     		ldr	r2, .L10
+ 155              	.LVL17:
+ 156              		.loc 1 270 17 view .LVU42
+ 157 005e 5268     		ldr	r2, [r2, #4]
+ 158              		.loc 1 270 12 view .LVU43
+ 159 0060 12F4003F 		tst	r2, #131072
+ 160 0064 05D0     		beq	.L8
+ 161              		.loc 1 272 11 is_stmt 1 view .LVU44
+ 162              		.loc 1 272 47 is_stmt 0 view .LVU45
+ 163 0066 0A4A     		ldr	r2, .L10+16
+ 164 0068 02FB03F3 		mul	r3, r2, r3
+ 165              	.LVL18:
+ 166              		.loc 1 272 27 view .LVU46
+ 167 006c 054A     		ldr	r2, .L10+4
+ 168 006e 1360     		str	r3, [r2]
+ 169 0070 D6E7     		b	.L6
+ 170              	.LVL19:
+ 171              	.L8:
+ 172              		.loc 1 276 11 is_stmt 1 view .LVU47
+ 173              		.loc 1 276 39 is_stmt 0 view .LVU48
+ARM GAS  C:\Users\Test\AppData\Local\Temp\cc4Ihuv5.s 			page 4
+
+
+ 174 0072 054A     		ldr	r2, .L10+8
+ 175 0074 02FB03F3 		mul	r3, r2, r3
+ 176              	.LVL20:
+ 177              		.loc 1 276 27 view .LVU49
+ 178 0078 024A     		ldr	r2, .L10+4
+ 179 007a 1360     		str	r3, [r2]
+ 180 007c D0E7     		b	.L6
+ 181              	.L11:
+ 182 007e 00BF     		.align	2
+ 183              	.L10:
+ 184 0080 00100240 		.word	1073876992
+ 185 0084 00000000 		.word	.LANCHOR0
+ 186 0088 00127A00 		.word	8000000
+ 187 008c 00000000 		.word	.LANCHOR1
+ 188 0090 00093D00 		.word	4000000
+ 189              		.cfi_endproc
+ 190              	.LFE66:
+ 192              		.global	APBPrescTable
+ 193              		.global	AHBPrescTable
+ 194              		.global	SystemCoreClock
+ 195              		.section	.data.SystemCoreClock,"aw"
+ 196              		.align	2
+ 197              		.set	.LANCHOR0,. + 0
+ 200              	SystemCoreClock:
+ 201 0000 0024F400 		.word	16000000
+ 202              		.section	.rodata.AHBPrescTable,"a"
+ 203              		.align	2
+ 204              		.set	.LANCHOR1,. + 0
+ 207              	AHBPrescTable:
+ 208 0000 00000000 		.ascii	"\000\000\000\000\000\000\000\000\001\002\003\004\006"
+ 208      00000000 
+ 208      01020304 
+ 208      06
+ 209 000d 070809   		.ascii	"\007\010\011"
+ 210              		.section	.rodata.APBPrescTable,"a"
+ 211              		.align	2
+ 214              	APBPrescTable:
+ 215 0000 00000000 		.ascii	"\000\000\000\000\001\002\003\004"
+ 215      01020304 
+ 216              		.text
+ 217              	.Letext0:
+ 218              		.file 2 "../c:\\users\\test\\desktop\\gnu mcu\\arm-none-eabi-gcc-10.2.1-1.1\\arm-none-eabi\\includ
+ 219              		.file 3 "../c:\\users\\test\\desktop\\gnu mcu\\arm-none-eabi-gcc-10.2.1-1.1\\arm-none-eabi\\includ
+ 220              		.file 4 "../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h"
+ 221              		.file 5 "../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103x6.h"
+ 222              		.file 6 "../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h"
+ARM GAS  C:\Users\Test\AppData\Local\Temp\cc4Ihuv5.s 			page 5
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 system_stm32f1xx.c
+C:\Users\Test\AppData\Local\Temp\cc4Ihuv5.s:16     .text.SystemInit:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\cc4Ihuv5.s:24     .text.SystemInit:0000000000000000 SystemInit
+C:\Users\Test\AppData\Local\Temp\cc4Ihuv5.s:38     .text.SystemCoreClockUpdate:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\cc4Ihuv5.s:45     .text.SystemCoreClockUpdate:0000000000000000 SystemCoreClockUpdate
+C:\Users\Test\AppData\Local\Temp\cc4Ihuv5.s:184    .text.SystemCoreClockUpdate:0000000000000080 $d
+C:\Users\Test\AppData\Local\Temp\cc4Ihuv5.s:214    .rodata.APBPrescTable:0000000000000000 APBPrescTable
+C:\Users\Test\AppData\Local\Temp\cc4Ihuv5.s:207    .rodata.AHBPrescTable:0000000000000000 AHBPrescTable
+C:\Users\Test\AppData\Local\Temp\cc4Ihuv5.s:200    .data.SystemCoreClock:0000000000000000 SystemCoreClock
+C:\Users\Test\AppData\Local\Temp\cc4Ihuv5.s:196    .data.SystemCoreClock:0000000000000000 $d
+C:\Users\Test\AppData\Local\Temp\cc4Ihuv5.s:203    .rodata.AHBPrescTable:0000000000000000 $d
+C:\Users\Test\AppData\Local\Temp\cc4Ihuv5.s:211    .rodata.APBPrescTable:0000000000000000 $d
+
+NO UNDEFINED SYMBOLS

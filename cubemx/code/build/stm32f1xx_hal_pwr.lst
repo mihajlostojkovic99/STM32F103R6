@@ -1,0 +1,845 @@
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccQqQMES.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 1
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"stm32f1xx_hal_pwr.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.PWR_OverloadWfe,"ax",%progbits
+  16              		.align	1
+  17              		.arch armv7-m
+  18              		.syntax unified
+  19              		.thumb
+  20              		.thumb_func
+  21              		.fpu softvfp
+  23              	PWR_OverloadWfe:
+  24              	.LFB65:
+  25              		.file 1 "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c"
+   1:../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c **** 
+  26              		.loc 1 118 1 view -0
+  27              		.cfi_startproc
+  28              		@ args = 0, pretend = 0, frame = 0
+  29              		@ frame_needed = 0, uses_anonymous_args = 0
+  30              		@ link register save eliminated.
+  31              		.loc 1 119 3 view .LVU1
+  32              		.syntax unified
+  33              	@ 119 "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c" 1
+  34 0000 20BF     		wfe
+  35              	@ 0 "" 2
+  36              		.loc 1 120 3 view .LVU2
+  37              	@ 120 "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c" 1
+  38 0002 00BF     		nop
+  39              	@ 0 "" 2
+  40              		.loc 1 121 1 is_stmt 0 view .LVU3
+  41              		.thumb
+  42              		.syntax unified
+  43 0004 7047     		bx	lr
+  44              		.cfi_endproc
+  45              	.LFE65:
+  47              		.section	.text.HAL_PWR_DeInit,"ax",%progbits
+  48              		.align	1
+  49              		.global	HAL_PWR_DeInit
+  50              		.syntax unified
+  51              		.thumb
+  52              		.thumb_func
+  53              		.fpu softvfp
+  55              	HAL_PWR_DeInit:
+  56              	.LFB66:
+  57              		.loc 1 157 1 is_stmt 1 view -0
+  58              		.cfi_startproc
+  59              		@ args = 0, pretend = 0, frame = 0
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccQqQMES.s 			page 2
+
+
+  60              		@ frame_needed = 0, uses_anonymous_args = 0
+  61              		@ link register save eliminated.
+  62              		.loc 1 158 3 view .LVU5
+  63 0000 044B     		ldr	r3, .L3
+  64 0002 1A69     		ldr	r2, [r3, #16]
+  65 0004 42F08052 		orr	r2, r2, #268435456
+  66 0008 1A61     		str	r2, [r3, #16]
+  67              		.loc 1 159 3 view .LVU6
+  68 000a 1A69     		ldr	r2, [r3, #16]
+  69 000c 22F08052 		bic	r2, r2, #268435456
+  70 0010 1A61     		str	r2, [r3, #16]
+  71              		.loc 1 160 1 is_stmt 0 view .LVU7
+  72 0012 7047     		bx	lr
+  73              	.L4:
+  74              		.align	2
+  75              	.L3:
+  76 0014 00100240 		.word	1073876992
+  77              		.cfi_endproc
+  78              	.LFE66:
+  80              		.section	.text.HAL_PWR_EnableBkUpAccess,"ax",%progbits
+  81              		.align	1
+  82              		.global	HAL_PWR_EnableBkUpAccess
+  83              		.syntax unified
+  84              		.thumb
+  85              		.thumb_func
+  86              		.fpu softvfp
+  88              	HAL_PWR_EnableBkUpAccess:
+  89              	.LFB67:
+  90              		.loc 1 170 1 is_stmt 1 view -0
+  91              		.cfi_startproc
+  92              		@ args = 0, pretend = 0, frame = 0
+  93              		@ frame_needed = 0, uses_anonymous_args = 0
+  94              		@ link register save eliminated.
+  95              		.loc 1 172 3 view .LVU9
+  96              		.loc 1 172 32 is_stmt 0 view .LVU10
+  97 0000 014B     		ldr	r3, .L6
+  98 0002 0122     		movs	r2, #1
+  99 0004 1A62     		str	r2, [r3, #32]
+ 100              		.loc 1 173 1 view .LVU11
+ 101 0006 7047     		bx	lr
+ 102              	.L7:
+ 103              		.align	2
+ 104              	.L6:
+ 105 0008 00000E42 		.word	1108213760
+ 106              		.cfi_endproc
+ 107              	.LFE67:
+ 109              		.section	.text.HAL_PWR_DisableBkUpAccess,"ax",%progbits
+ 110              		.align	1
+ 111              		.global	HAL_PWR_DisableBkUpAccess
+ 112              		.syntax unified
+ 113              		.thumb
+ 114              		.thumb_func
+ 115              		.fpu softvfp
+ 117              	HAL_PWR_DisableBkUpAccess:
+ 118              	.LFB68:
+ 119              		.loc 1 183 1 is_stmt 1 view -0
+ 120              		.cfi_startproc
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccQqQMES.s 			page 3
+
+
+ 121              		@ args = 0, pretend = 0, frame = 0
+ 122              		@ frame_needed = 0, uses_anonymous_args = 0
+ 123              		@ link register save eliminated.
+ 124              		.loc 1 185 3 view .LVU13
+ 125              		.loc 1 185 32 is_stmt 0 view .LVU14
+ 126 0000 014B     		ldr	r3, .L9
+ 127 0002 0022     		movs	r2, #0
+ 128 0004 1A62     		str	r2, [r3, #32]
+ 129              		.loc 1 186 1 view .LVU15
+ 130 0006 7047     		bx	lr
+ 131              	.L10:
+ 132              		.align	2
+ 133              	.L9:
+ 134 0008 00000E42 		.word	1108213760
+ 135              		.cfi_endproc
+ 136              	.LFE68:
+ 138              		.section	.text.HAL_PWR_ConfigPVD,"ax",%progbits
+ 139              		.align	1
+ 140              		.global	HAL_PWR_ConfigPVD
+ 141              		.syntax unified
+ 142              		.thumb
+ 143              		.thumb_func
+ 144              		.fpu softvfp
+ 146              	HAL_PWR_ConfigPVD:
+ 147              	.LVL0:
+ 148              	.LFB69:
+ 149              		.loc 1 317 1 is_stmt 1 view -0
+ 150              		.cfi_startproc
+ 151              		@ args = 0, pretend = 0, frame = 0
+ 152              		@ frame_needed = 0, uses_anonymous_args = 0
+ 153              		@ link register save eliminated.
+ 154              		.loc 1 319 3 view .LVU17
+ 155              		.loc 1 320 3 view .LVU18
+ 156              		.loc 1 323 3 view .LVU19
+ 157 0000 1E4A     		ldr	r2, .L16
+ 158 0002 1368     		ldr	r3, [r2]
+ 159 0004 23F0E003 		bic	r3, r3, #224
+ 160 0008 0168     		ldr	r1, [r0]
+ 161 000a 0B43     		orrs	r3, r3, r1
+ 162 000c 1360     		str	r3, [r2]
+ 163              		.loc 1 326 3 view .LVU20
+ 164 000e 1C4B     		ldr	r3, .L16+4
+ 165 0010 5A68     		ldr	r2, [r3, #4]
+ 166 0012 22F48032 		bic	r2, r2, #65536
+ 167 0016 5A60     		str	r2, [r3, #4]
+ 168              		.loc 1 327 3 view .LVU21
+ 169 0018 1A68     		ldr	r2, [r3]
+ 170 001a 22F48032 		bic	r2, r2, #65536
+ 171 001e 1A60     		str	r2, [r3]
+ 172              		.loc 1 328 3 view .LVU22
+ 173 0020 DA68     		ldr	r2, [r3, #12]
+ 174 0022 22F48032 		bic	r2, r2, #65536
+ 175 0026 DA60     		str	r2, [r3, #12]
+ 176              		.loc 1 329 3 view .LVU23
+ 177 0028 9A68     		ldr	r2, [r3, #8]
+ 178 002a 22F48032 		bic	r2, r2, #65536
+ 179 002e 9A60     		str	r2, [r3, #8]
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccQqQMES.s 			page 4
+
+
+ 180              		.loc 1 332 3 view .LVU24
+ 181              		.loc 1 332 17 is_stmt 0 view .LVU25
+ 182 0030 4368     		ldr	r3, [r0, #4]
+ 183              		.loc 1 332 5 view .LVU26
+ 184 0032 13F4803F 		tst	r3, #65536
+ 185 0036 04D0     		beq	.L12
+ 186              		.loc 1 334 5 is_stmt 1 view .LVU27
+ 187 0038 114A     		ldr	r2, .L16+4
+ 188 003a 1368     		ldr	r3, [r2]
+ 189 003c 43F48033 		orr	r3, r3, #65536
+ 190 0040 1360     		str	r3, [r2]
+ 191              	.L12:
+ 192              		.loc 1 338 3 view .LVU28
+ 193              		.loc 1 338 17 is_stmt 0 view .LVU29
+ 194 0042 4368     		ldr	r3, [r0, #4]
+ 195              		.loc 1 338 5 view .LVU30
+ 196 0044 13F4003F 		tst	r3, #131072
+ 197 0048 04D0     		beq	.L13
+ 198              		.loc 1 340 5 is_stmt 1 view .LVU31
+ 199 004a 0D4A     		ldr	r2, .L16+4
+ 200 004c 5368     		ldr	r3, [r2, #4]
+ 201 004e 43F48033 		orr	r3, r3, #65536
+ 202 0052 5360     		str	r3, [r2, #4]
+ 203              	.L13:
+ 204              		.loc 1 344 3 view .LVU32
+ 205              		.loc 1 344 17 is_stmt 0 view .LVU33
+ 206 0054 4368     		ldr	r3, [r0, #4]
+ 207              		.loc 1 344 5 view .LVU34
+ 208 0056 13F0010F 		tst	r3, #1
+ 209 005a 04D0     		beq	.L14
+ 210              		.loc 1 346 5 is_stmt 1 view .LVU35
+ 211 005c 084A     		ldr	r2, .L16+4
+ 212 005e 9368     		ldr	r3, [r2, #8]
+ 213 0060 43F48033 		orr	r3, r3, #65536
+ 214 0064 9360     		str	r3, [r2, #8]
+ 215              	.L14:
+ 216              		.loc 1 349 3 view .LVU36
+ 217              		.loc 1 349 17 is_stmt 0 view .LVU37
+ 218 0066 4368     		ldr	r3, [r0, #4]
+ 219              		.loc 1 349 5 view .LVU38
+ 220 0068 13F0020F 		tst	r3, #2
+ 221 006c 04D0     		beq	.L11
+ 222              		.loc 1 351 5 is_stmt 1 view .LVU39
+ 223 006e 044A     		ldr	r2, .L16+4
+ 224 0070 D368     		ldr	r3, [r2, #12]
+ 225 0072 43F48033 		orr	r3, r3, #65536
+ 226 0076 D360     		str	r3, [r2, #12]
+ 227              	.L11:
+ 228              		.loc 1 353 1 is_stmt 0 view .LVU40
+ 229 0078 7047     		bx	lr
+ 230              	.L17:
+ 231 007a 00BF     		.align	2
+ 232              	.L16:
+ 233 007c 00700040 		.word	1073770496
+ 234 0080 00040140 		.word	1073808384
+ 235              		.cfi_endproc
+ 236              	.LFE69:
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccQqQMES.s 			page 5
+
+
+ 238              		.section	.text.HAL_PWR_EnablePVD,"ax",%progbits
+ 239              		.align	1
+ 240              		.global	HAL_PWR_EnablePVD
+ 241              		.syntax unified
+ 242              		.thumb
+ 243              		.thumb_func
+ 244              		.fpu softvfp
+ 246              	HAL_PWR_EnablePVD:
+ 247              	.LFB70:
+ 248              		.loc 1 360 1 is_stmt 1 view -0
+ 249              		.cfi_startproc
+ 250              		@ args = 0, pretend = 0, frame = 0
+ 251              		@ frame_needed = 0, uses_anonymous_args = 0
+ 252              		@ link register save eliminated.
+ 253              		.loc 1 362 3 view .LVU42
+ 254              		.loc 1 362 33 is_stmt 0 view .LVU43
+ 255 0000 014B     		ldr	r3, .L19
+ 256 0002 0122     		movs	r2, #1
+ 257 0004 1A61     		str	r2, [r3, #16]
+ 258              		.loc 1 363 1 view .LVU44
+ 259 0006 7047     		bx	lr
+ 260              	.L20:
+ 261              		.align	2
+ 262              	.L19:
+ 263 0008 00000E42 		.word	1108213760
+ 264              		.cfi_endproc
+ 265              	.LFE70:
+ 267              		.section	.text.HAL_PWR_DisablePVD,"ax",%progbits
+ 268              		.align	1
+ 269              		.global	HAL_PWR_DisablePVD
+ 270              		.syntax unified
+ 271              		.thumb
+ 272              		.thumb_func
+ 273              		.fpu softvfp
+ 275              	HAL_PWR_DisablePVD:
+ 276              	.LFB71:
+ 277              		.loc 1 370 1 is_stmt 1 view -0
+ 278              		.cfi_startproc
+ 279              		@ args = 0, pretend = 0, frame = 0
+ 280              		@ frame_needed = 0, uses_anonymous_args = 0
+ 281              		@ link register save eliminated.
+ 282              		.loc 1 372 3 view .LVU46
+ 283              		.loc 1 372 33 is_stmt 0 view .LVU47
+ 284 0000 014B     		ldr	r3, .L22
+ 285 0002 0022     		movs	r2, #0
+ 286 0004 1A61     		str	r2, [r3, #16]
+ 287              		.loc 1 373 1 view .LVU48
+ 288 0006 7047     		bx	lr
+ 289              	.L23:
+ 290              		.align	2
+ 291              	.L22:
+ 292 0008 00000E42 		.word	1108213760
+ 293              		.cfi_endproc
+ 294              	.LFE71:
+ 296              		.section	.text.HAL_PWR_EnableWakeUpPin,"ax",%progbits
+ 297              		.align	1
+ 298              		.global	HAL_PWR_EnableWakeUpPin
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccQqQMES.s 			page 6
+
+
+ 299              		.syntax unified
+ 300              		.thumb
+ 301              		.thumb_func
+ 302              		.fpu softvfp
+ 304              	HAL_PWR_EnableWakeUpPin:
+ 305              	.LVL1:
+ 306              	.LFB72:
+ 307              		.loc 1 383 1 is_stmt 1 view -0
+ 308              		.cfi_startproc
+ 309              		@ args = 0, pretend = 0, frame = 0
+ 310              		@ frame_needed = 0, uses_anonymous_args = 0
+ 311              		@ link register save eliminated.
+ 312              		.loc 1 385 3 view .LVU50
+ 313              		.loc 1 387 3 view .LVU51
+ 314              	.LBB6:
+ 315              	.LBI6:
+ 316              		.file 2 "../Drivers/CMSIS/Include/cmsis_gcc.h"
+   1:../Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 317              		.loc 2 981 31 view .LVU52
+ 318              	.LBB7:
+ 319              		.loc 2 983 3 view .LVU53
+ 320              		.loc 2 988 4 view .LVU54
+ 321              		.syntax unified
+ 322              	@ 988 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 323 0000 90FAA0F0 		rbit r0, r0
+ 324              	@ 0 "" 2
+ 325              	.LVL2:
+ 326              		.loc 2 1001 3 view .LVU55
+ 327              		.loc 2 1001 3 is_stmt 0 view .LVU56
+ 328              		.thumb
+ 329              		.syntax unified
+ 330              	.LBE7:
+ 331              	.LBE6:
+ 332              		.loc 1 387 22 view .LVU57
+ 333 0004 B0FA80F0 		clz	r0, r0
+ 334 0008 024B     		ldr	r3, .L25
+ 335 000a 0344     		add	r3, r3, r0
+ 336 000c 9B00     		lsls	r3, r3, #2
+ 337              		.loc 1 387 46 view .LVU58
+ 338 000e 0122     		movs	r2, #1
+ 339 0010 1A60     		str	r2, [r3]
+ 340              		.loc 1 388 1 view .LVU59
+ 341 0012 7047     		bx	lr
+ 342              	.L26:
+ 343              		.align	2
+ 344              	.L25:
+ 345 0014 20808310 		.word	277053472
+ 346              		.cfi_endproc
+ 347              	.LFE72:
+ 349              		.section	.text.HAL_PWR_DisableWakeUpPin,"ax",%progbits
+ 350              		.align	1
+ 351              		.global	HAL_PWR_DisableWakeUpPin
+ 352              		.syntax unified
+ 353              		.thumb
+ 354              		.thumb_func
+ 355              		.fpu softvfp
+ 357              	HAL_PWR_DisableWakeUpPin:
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccQqQMES.s 			page 7
+
+
+ 358              	.LVL3:
+ 359              	.LFB73:
+ 360              		.loc 1 398 1 is_stmt 1 view -0
+ 361              		.cfi_startproc
+ 362              		@ args = 0, pretend = 0, frame = 0
+ 363              		@ frame_needed = 0, uses_anonymous_args = 0
+ 364              		@ link register save eliminated.
+ 365              		.loc 1 400 3 view .LVU61
+ 366              		.loc 1 402 3 view .LVU62
+ 367              	.LBB8:
+ 368              	.LBI8:
+ 369              		.loc 2 981 31 view .LVU63
+ 370              	.LBB9:
+ 371              		.loc 2 983 3 view .LVU64
+ 372              		.loc 2 988 4 view .LVU65
+ 373              		.syntax unified
+ 374              	@ 988 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 375 0000 90FAA0F0 		rbit r0, r0
+ 376              	@ 0 "" 2
+ 377              	.LVL4:
+ 378              		.loc 2 1001 3 view .LVU66
+ 379              		.loc 2 1001 3 is_stmt 0 view .LVU67
+ 380              		.thumb
+ 381              		.syntax unified
+ 382              	.LBE9:
+ 383              	.LBE8:
+ 384              		.loc 1 402 22 view .LVU68
+ 385 0004 B0FA80F0 		clz	r0, r0
+ 386 0008 024B     		ldr	r3, .L28
+ 387 000a 0344     		add	r3, r3, r0
+ 388 000c 9B00     		lsls	r3, r3, #2
+ 389              		.loc 1 402 46 view .LVU69
+ 390 000e 0022     		movs	r2, #0
+ 391 0010 1A60     		str	r2, [r3]
+ 392              		.loc 1 403 1 view .LVU70
+ 393 0012 7047     		bx	lr
+ 394              	.L29:
+ 395              		.align	2
+ 396              	.L28:
+ 397 0014 20808310 		.word	277053472
+ 398              		.cfi_endproc
+ 399              	.LFE73:
+ 401              		.section	.text.HAL_PWR_EnterSLEEPMode,"ax",%progbits
+ 402              		.align	1
+ 403              		.global	HAL_PWR_EnterSLEEPMode
+ 404              		.syntax unified
+ 405              		.thumb
+ 406              		.thumb_func
+ 407              		.fpu softvfp
+ 409              	HAL_PWR_EnterSLEEPMode:
+ 410              	.LVL5:
+ 411              	.LFB74:
+ 412              		.loc 1 418 1 is_stmt 1 view -0
+ 413              		.cfi_startproc
+ 414              		@ args = 0, pretend = 0, frame = 0
+ 415              		@ frame_needed = 0, uses_anonymous_args = 0
+ 416              		@ link register save eliminated.
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccQqQMES.s 			page 8
+
+
+ 417              		.loc 1 422 3 view .LVU72
+ 418              		.loc 1 424 3 view .LVU73
+ 419              		.loc 1 427 3 view .LVU74
+ 420 0000 064A     		ldr	r2, .L34
+ 421 0002 1369     		ldr	r3, [r2, #16]
+ 422 0004 23F00403 		bic	r3, r3, #4
+ 423 0008 1361     		str	r3, [r2, #16]
+ 424              		.loc 1 430 3 view .LVU75
+ 425              		.loc 1 430 5 is_stmt 0 view .LVU76
+ 426 000a 0129     		cmp	r1, #1
+ 427 000c 03D0     		beq	.L33
+ 428              		.loc 1 438 5 is_stmt 1 view .LVU77
+ 429              		.syntax unified
+ 430              	@ 438 "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c" 1
+ 431 000e 40BF     		sev
+ 432              	@ 0 "" 2
+ 433              		.loc 1 439 5 view .LVU78
+ 434              	@ 439 "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c" 1
+ 435 0010 20BF     		wfe
+ 436              	@ 0 "" 2
+ 437              		.loc 1 440 5 view .LVU79
+ 438              	@ 440 "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c" 1
+ 439 0012 20BF     		wfe
+ 440              	@ 0 "" 2
+ 441              		.loc 1 442 1 is_stmt 0 view .LVU80
+ 442              		.thumb
+ 443              		.syntax unified
+ 444 0014 7047     		bx	lr
+ 445              	.L33:
+ 446              		.loc 1 433 5 is_stmt 1 view .LVU81
+ 447              		.syntax unified
+ 448              	@ 433 "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c" 1
+ 449 0016 30BF     		wfi
+ 450              	@ 0 "" 2
+ 451              		.thumb
+ 452              		.syntax unified
+ 453 0018 7047     		bx	lr
+ 454              	.L35:
+ 455 001a 00BF     		.align	2
+ 456              	.L34:
+ 457 001c 00ED00E0 		.word	-536810240
+ 458              		.cfi_endproc
+ 459              	.LFE74:
+ 461              		.section	.text.HAL_PWR_EnterSTOPMode,"ax",%progbits
+ 462              		.align	1
+ 463              		.global	HAL_PWR_EnterSTOPMode
+ 464              		.syntax unified
+ 465              		.thumb
+ 466              		.thumb_func
+ 467              		.fpu softvfp
+ 469              	HAL_PWR_EnterSTOPMode:
+ 470              	.LVL6:
+ 471              	.LFB75:
+ 472              		.loc 1 464 1 view -0
+ 473              		.cfi_startproc
+ 474              		@ args = 0, pretend = 0, frame = 0
+ 475              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccQqQMES.s 			page 9
+
+
+ 476              		.loc 1 464 1 is_stmt 0 view .LVU83
+ 477 0000 10B5     		push	{r4, lr}
+ 478              	.LCFI0:
+ 479              		.cfi_def_cfa_offset 8
+ 480              		.cfi_offset 4, -8
+ 481              		.cfi_offset 14, -4
+ 482              		.loc 1 466 3 is_stmt 1 view .LVU84
+ 483              		.loc 1 467 3 view .LVU85
+ 484              		.loc 1 470 3 view .LVU86
+ 485 0002 0E4A     		ldr	r2, .L40
+ 486 0004 1468     		ldr	r4, [r2]
+ 487 0006 24F00204 		bic	r4, r4, #2
+ 488 000a 1460     		str	r4, [r2]
+ 489              		.loc 1 473 3 view .LVU87
+ 490 000c 1368     		ldr	r3, [r2]
+ 491 000e 23F00103 		bic	r3, r3, #1
+ 492 0012 0343     		orrs	r3, r3, r0
+ 493 0014 1360     		str	r3, [r2]
+ 494              		.loc 1 476 3 view .LVU88
+ 495 0016 0A4A     		ldr	r2, .L40+4
+ 496 0018 1369     		ldr	r3, [r2, #16]
+ 497 001a 43F00403 		orr	r3, r3, #4
+ 498 001e 1361     		str	r3, [r2, #16]
+ 499              		.loc 1 479 3 view .LVU89
+ 500              		.loc 1 479 5 is_stmt 0 view .LVU90
+ 501 0020 0129     		cmp	r1, #1
+ 502 0022 06D1     		bne	.L37
+ 503              		.loc 1 482 5 is_stmt 1 view .LVU91
+ 504              		.syntax unified
+ 505              	@ 482 "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c" 1
+ 506 0024 30BF     		wfi
+ 507              	@ 0 "" 2
+ 508              	.LVL7:
+ 509              		.thumb
+ 510              		.syntax unified
+ 511              	.L38:
+ 512              		.loc 1 492 3 view .LVU92
+ 513 0026 064A     		ldr	r2, .L40+4
+ 514 0028 1369     		ldr	r3, [r2, #16]
+ 515 002a 23F00403 		bic	r3, r3, #4
+ 516 002e 1361     		str	r3, [r2, #16]
+ 517              		.loc 1 493 1 is_stmt 0 view .LVU93
+ 518 0030 10BD     		pop	{r4, pc}
+ 519              	.LVL8:
+ 520              	.L37:
+ 521              		.loc 1 487 5 is_stmt 1 view .LVU94
+ 522              		.syntax unified
+ 523              	@ 487 "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c" 1
+ 524 0032 40BF     		sev
+ 525              	@ 0 "" 2
+ 526              		.loc 1 488 5 view .LVU95
+ 527              		.thumb
+ 528              		.syntax unified
+ 529 0034 034C     		ldr	r4, .L40+8
+ 530 0036 A047     		blx	r4
+ 531              	.LVL9:
+ 532              		.loc 1 489 5 view .LVU96
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccQqQMES.s 			page 10
+
+
+ 533 0038 A047     		blx	r4
+ 534              	.LVL10:
+ 535 003a F4E7     		b	.L38
+ 536              	.L41:
+ 537              		.align	2
+ 538              	.L40:
+ 539 003c 00700040 		.word	1073770496
+ 540 0040 00ED00E0 		.word	-536810240
+ 541 0044 00000000 		.word	PWR_OverloadWfe
+ 542              		.cfi_endproc
+ 543              	.LFE75:
+ 545              		.section	.text.HAL_PWR_EnterSTANDBYMode,"ax",%progbits
+ 546              		.align	1
+ 547              		.global	HAL_PWR_EnterSTANDBYMode
+ 548              		.syntax unified
+ 549              		.thumb
+ 550              		.thumb_func
+ 551              		.fpu softvfp
+ 553              	HAL_PWR_EnterSTANDBYMode:
+ 554              	.LFB76:
+ 555              		.loc 1 504 1 view -0
+ 556              		.cfi_startproc
+ 557              		@ args = 0, pretend = 0, frame = 0
+ 558              		@ frame_needed = 0, uses_anonymous_args = 0
+ 559              		@ link register save eliminated.
+ 560              		.loc 1 506 3 view .LVU98
+ 561 0000 054A     		ldr	r2, .L43
+ 562 0002 1368     		ldr	r3, [r2]
+ 563 0004 43F00203 		orr	r3, r3, #2
+ 564 0008 1360     		str	r3, [r2]
+ 565              		.loc 1 509 3 view .LVU99
+ 566 000a 044A     		ldr	r2, .L43+4
+ 567 000c 1369     		ldr	r3, [r2, #16]
+ 568 000e 43F00403 		orr	r3, r3, #4
+ 569 0012 1361     		str	r3, [r2, #16]
+ 570              		.loc 1 516 3 view .LVU100
+ 571              		.syntax unified
+ 572              	@ 516 "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c" 1
+ 573 0014 30BF     		wfi
+ 574              	@ 0 "" 2
+ 575              		.loc 1 517 1 is_stmt 0 view .LVU101
+ 576              		.thumb
+ 577              		.syntax unified
+ 578 0016 7047     		bx	lr
+ 579              	.L44:
+ 580              		.align	2
+ 581              	.L43:
+ 582 0018 00700040 		.word	1073770496
+ 583 001c 00ED00E0 		.word	-536810240
+ 584              		.cfi_endproc
+ 585              	.LFE76:
+ 587              		.section	.text.HAL_PWR_EnableSleepOnExit,"ax",%progbits
+ 588              		.align	1
+ 589              		.global	HAL_PWR_EnableSleepOnExit
+ 590              		.syntax unified
+ 591              		.thumb
+ 592              		.thumb_func
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccQqQMES.s 			page 11
+
+
+ 593              		.fpu softvfp
+ 595              	HAL_PWR_EnableSleepOnExit:
+ 596              	.LFB77:
+ 597              		.loc 1 529 1 is_stmt 1 view -0
+ 598              		.cfi_startproc
+ 599              		@ args = 0, pretend = 0, frame = 0
+ 600              		@ frame_needed = 0, uses_anonymous_args = 0
+ 601              		@ link register save eliminated.
+ 602              		.loc 1 531 3 view .LVU103
+ 603 0000 024A     		ldr	r2, .L46
+ 604 0002 1369     		ldr	r3, [r2, #16]
+ 605 0004 43F00203 		orr	r3, r3, #2
+ 606 0008 1361     		str	r3, [r2, #16]
+ 607              		.loc 1 532 1 is_stmt 0 view .LVU104
+ 608 000a 7047     		bx	lr
+ 609              	.L47:
+ 610              		.align	2
+ 611              	.L46:
+ 612 000c 00ED00E0 		.word	-536810240
+ 613              		.cfi_endproc
+ 614              	.LFE77:
+ 616              		.section	.text.HAL_PWR_DisableSleepOnExit,"ax",%progbits
+ 617              		.align	1
+ 618              		.global	HAL_PWR_DisableSleepOnExit
+ 619              		.syntax unified
+ 620              		.thumb
+ 621              		.thumb_func
+ 622              		.fpu softvfp
+ 624              	HAL_PWR_DisableSleepOnExit:
+ 625              	.LFB78:
+ 626              		.loc 1 542 1 is_stmt 1 view -0
+ 627              		.cfi_startproc
+ 628              		@ args = 0, pretend = 0, frame = 0
+ 629              		@ frame_needed = 0, uses_anonymous_args = 0
+ 630              		@ link register save eliminated.
+ 631              		.loc 1 544 3 view .LVU106
+ 632 0000 024A     		ldr	r2, .L49
+ 633 0002 1369     		ldr	r3, [r2, #16]
+ 634 0004 23F00203 		bic	r3, r3, #2
+ 635 0008 1361     		str	r3, [r2, #16]
+ 636              		.loc 1 545 1 is_stmt 0 view .LVU107
+ 637 000a 7047     		bx	lr
+ 638              	.L50:
+ 639              		.align	2
+ 640              	.L49:
+ 641 000c 00ED00E0 		.word	-536810240
+ 642              		.cfi_endproc
+ 643              	.LFE78:
+ 645              		.section	.text.HAL_PWR_EnableSEVOnPend,"ax",%progbits
+ 646              		.align	1
+ 647              		.global	HAL_PWR_EnableSEVOnPend
+ 648              		.syntax unified
+ 649              		.thumb
+ 650              		.thumb_func
+ 651              		.fpu softvfp
+ 653              	HAL_PWR_EnableSEVOnPend:
+ 654              	.LFB79:
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccQqQMES.s 			page 12
+
+
+ 655              		.loc 1 555 1 is_stmt 1 view -0
+ 656              		.cfi_startproc
+ 657              		@ args = 0, pretend = 0, frame = 0
+ 658              		@ frame_needed = 0, uses_anonymous_args = 0
+ 659              		@ link register save eliminated.
+ 660              		.loc 1 557 3 view .LVU109
+ 661 0000 024A     		ldr	r2, .L52
+ 662 0002 1369     		ldr	r3, [r2, #16]
+ 663 0004 43F01003 		orr	r3, r3, #16
+ 664 0008 1361     		str	r3, [r2, #16]
+ 665              		.loc 1 558 1 is_stmt 0 view .LVU110
+ 666 000a 7047     		bx	lr
+ 667              	.L53:
+ 668              		.align	2
+ 669              	.L52:
+ 670 000c 00ED00E0 		.word	-536810240
+ 671              		.cfi_endproc
+ 672              	.LFE79:
+ 674              		.section	.text.HAL_PWR_DisableSEVOnPend,"ax",%progbits
+ 675              		.align	1
+ 676              		.global	HAL_PWR_DisableSEVOnPend
+ 677              		.syntax unified
+ 678              		.thumb
+ 679              		.thumb_func
+ 680              		.fpu softvfp
+ 682              	HAL_PWR_DisableSEVOnPend:
+ 683              	.LFB80:
+ 684              		.loc 1 568 1 is_stmt 1 view -0
+ 685              		.cfi_startproc
+ 686              		@ args = 0, pretend = 0, frame = 0
+ 687              		@ frame_needed = 0, uses_anonymous_args = 0
+ 688              		@ link register save eliminated.
+ 689              		.loc 1 570 3 view .LVU112
+ 690 0000 024A     		ldr	r2, .L55
+ 691 0002 1369     		ldr	r3, [r2, #16]
+ 692 0004 23F01003 		bic	r3, r3, #16
+ 693 0008 1361     		str	r3, [r2, #16]
+ 694              		.loc 1 571 1 is_stmt 0 view .LVU113
+ 695 000a 7047     		bx	lr
+ 696              	.L56:
+ 697              		.align	2
+ 698              	.L55:
+ 699 000c 00ED00E0 		.word	-536810240
+ 700              		.cfi_endproc
+ 701              	.LFE80:
+ 703              		.section	.text.HAL_PWR_PVDCallback,"ax",%progbits
+ 704              		.align	1
+ 705              		.weak	HAL_PWR_PVDCallback
+ 706              		.syntax unified
+ 707              		.thumb
+ 708              		.thumb_func
+ 709              		.fpu softvfp
+ 711              	HAL_PWR_PVDCallback:
+ 712              	.LFB82:
+ 713              		.loc 1 598 1 is_stmt 1 view -0
+ 714              		.cfi_startproc
+ 715              		@ args = 0, pretend = 0, frame = 0
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccQqQMES.s 			page 13
+
+
+ 716              		@ frame_needed = 0, uses_anonymous_args = 0
+ 717              		@ link register save eliminated.
+ 718              		.loc 1 602 1 view .LVU115
+ 719 0000 7047     		bx	lr
+ 720              		.cfi_endproc
+ 721              	.LFE82:
+ 723              		.section	.text.HAL_PWR_PVD_IRQHandler,"ax",%progbits
+ 724              		.align	1
+ 725              		.global	HAL_PWR_PVD_IRQHandler
+ 726              		.syntax unified
+ 727              		.thumb
+ 728              		.thumb_func
+ 729              		.fpu softvfp
+ 731              	HAL_PWR_PVD_IRQHandler:
+ 732              	.LFB81:
+ 733              		.loc 1 581 1 view -0
+ 734              		.cfi_startproc
+ 735              		@ args = 0, pretend = 0, frame = 0
+ 736              		@ frame_needed = 0, uses_anonymous_args = 0
+ 737 0000 08B5     		push	{r3, lr}
+ 738              	.LCFI1:
+ 739              		.cfi_def_cfa_offset 8
+ 740              		.cfi_offset 3, -8
+ 741              		.cfi_offset 14, -4
+ 742              		.loc 1 583 3 view .LVU117
+ 743              		.loc 1 583 6 is_stmt 0 view .LVU118
+ 744 0002 064B     		ldr	r3, .L62
+ 745 0004 5B69     		ldr	r3, [r3, #20]
+ 746              		.loc 1 583 5 view .LVU119
+ 747 0006 13F4803F 		tst	r3, #65536
+ 748 000a 00D1     		bne	.L61
+ 749              	.L58:
+ 750              		.loc 1 591 1 view .LVU120
+ 751 000c 08BD     		pop	{r3, pc}
+ 752              	.L61:
+ 753              		.loc 1 586 5 is_stmt 1 view .LVU121
+ 754 000e 044B     		ldr	r3, .L62+4
+ 755 0010 9847     		blx	r3
+ 756              	.LVL11:
+ 757              		.loc 1 589 5 view .LVU122
+ 758 0012 024B     		ldr	r3, .L62
+ 759 0014 4FF48032 		mov	r2, #65536
+ 760 0018 5A61     		str	r2, [r3, #20]
+ 761              		.loc 1 591 1 is_stmt 0 view .LVU123
+ 762 001a F7E7     		b	.L58
+ 763              	.L63:
+ 764              		.align	2
+ 765              	.L62:
+ 766 001c 00040140 		.word	1073808384
+ 767 0020 00000000 		.word	HAL_PWR_PVDCallback
+ 768              		.cfi_endproc
+ 769              	.LFE81:
+ 771              		.text
+ 772              	.Letext0:
+ 773              		.file 3 "../c:\\users\\test\\desktop\\gnu mcu\\arm-none-eabi-gcc-10.2.1-1.1\\arm-none-eabi\\includ
+ 774              		.file 4 "../c:\\users\\test\\desktop\\gnu mcu\\arm-none-eabi-gcc-10.2.1-1.1\\arm-none-eabi\\includ
+ 775              		.file 5 "../Drivers/CMSIS/Include/core_cm3.h"
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccQqQMES.s 			page 14
+
+
+ 776              		.file 6 "../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103x6.h"
+ 777              		.file 7 "../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h"
+ 778              		.file 8 "../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h"
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccQqQMES.s 			page 15
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 stm32f1xx_hal_pwr.c
+C:\Users\Test\AppData\Local\Temp\ccQqQMES.s:16     .text.PWR_OverloadWfe:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\ccQqQMES.s:23     .text.PWR_OverloadWfe:0000000000000000 PWR_OverloadWfe
+C:\Users\Test\AppData\Local\Temp\ccQqQMES.s:48     .text.HAL_PWR_DeInit:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\ccQqQMES.s:55     .text.HAL_PWR_DeInit:0000000000000000 HAL_PWR_DeInit
+C:\Users\Test\AppData\Local\Temp\ccQqQMES.s:76     .text.HAL_PWR_DeInit:0000000000000014 $d
+C:\Users\Test\AppData\Local\Temp\ccQqQMES.s:81     .text.HAL_PWR_EnableBkUpAccess:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\ccQqQMES.s:88     .text.HAL_PWR_EnableBkUpAccess:0000000000000000 HAL_PWR_EnableBkUpAccess
+C:\Users\Test\AppData\Local\Temp\ccQqQMES.s:105    .text.HAL_PWR_EnableBkUpAccess:0000000000000008 $d
+C:\Users\Test\AppData\Local\Temp\ccQqQMES.s:110    .text.HAL_PWR_DisableBkUpAccess:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\ccQqQMES.s:117    .text.HAL_PWR_DisableBkUpAccess:0000000000000000 HAL_PWR_DisableBkUpAccess
+C:\Users\Test\AppData\Local\Temp\ccQqQMES.s:134    .text.HAL_PWR_DisableBkUpAccess:0000000000000008 $d
+C:\Users\Test\AppData\Local\Temp\ccQqQMES.s:139    .text.HAL_PWR_ConfigPVD:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\ccQqQMES.s:146    .text.HAL_PWR_ConfigPVD:0000000000000000 HAL_PWR_ConfigPVD
+C:\Users\Test\AppData\Local\Temp\ccQqQMES.s:233    .text.HAL_PWR_ConfigPVD:000000000000007c $d
+C:\Users\Test\AppData\Local\Temp\ccQqQMES.s:239    .text.HAL_PWR_EnablePVD:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\ccQqQMES.s:246    .text.HAL_PWR_EnablePVD:0000000000000000 HAL_PWR_EnablePVD
+C:\Users\Test\AppData\Local\Temp\ccQqQMES.s:263    .text.HAL_PWR_EnablePVD:0000000000000008 $d
+C:\Users\Test\AppData\Local\Temp\ccQqQMES.s:268    .text.HAL_PWR_DisablePVD:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\ccQqQMES.s:275    .text.HAL_PWR_DisablePVD:0000000000000000 HAL_PWR_DisablePVD
+C:\Users\Test\AppData\Local\Temp\ccQqQMES.s:292    .text.HAL_PWR_DisablePVD:0000000000000008 $d
+C:\Users\Test\AppData\Local\Temp\ccQqQMES.s:297    .text.HAL_PWR_EnableWakeUpPin:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\ccQqQMES.s:304    .text.HAL_PWR_EnableWakeUpPin:0000000000000000 HAL_PWR_EnableWakeUpPin
+C:\Users\Test\AppData\Local\Temp\ccQqQMES.s:345    .text.HAL_PWR_EnableWakeUpPin:0000000000000014 $d
+C:\Users\Test\AppData\Local\Temp\ccQqQMES.s:350    .text.HAL_PWR_DisableWakeUpPin:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\ccQqQMES.s:357    .text.HAL_PWR_DisableWakeUpPin:0000000000000000 HAL_PWR_DisableWakeUpPin
+C:\Users\Test\AppData\Local\Temp\ccQqQMES.s:397    .text.HAL_PWR_DisableWakeUpPin:0000000000000014 $d
+C:\Users\Test\AppData\Local\Temp\ccQqQMES.s:402    .text.HAL_PWR_EnterSLEEPMode:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\ccQqQMES.s:409    .text.HAL_PWR_EnterSLEEPMode:0000000000000000 HAL_PWR_EnterSLEEPMode
+C:\Users\Test\AppData\Local\Temp\ccQqQMES.s:457    .text.HAL_PWR_EnterSLEEPMode:000000000000001c $d
+C:\Users\Test\AppData\Local\Temp\ccQqQMES.s:462    .text.HAL_PWR_EnterSTOPMode:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\ccQqQMES.s:469    .text.HAL_PWR_EnterSTOPMode:0000000000000000 HAL_PWR_EnterSTOPMode
+C:\Users\Test\AppData\Local\Temp\ccQqQMES.s:539    .text.HAL_PWR_EnterSTOPMode:000000000000003c $d
+C:\Users\Test\AppData\Local\Temp\ccQqQMES.s:546    .text.HAL_PWR_EnterSTANDBYMode:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\ccQqQMES.s:553    .text.HAL_PWR_EnterSTANDBYMode:0000000000000000 HAL_PWR_EnterSTANDBYMode
+C:\Users\Test\AppData\Local\Temp\ccQqQMES.s:582    .text.HAL_PWR_EnterSTANDBYMode:0000000000000018 $d
+C:\Users\Test\AppData\Local\Temp\ccQqQMES.s:588    .text.HAL_PWR_EnableSleepOnExit:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\ccQqQMES.s:595    .text.HAL_PWR_EnableSleepOnExit:0000000000000000 HAL_PWR_EnableSleepOnExit
+C:\Users\Test\AppData\Local\Temp\ccQqQMES.s:612    .text.HAL_PWR_EnableSleepOnExit:000000000000000c $d
+C:\Users\Test\AppData\Local\Temp\ccQqQMES.s:617    .text.HAL_PWR_DisableSleepOnExit:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\ccQqQMES.s:624    .text.HAL_PWR_DisableSleepOnExit:0000000000000000 HAL_PWR_DisableSleepOnExit
+C:\Users\Test\AppData\Local\Temp\ccQqQMES.s:641    .text.HAL_PWR_DisableSleepOnExit:000000000000000c $d
+C:\Users\Test\AppData\Local\Temp\ccQqQMES.s:646    .text.HAL_PWR_EnableSEVOnPend:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\ccQqQMES.s:653    .text.HAL_PWR_EnableSEVOnPend:0000000000000000 HAL_PWR_EnableSEVOnPend
+C:\Users\Test\AppData\Local\Temp\ccQqQMES.s:670    .text.HAL_PWR_EnableSEVOnPend:000000000000000c $d
+C:\Users\Test\AppData\Local\Temp\ccQqQMES.s:675    .text.HAL_PWR_DisableSEVOnPend:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\ccQqQMES.s:682    .text.HAL_PWR_DisableSEVOnPend:0000000000000000 HAL_PWR_DisableSEVOnPend
+C:\Users\Test\AppData\Local\Temp\ccQqQMES.s:699    .text.HAL_PWR_DisableSEVOnPend:000000000000000c $d
+C:\Users\Test\AppData\Local\Temp\ccQqQMES.s:704    .text.HAL_PWR_PVDCallback:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\ccQqQMES.s:711    .text.HAL_PWR_PVDCallback:0000000000000000 HAL_PWR_PVDCallback
+C:\Users\Test\AppData\Local\Temp\ccQqQMES.s:724    .text.HAL_PWR_PVD_IRQHandler:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\ccQqQMES.s:731    .text.HAL_PWR_PVD_IRQHandler:0000000000000000 HAL_PWR_PVD_IRQHandler
+C:\Users\Test\AppData\Local\Temp\ccQqQMES.s:766    .text.HAL_PWR_PVD_IRQHandler:000000000000001c $d
+
+NO UNDEFINED SYMBOLS

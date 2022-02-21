@@ -1,0 +1,154 @@
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccy6pTWd.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 1
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"freertos.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.StartDefaultTask,"ax",%progbits
+  16              		.align	1
+  17              		.global	StartDefaultTask
+  18              		.arch armv7-m
+  19              		.syntax unified
+  20              		.thumb
+  21              		.thumb_func
+  22              		.fpu softvfp
+  24              	StartDefaultTask:
+  25              	.LFB70:
+  26              		.file 1 "../Core/Src/freertos.c"
+   1:../Core/Src/freertos.c **** 
+  27              		.loc 1 115 1 view -0
+  28              		.cfi_startproc
+  29              		@ Volatile: function does not return.
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              	.LVL0:
+  33              		.loc 1 115 1 is_stmt 0 view .LVU1
+  34 0000 08B5     		push	{r3, lr}
+  35              	.LCFI0:
+  36              		.cfi_def_cfa_offset 8
+  37              		.cfi_offset 3, -8
+  38              		.cfi_offset 14, -4
+  39              	.LVL1:
+  40              	.L2:
+  41              		.loc 1 118 3 is_stmt 1 discriminator 1 view .LVU2
+  42              		.loc 1 120 5 discriminator 1 view .LVU3
+  43 0002 0120     		movs	r0, #1
+  44 0004 014B     		ldr	r3, .L4
+  45 0006 9847     		blx	r3
+  46              	.LVL2:
+  47              		.loc 1 118 8 discriminator 1 view .LVU4
+  48 0008 FBE7     		b	.L2
+  49              	.L5:
+  50 000a 00BF     		.align	2
+  51              	.L4:
+  52 000c 00000000 		.word	osDelay
+  53              		.cfi_endproc
+  54              	.LFE70:
+  56              		.section	.text.MX_FREERTOS_Init,"ax",%progbits
+  57              		.align	1
+  58              		.global	MX_FREERTOS_Init
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccy6pTWd.s 			page 2
+
+
+  59              		.syntax unified
+  60              		.thumb
+  61              		.thumb_func
+  62              		.fpu softvfp
+  64              	MX_FREERTOS_Init:
+  65              	.LFB69:
+  66              		.loc 1 72 29 view -0
+  67              		.cfi_startproc
+  68              		@ args = 0, pretend = 0, frame = 0
+  69              		@ frame_needed = 0, uses_anonymous_args = 0
+  70 0000 08B5     		push	{r3, lr}
+  71              	.LCFI1:
+  72              		.cfi_def_cfa_offset 8
+  73              		.cfi_offset 3, -8
+  74              		.cfi_offset 14, -4
+  75              		.loc 1 95 3 view .LVU6
+  76              		.loc 1 95 23 is_stmt 0 view .LVU7
+  77 0002 044A     		ldr	r2, .L8
+  78 0004 0021     		movs	r1, #0
+  79 0006 0448     		ldr	r0, .L8+4
+  80 0008 044B     		ldr	r3, .L8+8
+  81 000a 9847     		blx	r3
+  82              	.LVL3:
+  83              		.loc 1 95 21 view .LVU8
+  84 000c 044B     		ldr	r3, .L8+12
+  85 000e 1860     		str	r0, [r3]
+  86              		.loc 1 105 1 view .LVU9
+  87 0010 08BD     		pop	{r3, pc}
+  88              	.L9:
+  89 0012 00BF     		.align	2
+  90              	.L8:
+  91 0014 00000000 		.word	.LANCHOR0
+  92 0018 00000000 		.word	StartDefaultTask
+  93 001c 00000000 		.word	osThreadNew
+  94 0020 00000000 		.word	.LANCHOR1
+  95              		.cfi_endproc
+  96              	.LFE69:
+  98              		.global	defaultTask_attributes
+  99              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 100              		.align	2
+ 101              	.LC0:
+ 102 0000 64656661 		.ascii	"defaultTask\000"
+ 102      756C7454 
+ 102      61736B00 
+ 103              		.global	defaultTaskHandle
+ 104              		.section	.bss.defaultTaskHandle,"aw",%nobits
+ 105              		.align	2
+ 106              		.set	.LANCHOR1,. + 0
+ 109              	defaultTaskHandle:
+ 110 0000 00000000 		.space	4
+ 111              		.section	.rodata.defaultTask_attributes,"a"
+ 112              		.align	2
+ 113              		.set	.LANCHOR0,. + 0
+ 116              	defaultTask_attributes:
+ 117 0000 00000000 		.word	.LC0
+ 118 0004 00000000 		.space	16
+ 118      00000000 
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccy6pTWd.s 			page 3
+
+
+ 118      00000000 
+ 118      00000000 
+ 119 0014 00020000 		.word	512
+ 120 0018 18000000 		.word	24
+ 121 001c 00000000 		.space	8
+ 121      00000000 
+ 122              		.text
+ 123              	.Letext0:
+ 124              		.file 2 "../c:\\users\\test\\desktop\\gnu mcu\\arm-none-eabi-gcc-10.2.1-1.1\\arm-none-eabi\\includ
+ 125              		.file 3 "../c:\\users\\test\\desktop\\gnu mcu\\arm-none-eabi-gcc-10.2.1-1.1\\arm-none-eabi\\includ
+ 126              		.file 4 "../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h"
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccy6pTWd.s 			page 4
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 freertos.c
+C:\Users\Test\AppData\Local\Temp\ccy6pTWd.s:16     .text.StartDefaultTask:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\ccy6pTWd.s:24     .text.StartDefaultTask:0000000000000000 StartDefaultTask
+C:\Users\Test\AppData\Local\Temp\ccy6pTWd.s:52     .text.StartDefaultTask:000000000000000c $d
+C:\Users\Test\AppData\Local\Temp\ccy6pTWd.s:57     .text.MX_FREERTOS_Init:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\ccy6pTWd.s:64     .text.MX_FREERTOS_Init:0000000000000000 MX_FREERTOS_Init
+C:\Users\Test\AppData\Local\Temp\ccy6pTWd.s:91     .text.MX_FREERTOS_Init:0000000000000014 $d
+C:\Users\Test\AppData\Local\Temp\ccy6pTWd.s:116    .rodata.defaultTask_attributes:0000000000000000 defaultTask_attributes
+C:\Users\Test\AppData\Local\Temp\ccy6pTWd.s:100    .rodata.str1.4:0000000000000000 $d
+C:\Users\Test\AppData\Local\Temp\ccy6pTWd.s:109    .bss.defaultTaskHandle:0000000000000000 defaultTaskHandle
+C:\Users\Test\AppData\Local\Temp\ccy6pTWd.s:105    .bss.defaultTaskHandle:0000000000000000 $d
+C:\Users\Test\AppData\Local\Temp\ccy6pTWd.s:112    .rodata.defaultTask_attributes:0000000000000000 $d
+
+UNDEFINED SYMBOLS
+osDelay
+osThreadNew

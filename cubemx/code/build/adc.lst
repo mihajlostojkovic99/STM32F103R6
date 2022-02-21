@@ -1,0 +1,380 @@
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccCqB49v.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 1
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"adc.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.MX_ADC1_Init,"ax",%progbits
+  16              		.align	1
+  17              		.global	MX_ADC1_Init
+  18              		.arch armv7-m
+  19              		.syntax unified
+  20              		.thumb
+  21              		.thumb_func
+  22              		.fpu softvfp
+  24              	MX_ADC1_Init:
+  25              	.LFB65:
+  26              		.file 1 "../Core/Src/adc.c"
+   1:../Core/Src/adc.c **** 
+  27              		.loc 1 31 1 view -0
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 16
+  30              		@ frame_needed = 0, uses_anonymous_args = 0
+  31 0000 00B5     		push	{lr}
+  32              	.LCFI0:
+  33              		.cfi_def_cfa_offset 4
+  34              		.cfi_offset 14, -4
+  35 0002 85B0     		sub	sp, sp, #20
+  36              	.LCFI1:
+  37              		.cfi_def_cfa_offset 24
+  38              		.loc 1 37 3 view .LVU1
+  39              		.loc 1 37 26 is_stmt 0 view .LVU2
+  40 0004 0023     		movs	r3, #0
+  41 0006 0193     		str	r3, [sp, #4]
+  42 0008 0293     		str	r3, [sp, #8]
+  43 000a 0393     		str	r3, [sp, #12]
+  44              		.loc 1 44 3 is_stmt 1 view .LVU3
+  45              		.loc 1 44 18 is_stmt 0 view .LVU4
+  46 000c 1148     		ldr	r0, .L7
+  47 000e 124A     		ldr	r2, .L7+4
+  48 0010 0260     		str	r2, [r0]
+  49              		.loc 1 45 3 is_stmt 1 view .LVU5
+  50              		.loc 1 45 27 is_stmt 0 view .LVU6
+  51 0012 8360     		str	r3, [r0, #8]
+  52              		.loc 1 46 3 is_stmt 1 view .LVU7
+  53              		.loc 1 46 33 is_stmt 0 view .LVU8
+  54 0014 0373     		strb	r3, [r0, #12]
+  55              		.loc 1 47 3 is_stmt 1 view .LVU9
+  56              		.loc 1 47 36 is_stmt 0 view .LVU10
+  57 0016 0375     		strb	r3, [r0, #20]
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccCqB49v.s 			page 2
+
+
+  58              		.loc 1 48 3 is_stmt 1 view .LVU11
+  59              		.loc 1 48 31 is_stmt 0 view .LVU12
+  60 0018 4FF46022 		mov	r2, #917504
+  61 001c C261     		str	r2, [r0, #28]
+  62              		.loc 1 49 3 is_stmt 1 view .LVU13
+  63              		.loc 1 49 24 is_stmt 0 view .LVU14
+  64 001e 4360     		str	r3, [r0, #4]
+  65              		.loc 1 50 3 is_stmt 1 view .LVU15
+  66              		.loc 1 50 30 is_stmt 0 view .LVU16
+  67 0020 0123     		movs	r3, #1
+  68 0022 0361     		str	r3, [r0, #16]
+  69              		.loc 1 51 3 is_stmt 1 view .LVU17
+  70              		.loc 1 51 7 is_stmt 0 view .LVU18
+  71 0024 0D4B     		ldr	r3, .L7+8
+  72 0026 9847     		blx	r3
+  73              	.LVL0:
+  74              		.loc 1 51 6 view .LVU19
+  75 0028 68B9     		cbnz	r0, .L5
+  76              	.L2:
+  77              		.loc 1 57 3 is_stmt 1 view .LVU20
+  78              		.loc 1 57 19 is_stmt 0 view .LVU21
+  79 002a 0723     		movs	r3, #7
+  80 002c 0193     		str	r3, [sp, #4]
+  81              		.loc 1 58 3 is_stmt 1 view .LVU22
+  82              		.loc 1 58 16 is_stmt 0 view .LVU23
+  83 002e 0123     		movs	r3, #1
+  84 0030 0293     		str	r3, [sp, #8]
+  85              		.loc 1 59 3 is_stmt 1 view .LVU24
+  86              		.loc 1 59 24 is_stmt 0 view .LVU25
+  87 0032 0023     		movs	r3, #0
+  88 0034 0393     		str	r3, [sp, #12]
+  89              		.loc 1 60 3 is_stmt 1 view .LVU26
+  90              		.loc 1 60 7 is_stmt 0 view .LVU27
+  91 0036 01A9     		add	r1, sp, #4
+  92 0038 0648     		ldr	r0, .L7
+  93 003a 094B     		ldr	r3, .L7+12
+  94 003c 9847     		blx	r3
+  95              	.LVL1:
+  96              		.loc 1 60 6 view .LVU28
+  97 003e 28B9     		cbnz	r0, .L6
+  98              	.L1:
+  99              		.loc 1 68 1 view .LVU29
+ 100 0040 05B0     		add	sp, sp, #20
+ 101              	.LCFI2:
+ 102              		.cfi_remember_state
+ 103              		.cfi_def_cfa_offset 4
+ 104              		@ sp needed
+ 105 0042 5DF804FB 		ldr	pc, [sp], #4
+ 106              	.L5:
+ 107              	.LCFI3:
+ 108              		.cfi_restore_state
+ 109              		.loc 1 53 5 is_stmt 1 view .LVU30
+ 110 0046 074B     		ldr	r3, .L7+16
+ 111 0048 9847     		blx	r3
+ 112              	.LVL2:
+ 113 004a EEE7     		b	.L2
+ 114              	.L6:
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccCqB49v.s 			page 3
+
+
+ 115              		.loc 1 62 5 view .LVU31
+ 116 004c 054B     		ldr	r3, .L7+16
+ 117 004e 9847     		blx	r3
+ 118              	.LVL3:
+ 119              		.loc 1 68 1 is_stmt 0 view .LVU32
+ 120 0050 F6E7     		b	.L1
+ 121              	.L8:
+ 122 0052 00BF     		.align	2
+ 123              	.L7:
+ 124 0054 00000000 		.word	.LANCHOR0
+ 125 0058 00240140 		.word	1073816576
+ 126 005c 00000000 		.word	HAL_ADC_Init
+ 127 0060 00000000 		.word	HAL_ADC_ConfigChannel
+ 128 0064 00000000 		.word	Error_Handler
+ 129              		.cfi_endproc
+ 130              	.LFE65:
+ 132              		.section	.text.HAL_ADC_MspInit,"ax",%progbits
+ 133              		.align	1
+ 134              		.global	HAL_ADC_MspInit
+ 135              		.syntax unified
+ 136              		.thumb
+ 137              		.thumb_func
+ 138              		.fpu softvfp
+ 140              	HAL_ADC_MspInit:
+ 141              	.LVL4:
+ 142              	.LFB66:
+ 143              		.loc 1 71 1 is_stmt 1 view -0
+ 144              		.cfi_startproc
+ 145              		@ args = 0, pretend = 0, frame = 24
+ 146              		@ frame_needed = 0, uses_anonymous_args = 0
+ 147              		.loc 1 71 1 is_stmt 0 view .LVU34
+ 148 0000 00B5     		push	{lr}
+ 149              	.LCFI4:
+ 150              		.cfi_def_cfa_offset 4
+ 151              		.cfi_offset 14, -4
+ 152 0002 87B0     		sub	sp, sp, #28
+ 153              	.LCFI5:
+ 154              		.cfi_def_cfa_offset 32
+ 155              		.loc 1 73 3 is_stmt 1 view .LVU35
+ 156              		.loc 1 73 20 is_stmt 0 view .LVU36
+ 157 0004 0023     		movs	r3, #0
+ 158 0006 0293     		str	r3, [sp, #8]
+ 159 0008 0393     		str	r3, [sp, #12]
+ 160 000a 0493     		str	r3, [sp, #16]
+ 161 000c 0593     		str	r3, [sp, #20]
+ 162              		.loc 1 74 3 is_stmt 1 view .LVU37
+ 163              		.loc 1 74 15 is_stmt 0 view .LVU38
+ 164 000e 0268     		ldr	r2, [r0]
+ 165              		.loc 1 74 5 view .LVU39
+ 166 0010 154B     		ldr	r3, .L13
+ 167 0012 9A42     		cmp	r2, r3
+ 168 0014 02D0     		beq	.L12
+ 169              	.LVL5:
+ 170              	.L9:
+ 171              		.loc 1 97 1 view .LVU40
+ 172 0016 07B0     		add	sp, sp, #28
+ 173              	.LCFI6:
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccCqB49v.s 			page 4
+
+
+ 174              		.cfi_remember_state
+ 175              		.cfi_def_cfa_offset 4
+ 176              		@ sp needed
+ 177 0018 5DF804FB 		ldr	pc, [sp], #4
+ 178              	.LVL6:
+ 179              	.L12:
+ 180              	.LCFI7:
+ 181              		.cfi_restore_state
+ 182              		.loc 1 80 5 is_stmt 1 view .LVU41
+ 183              	.LBB2:
+ 184              		.loc 1 80 5 view .LVU42
+ 185              		.loc 1 80 5 view .LVU43
+ 186 001c 03F56C43 		add	r3, r3, #60416
+ 187 0020 9A69     		ldr	r2, [r3, #24]
+ 188 0022 42F40072 		orr	r2, r2, #512
+ 189 0026 9A61     		str	r2, [r3, #24]
+ 190              		.loc 1 80 5 view .LVU44
+ 191 0028 9A69     		ldr	r2, [r3, #24]
+ 192 002a 02F40072 		and	r2, r2, #512
+ 193 002e 0092     		str	r2, [sp]
+ 194              		.loc 1 80 5 view .LVU45
+ 195 0030 009A     		ldr	r2, [sp]
+ 196              	.LBE2:
+ 197              		.loc 1 80 5 view .LVU46
+ 198              		.loc 1 82 5 view .LVU47
+ 199              	.LBB3:
+ 200              		.loc 1 82 5 view .LVU48
+ 201              		.loc 1 82 5 view .LVU49
+ 202 0032 9A69     		ldr	r2, [r3, #24]
+ 203 0034 42F00402 		orr	r2, r2, #4
+ 204 0038 9A61     		str	r2, [r3, #24]
+ 205              		.loc 1 82 5 view .LVU50
+ 206 003a 9B69     		ldr	r3, [r3, #24]
+ 207 003c 03F00403 		and	r3, r3, #4
+ 208 0040 0193     		str	r3, [sp, #4]
+ 209              		.loc 1 82 5 view .LVU51
+ 210 0042 019B     		ldr	r3, [sp, #4]
+ 211              	.LBE3:
+ 212              		.loc 1 82 5 view .LVU52
+ 213              		.loc 1 86 5 view .LVU53
+ 214              		.loc 1 86 25 is_stmt 0 view .LVU54
+ 215 0044 8023     		movs	r3, #128
+ 216 0046 0293     		str	r3, [sp, #8]
+ 217              		.loc 1 87 5 is_stmt 1 view .LVU55
+ 218              		.loc 1 87 26 is_stmt 0 view .LVU56
+ 219 0048 0323     		movs	r3, #3
+ 220 004a 0393     		str	r3, [sp, #12]
+ 221              		.loc 1 88 5 is_stmt 1 view .LVU57
+ 222 004c 02A9     		add	r1, sp, #8
+ 223 004e 0748     		ldr	r0, .L13+4
+ 224              	.LVL7:
+ 225              		.loc 1 88 5 is_stmt 0 view .LVU58
+ 226 0050 074B     		ldr	r3, .L13+8
+ 227 0052 9847     		blx	r3
+ 228              	.LVL8:
+ 229              		.loc 1 91 5 is_stmt 1 view .LVU59
+ 230 0054 0022     		movs	r2, #0
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccCqB49v.s 			page 5
+
+
+ 231 0056 0521     		movs	r1, #5
+ 232 0058 1220     		movs	r0, #18
+ 233 005a 064B     		ldr	r3, .L13+12
+ 234 005c 9847     		blx	r3
+ 235              	.LVL9:
+ 236              		.loc 1 92 5 view .LVU60
+ 237 005e 1220     		movs	r0, #18
+ 238 0060 054B     		ldr	r3, .L13+16
+ 239 0062 9847     		blx	r3
+ 240              	.LVL10:
+ 241              		.loc 1 97 1 is_stmt 0 view .LVU61
+ 242 0064 D7E7     		b	.L9
+ 243              	.L14:
+ 244 0066 00BF     		.align	2
+ 245              	.L13:
+ 246 0068 00240140 		.word	1073816576
+ 247 006c 00080140 		.word	1073809408
+ 248 0070 00000000 		.word	HAL_GPIO_Init
+ 249 0074 00000000 		.word	HAL_NVIC_SetPriority
+ 250 0078 00000000 		.word	HAL_NVIC_EnableIRQ
+ 251              		.cfi_endproc
+ 252              	.LFE66:
+ 254              		.section	.text.HAL_ADC_MspDeInit,"ax",%progbits
+ 255              		.align	1
+ 256              		.global	HAL_ADC_MspDeInit
+ 257              		.syntax unified
+ 258              		.thumb
+ 259              		.thumb_func
+ 260              		.fpu softvfp
+ 262              	HAL_ADC_MspDeInit:
+ 263              	.LVL11:
+ 264              	.LFB67:
+ 265              		.loc 1 100 1 is_stmt 1 view -0
+ 266              		.cfi_startproc
+ 267              		@ args = 0, pretend = 0, frame = 0
+ 268              		@ frame_needed = 0, uses_anonymous_args = 0
+ 269              		.loc 1 100 1 is_stmt 0 view .LVU63
+ 270 0000 08B5     		push	{r3, lr}
+ 271              	.LCFI8:
+ 272              		.cfi_def_cfa_offset 8
+ 273              		.cfi_offset 3, -8
+ 274              		.cfi_offset 14, -4
+ 275              		.loc 1 102 3 is_stmt 1 view .LVU64
+ 276              		.loc 1 102 15 is_stmt 0 view .LVU65
+ 277 0002 0268     		ldr	r2, [r0]
+ 278              		.loc 1 102 5 view .LVU66
+ 279 0004 084B     		ldr	r3, .L19
+ 280 0006 9A42     		cmp	r2, r3
+ 281 0008 00D0     		beq	.L18
+ 282              	.LVL12:
+ 283              	.L15:
+ 284              		.loc 1 121 1 view .LVU67
+ 285 000a 08BD     		pop	{r3, pc}
+ 286              	.LVL13:
+ 287              	.L18:
+ 288              		.loc 1 108 5 is_stmt 1 view .LVU68
+ 289 000c 074A     		ldr	r2, .L19+4
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccCqB49v.s 			page 6
+
+
+ 290 000e 9369     		ldr	r3, [r2, #24]
+ 291 0010 23F40073 		bic	r3, r3, #512
+ 292 0014 9361     		str	r3, [r2, #24]
+ 293              		.loc 1 113 5 view .LVU69
+ 294 0016 8021     		movs	r1, #128
+ 295 0018 0548     		ldr	r0, .L19+8
+ 296              	.LVL14:
+ 297              		.loc 1 113 5 is_stmt 0 view .LVU70
+ 298 001a 064B     		ldr	r3, .L19+12
+ 299 001c 9847     		blx	r3
+ 300              	.LVL15:
+ 301              		.loc 1 116 5 is_stmt 1 view .LVU71
+ 302 001e 1220     		movs	r0, #18
+ 303 0020 054B     		ldr	r3, .L19+16
+ 304 0022 9847     		blx	r3
+ 305              	.LVL16:
+ 306              		.loc 1 121 1 is_stmt 0 view .LVU72
+ 307 0024 F1E7     		b	.L15
+ 308              	.L20:
+ 309 0026 00BF     		.align	2
+ 310              	.L19:
+ 311 0028 00240140 		.word	1073816576
+ 312 002c 00100240 		.word	1073876992
+ 313 0030 00080140 		.word	1073809408
+ 314 0034 00000000 		.word	HAL_GPIO_DeInit
+ 315 0038 00000000 		.word	HAL_NVIC_DisableIRQ
+ 316              		.cfi_endproc
+ 317              	.LFE67:
+ 319              		.global	hadc1
+ 320              		.section	.bss.hadc1,"aw",%nobits
+ 321              		.align	2
+ 322              		.set	.LANCHOR0,. + 0
+ 325              	hadc1:
+ 326 0000 00000000 		.space	48
+ 326      00000000 
+ 326      00000000 
+ 326      00000000 
+ 326      00000000 
+ 327              		.text
+ 328              	.Letext0:
+ 329              		.file 2 "../c:\\users\\test\\desktop\\gnu mcu\\arm-none-eabi-gcc-10.2.1-1.1\\arm-none-eabi\\includ
+ 330              		.file 3 "../c:\\users\\test\\desktop\\gnu mcu\\arm-none-eabi-gcc-10.2.1-1.1\\arm-none-eabi\\includ
+ 331              		.file 4 "../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103x6.h"
+ 332              		.file 5 "../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h"
+ 333              		.file 6 "../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
+ 334              		.file 7 "../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h"
+ 335              		.file 8 "../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h"
+ 336              		.file 9 "../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc.h"
+ 337              		.file 10 "../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h"
+ 338              		.file 11 "../Core/Inc/main.h"
+ 339              		.file 12 "../Core/Inc/adc.h"
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccCqB49v.s 			page 7
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 adc.c
+C:\Users\Test\AppData\Local\Temp\ccCqB49v.s:16     .text.MX_ADC1_Init:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\ccCqB49v.s:24     .text.MX_ADC1_Init:0000000000000000 MX_ADC1_Init
+C:\Users\Test\AppData\Local\Temp\ccCqB49v.s:124    .text.MX_ADC1_Init:0000000000000054 $d
+C:\Users\Test\AppData\Local\Temp\ccCqB49v.s:133    .text.HAL_ADC_MspInit:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\ccCqB49v.s:140    .text.HAL_ADC_MspInit:0000000000000000 HAL_ADC_MspInit
+C:\Users\Test\AppData\Local\Temp\ccCqB49v.s:246    .text.HAL_ADC_MspInit:0000000000000068 $d
+C:\Users\Test\AppData\Local\Temp\ccCqB49v.s:255    .text.HAL_ADC_MspDeInit:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\ccCqB49v.s:262    .text.HAL_ADC_MspDeInit:0000000000000000 HAL_ADC_MspDeInit
+C:\Users\Test\AppData\Local\Temp\ccCqB49v.s:311    .text.HAL_ADC_MspDeInit:0000000000000028 $d
+C:\Users\Test\AppData\Local\Temp\ccCqB49v.s:325    .bss.hadc1:0000000000000000 hadc1
+C:\Users\Test\AppData\Local\Temp\ccCqB49v.s:321    .bss.hadc1:0000000000000000 $d
+
+UNDEFINED SYMBOLS
+HAL_ADC_Init
+HAL_ADC_ConfigChannel
+Error_Handler
+HAL_GPIO_Init
+HAL_NVIC_SetPriority
+HAL_NVIC_EnableIRQ
+HAL_GPIO_DeInit
+HAL_NVIC_DisableIRQ

@@ -1,0 +1,1265 @@
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccuVRhG5.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 1
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"stm32f1xx_hal_flash.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.FLASH_Program_HalfWord,"ax",%progbits
+  16              		.align	1
+  17              		.arch armv7-m
+  18              		.syntax unified
+  19              		.thumb
+  20              		.thumb_func
+  21              		.fpu softvfp
+  23              	FLASH_Program_HalfWord:
+  24              	.LVL0:
+  25              	.LFB76:
+  26              		.file 1 "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c"
+   1:../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c **** 
+  27              		.loc 1 798 1 view -0
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 0, uses_anonymous_args = 0
+  31              		@ link register save eliminated.
+  32              		.loc 1 800 3 view .LVU1
+  33              		.loc 1 800 20 is_stmt 0 view .LVU2
+  34 0000 044B     		ldr	r3, .L2
+  35 0002 0022     		movs	r2, #0
+  36 0004 DA61     		str	r2, [r3, #28]
+  37              		.loc 1 807 5 is_stmt 1 view .LVU3
+  38 0006 044A     		ldr	r2, .L2+4
+  39 0008 1369     		ldr	r3, [r2, #16]
+  40 000a 43F00103 		orr	r3, r3, #1
+  41 000e 1361     		str	r3, [r2, #16]
+  42              		.loc 1 818 3 view .LVU4
+  43              		.loc 1 818 28 is_stmt 0 view .LVU5
+  44 0010 0180     		strh	r1, [r0]	@ movhi
+  45              		.loc 1 819 1 view .LVU6
+  46 0012 7047     		bx	lr
+  47              	.L3:
+  48              		.align	2
+  49              	.L2:
+  50 0014 00000000 		.word	.LANCHOR0
+  51 0018 00200240 		.word	1073881088
+  52              		.cfi_endproc
+  53              	.LFE76:
+  55              		.section	.text.FLASH_SetErrorCode,"ax",%progbits
+  56              		.align	1
+  57              		.syntax unified
+  58              		.thumb
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccuVRhG5.s 			page 2
+
+
+  59              		.thumb_func
+  60              		.fpu softvfp
+  62              	FLASH_SetErrorCode:
+  63              	.LFB78:
+  64              		.loc 1 915 1 is_stmt 1 view -0
+  65              		.cfi_startproc
+  66              		@ args = 0, pretend = 0, frame = 0
+  67              		@ frame_needed = 0, uses_anonymous_args = 0
+  68              		@ link register save eliminated.
+  69              		.loc 1 916 3 view .LVU8
+  70              	.LVL1:
+  71              		.loc 1 921 3 view .LVU9
+  72              		.loc 1 921 6 is_stmt 0 view .LVU10
+  73 0000 194B     		ldr	r3, .L11
+  74 0002 DB68     		ldr	r3, [r3, #12]
+  75              		.loc 1 921 5 view .LVU11
+  76 0004 13F01003 		ands	r3, r3, #16
+  77 0008 05D0     		beq	.L5
+  78              		.loc 1 924 5 is_stmt 1 view .LVU12
+  79              		.loc 1 924 22 is_stmt 0 view .LVU13
+  80 000a 184A     		ldr	r2, .L11+4
+  81 000c D369     		ldr	r3, [r2, #28]
+  82 000e 43F00203 		orr	r3, r3, #2
+  83 0012 D361     		str	r3, [r2, #28]
+  84              		.loc 1 928 5 is_stmt 1 view .LVU14
+  85              	.LVL2:
+  86              		.loc 1 928 11 is_stmt 0 view .LVU15
+  87 0014 1023     		movs	r3, #16
+  88              	.LVL3:
+  89              	.L5:
+  90              		.loc 1 934 3 is_stmt 1 view .LVU16
+  91              		.loc 1 934 6 is_stmt 0 view .LVU17
+  92 0016 144A     		ldr	r2, .L11
+  93 0018 D268     		ldr	r2, [r2, #12]
+  94              		.loc 1 934 5 view .LVU18
+  95 001a 12F0040F 		tst	r2, #4
+  96 001e 06D0     		beq	.L6
+  97              		.loc 1 937 5 is_stmt 1 view .LVU19
+  98              		.loc 1 937 22 is_stmt 0 view .LVU20
+  99 0020 1249     		ldr	r1, .L11+4
+ 100 0022 CA69     		ldr	r2, [r1, #28]
+ 101 0024 42F00102 		orr	r2, r2, #1
+ 102 0028 CA61     		str	r2, [r1, #28]
+ 103              		.loc 1 941 5 is_stmt 1 view .LVU21
+ 104              		.loc 1 941 11 is_stmt 0 view .LVU22
+ 105 002a 43F00403 		orr	r3, r3, #4
+ 106              	.LVL4:
+ 107              	.L6:
+ 108              		.loc 1 944 3 is_stmt 1 view .LVU23
+ 109              		.loc 1 944 6 is_stmt 0 view .LVU24
+ 110 002e 0E4A     		ldr	r2, .L11
+ 111 0030 D269     		ldr	r2, [r2, #28]
+ 112              		.loc 1 944 5 view .LVU25
+ 113 0032 12F0010F 		tst	r2, #1
+ 114 0036 09D0     		beq	.L7
+ 115              		.loc 1 946 5 is_stmt 1 view .LVU26
+ 116              		.loc 1 946 22 is_stmt 0 view .LVU27
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccuVRhG5.s 			page 3
+
+
+ 117 0038 0C49     		ldr	r1, .L11+4
+ 118 003a CA69     		ldr	r2, [r1, #28]
+ 119 003c 42F00402 		orr	r2, r2, #4
+ 120 0040 CA61     		str	r2, [r1, #28]
+ 121              		.loc 1 947 3 is_stmt 1 view .LVU28
+ 122              		.loc 1 947 3 view .LVU29
+ 123              		.loc 1 947 3 view .LVU30
+ 124 0042 0949     		ldr	r1, .L11
+ 125 0044 CA69     		ldr	r2, [r1, #28]
+ 126 0046 22F00102 		bic	r2, r2, #1
+ 127 004a CA61     		str	r2, [r1, #28]
+ 128              	.L7:
+ 129              		.loc 1 947 3 discriminator 4 view .LVU31
+ 130              		.loc 1 951 3 discriminator 4 view .LVU32
+ 131              		.loc 1 951 3 discriminator 4 view .LVU33
+ 132 004c 40F20112 		movw	r2, #257
+ 133 0050 9342     		cmp	r3, r2
+ 134 0052 02D0     		beq	.L10
+ 135              		.loc 1 951 3 discriminator 2 view .LVU34
+ 136 0054 044A     		ldr	r2, .L11
+ 137 0056 D360     		str	r3, [r2, #12]
+ 138              		.loc 1 951 3 discriminator 2 view .LVU35
+ 139              		.loc 1 952 1 is_stmt 0 discriminator 2 view .LVU36
+ 140 0058 7047     		bx	lr
+ 141              	.L10:
+ 142              		.loc 1 951 3 is_stmt 1 discriminator 1 view .LVU37
+ 143 005a 034A     		ldr	r2, .L11
+ 144 005c D369     		ldr	r3, [r2, #28]
+ 145              	.LVL5:
+ 146              		.loc 1 951 3 is_stmt 0 discriminator 1 view .LVU38
+ 147 005e 23F00103 		bic	r3, r3, #1
+ 148 0062 D361     		str	r3, [r2, #28]
+ 149 0064 7047     		bx	lr
+ 150              	.L12:
+ 151 0066 00BF     		.align	2
+ 152              	.L11:
+ 153 0068 00200240 		.word	1073881088
+ 154 006c 00000000 		.word	.LANCHOR0
+ 155              		.cfi_endproc
+ 156              	.LFE78:
+ 158              		.section	.text.HAL_FLASH_Program_IT,"ax",%progbits
+ 159              		.align	1
+ 160              		.global	HAL_FLASH_Program_IT
+ 161              		.syntax unified
+ 162              		.thumb
+ 163              		.thumb_func
+ 164              		.fpu softvfp
+ 166              	HAL_FLASH_Program_IT:
+ 167              	.LVL6:
+ 168              	.LFB66:
+ 169              		.loc 1 268 1 is_stmt 1 view -0
+ 170              		.cfi_startproc
+ 171              		@ args = 0, pretend = 0, frame = 0
+ 172              		@ frame_needed = 0, uses_anonymous_args = 0
+ 173              		.loc 1 268 1 is_stmt 0 view .LVU40
+ 174 0000 38B5     		push	{r3, r4, r5, lr}
+ 175              	.LCFI0:
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccuVRhG5.s 			page 4
+
+
+ 176              		.cfi_def_cfa_offset 16
+ 177              		.cfi_offset 3, -16
+ 178              		.cfi_offset 4, -12
+ 179              		.cfi_offset 5, -8
+ 180              		.cfi_offset 14, -4
+ 181 0002 1D46     		mov	r5, r3
+ 182              		.loc 1 269 3 is_stmt 1 view .LVU41
+ 183              	.LVL7:
+ 184              		.loc 1 272 3 view .LVU42
+ 185              		.loc 1 272 3 view .LVU43
+ 186 0004 174B     		ldr	r3, .L22
+ 187 0006 1B7E     		ldrb	r3, [r3, #24]	@ zero_extendqisi2
+ 188 0008 012B     		cmp	r3, #1
+ 189 000a 28D0     		beq	.L18
+ 190 000c 8446     		mov	ip, r0
+ 191 000e 0846     		mov	r0, r1
+ 192              	.LVL8:
+ 193              		.loc 1 272 3 is_stmt 0 view .LVU44
+ 194 0010 1446     		mov	r4, r2
+ 195              		.loc 1 272 3 is_stmt 1 discriminator 2 view .LVU45
+ 196 0012 144B     		ldr	r3, .L22
+ 197 0014 0122     		movs	r2, #1
+ 198              	.LVL9:
+ 199              		.loc 1 272 3 is_stmt 0 discriminator 2 view .LVU46
+ 200 0016 1A76     		strb	r2, [r3, #24]
+ 201              		.loc 1 272 3 is_stmt 1 discriminator 2 view .LVU47
+ 202              		.loc 1 275 3 discriminator 2 view .LVU48
+ 203              		.loc 1 276 3 discriminator 2 view .LVU49
+ 204              		.loc 1 297 3 discriminator 2 view .LVU50
+ 205 0018 1349     		ldr	r1, .L22+4
+ 206              	.LVL10:
+ 207              		.loc 1 297 3 is_stmt 0 discriminator 2 view .LVU51
+ 208 001a 0A69     		ldr	r2, [r1, #16]
+ 209 001c 42F4A052 		orr	r2, r2, #5120
+ 210 0020 0A61     		str	r2, [r1, #16]
+ 211              		.loc 1 300 3 is_stmt 1 discriminator 2 view .LVU52
+ 212              		.loc 1 300 18 is_stmt 0 discriminator 2 view .LVU53
+ 213 0022 9860     		str	r0, [r3, #8]
+ 214              		.loc 1 301 3 is_stmt 1 discriminator 2 view .LVU54
+ 215              		.loc 1 301 15 is_stmt 0 discriminator 2 view .LVU55
+ 216 0024 C3E90445 		strd	r4, [r3, #16]
+ 217              		.loc 1 303 3 is_stmt 1 discriminator 2 view .LVU56
+ 218              		.loc 1 303 5 is_stmt 0 discriminator 2 view .LVU57
+ 219 0028 BCF1010F 		cmp	ip, #1
+ 220 002c 0CD0     		beq	.L20
+ 221              		.loc 1 309 8 is_stmt 1 view .LVU58
+ 222              		.loc 1 309 10 is_stmt 0 view .LVU59
+ 223 002e BCF1020F 		cmp	ip, #2
+ 224 0032 0ED0     		beq	.L21
+ 225              		.loc 1 317 5 is_stmt 1 view .LVU60
+ 226              		.loc 1 317 29 is_stmt 0 view .LVU61
+ 227 0034 0B4B     		ldr	r3, .L22
+ 228 0036 0522     		movs	r2, #5
+ 229 0038 1A70     		strb	r2, [r3]
+ 230              		.loc 1 319 5 is_stmt 1 view .LVU62
+ 231              		.loc 1 319 26 is_stmt 0 view .LVU63
+ 232 003a 0422     		movs	r2, #4
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccuVRhG5.s 			page 5
+
+
+ 233 003c 5A60     		str	r2, [r3, #4]
+ 234              	.L16:
+ 235              		.loc 1 323 3 is_stmt 1 view .LVU64
+ 236 003e A1B2     		uxth	r1, r4
+ 237 0040 0A4B     		ldr	r3, .L22+8
+ 238 0042 9847     		blx	r3
+ 239              	.LVL11:
+ 240              		.loc 1 325 3 view .LVU65
+ 241              		.loc 1 325 10 is_stmt 0 view .LVU66
+ 242 0044 0020     		movs	r0, #0
+ 243              	.L14:
+ 244              		.loc 1 326 1 view .LVU67
+ 245 0046 38BD     		pop	{r3, r4, r5, pc}
+ 246              	.LVL12:
+ 247              	.L20:
+ 248              		.loc 1 305 5 is_stmt 1 view .LVU68
+ 249              		.loc 1 305 29 is_stmt 0 view .LVU69
+ 250 0048 0322     		movs	r2, #3
+ 251 004a 1A70     		strb	r2, [r3]
+ 252              		.loc 1 307 5 is_stmt 1 view .LVU70
+ 253              		.loc 1 307 26 is_stmt 0 view .LVU71
+ 254 004c 0122     		movs	r2, #1
+ 255 004e 5A60     		str	r2, [r3, #4]
+ 256 0050 F5E7     		b	.L16
+ 257              	.L21:
+ 258              		.loc 1 311 5 is_stmt 1 view .LVU72
+ 259              		.loc 1 311 29 is_stmt 0 view .LVU73
+ 260 0052 044B     		ldr	r3, .L22
+ 261 0054 0422     		movs	r2, #4
+ 262 0056 1A70     		strb	r2, [r3]
+ 263              		.loc 1 313 5 is_stmt 1 view .LVU74
+ 264              		.loc 1 313 26 is_stmt 0 view .LVU75
+ 265 0058 0222     		movs	r2, #2
+ 266 005a 5A60     		str	r2, [r3, #4]
+ 267 005c EFE7     		b	.L16
+ 268              	.LVL13:
+ 269              	.L18:
+ 270              		.loc 1 272 3 view .LVU76
+ 271 005e 0220     		movs	r0, #2
+ 272              	.LVL14:
+ 273              		.loc 1 272 3 view .LVU77
+ 274 0060 F1E7     		b	.L14
+ 275              	.L23:
+ 276 0062 00BF     		.align	2
+ 277              	.L22:
+ 278 0064 00000000 		.word	.LANCHOR0
+ 279 0068 00200240 		.word	1073881088
+ 280 006c 00000000 		.word	FLASH_Program_HalfWord
+ 281              		.cfi_endproc
+ 282              	.LFE66:
+ 284              		.section	.text.HAL_FLASH_EndOfOperationCallback,"ax",%progbits
+ 285              		.align	1
+ 286              		.weak	HAL_FLASH_EndOfOperationCallback
+ 287              		.syntax unified
+ 288              		.thumb
+ 289              		.thumb_func
+ 290              		.fpu softvfp
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccuVRhG5.s 			page 6
+
+
+ 292              	HAL_FLASH_EndOfOperationCallback:
+ 293              	.LVL15:
+ 294              	.LFB68:
+ 295              		.loc 1 607 1 is_stmt 1 view -0
+ 296              		.cfi_startproc
+ 297              		@ args = 0, pretend = 0, frame = 0
+ 298              		@ frame_needed = 0, uses_anonymous_args = 0
+ 299              		@ link register save eliminated.
+ 300              		.loc 1 609 3 view .LVU79
+ 301              		.loc 1 614 1 is_stmt 0 view .LVU80
+ 302 0000 7047     		bx	lr
+ 303              		.cfi_endproc
+ 304              	.LFE68:
+ 306              		.section	.text.HAL_FLASH_OperationErrorCallback,"ax",%progbits
+ 307              		.align	1
+ 308              		.weak	HAL_FLASH_OperationErrorCallback
+ 309              		.syntax unified
+ 310              		.thumb
+ 311              		.thumb_func
+ 312              		.fpu softvfp
+ 314              	HAL_FLASH_OperationErrorCallback:
+ 315              	.LVL16:
+ 316              	.LFB69:
+ 317              		.loc 1 625 1 is_stmt 1 view -0
+ 318              		.cfi_startproc
+ 319              		@ args = 0, pretend = 0, frame = 0
+ 320              		@ frame_needed = 0, uses_anonymous_args = 0
+ 321              		@ link register save eliminated.
+ 322              		.loc 1 627 3 view .LVU82
+ 323              		.loc 1 632 1 is_stmt 0 view .LVU83
+ 324 0000 7047     		bx	lr
+ 325              		.cfi_endproc
+ 326              	.LFE69:
+ 328              		.section	.text.HAL_FLASH_IRQHandler,"ax",%progbits
+ 329              		.align	1
+ 330              		.global	HAL_FLASH_IRQHandler
+ 331              		.syntax unified
+ 332              		.thumb
+ 333              		.thumb_func
+ 334              		.fpu softvfp
+ 336              	HAL_FLASH_IRQHandler:
+ 337              	.LFB67:
+ 338              		.loc 1 333 1 is_stmt 1 view -0
+ 339              		.cfi_startproc
+ 340              		@ args = 0, pretend = 0, frame = 0
+ 341              		@ frame_needed = 0, uses_anonymous_args = 0
+ 342 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+ 343              	.LCFI1:
+ 344              		.cfi_def_cfa_offset 24
+ 345              		.cfi_offset 3, -24
+ 346              		.cfi_offset 4, -20
+ 347              		.cfi_offset 5, -16
+ 348              		.cfi_offset 6, -12
+ 349              		.cfi_offset 7, -8
+ 350              		.cfi_offset 14, -4
+ 351              		.loc 1 334 3 view .LVU85
+ 352              	.LVL17:
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccuVRhG5.s 			page 7
+
+
+ 353              		.loc 1 341 3 view .LVU86
+ 354              		.loc 1 341 6 is_stmt 0 view .LVU87
+ 355 0002 524B     		ldr	r3, .L44
+ 356 0004 DB68     		ldr	r3, [r3, #12]
+ 357              		.loc 1 341 5 view .LVU88
+ 358 0006 13F0100F 		tst	r3, #16
+ 359 000a 04D1     		bne	.L27
+ 360              		.loc 1 341 48 discriminator 1 view .LVU89
+ 361 000c 4F4B     		ldr	r3, .L44
+ 362 000e DB68     		ldr	r3, [r3, #12]
+ 363              		.loc 1 341 46 discriminator 1 view .LVU90
+ 364 0010 13F0040F 		tst	r3, #4
+ 365 0014 0BD0     		beq	.L28
+ 366              	.L27:
+ 367              		.loc 1 345 5 is_stmt 1 view .LVU91
+ 368              		.loc 1 345 16 is_stmt 0 view .LVU92
+ 369 0016 4E4C     		ldr	r4, .L44+4
+ 370 0018 A568     		ldr	r5, [r4, #8]
+ 371              	.LVL18:
+ 372              		.loc 1 347 5 is_stmt 1 view .LVU93
+ 373              		.loc 1 347 20 is_stmt 0 view .LVU94
+ 374 001a 4FF0FF33 		mov	r3, #-1
+ 375 001e A360     		str	r3, [r4, #8]
+ 376              		.loc 1 350 5 is_stmt 1 view .LVU95
+ 377 0020 4C4B     		ldr	r3, .L44+8
+ 378 0022 9847     		blx	r3
+ 379              	.LVL19:
+ 380              		.loc 1 353 5 view .LVU96
+ 381 0024 2846     		mov	r0, r5
+ 382 0026 4C4B     		ldr	r3, .L44+12
+ 383 0028 9847     		blx	r3
+ 384              	.LVL20:
+ 385              		.loc 1 356 5 view .LVU97
+ 386              		.loc 1 356 29 is_stmt 0 view .LVU98
+ 387 002a 0023     		movs	r3, #0
+ 388 002c 2370     		strb	r3, [r4]
+ 389              	.LVL21:
+ 390              	.L28:
+ 391              		.loc 1 366 3 is_stmt 1 view .LVU99
+ 392              		.loc 1 366 6 is_stmt 0 view .LVU100
+ 393 002e 474B     		ldr	r3, .L44
+ 394 0030 DB68     		ldr	r3, [r3, #12]
+ 395              		.loc 1 366 5 view .LVU101
+ 396 0032 13F0200F 		tst	r3, #32
+ 397 0036 2BD0     		beq	.L29
+ 398              		.loc 1 369 5 is_stmt 1 discriminator 2 view .LVU102
+ 399              		.loc 1 369 5 discriminator 2 view .LVU103
+ 400              		.loc 1 369 5 discriminator 2 view .LVU104
+ 401 0038 444B     		ldr	r3, .L44
+ 402 003a 2022     		movs	r2, #32
+ 403 003c DA60     		str	r2, [r3, #12]
+ 404              		.loc 1 369 5 discriminator 2 view .LVU105
+ 405              		.loc 1 373 5 discriminator 2 view .LVU106
+ 406              		.loc 1 373 14 is_stmt 0 discriminator 2 view .LVU107
+ 407 003e 444B     		ldr	r3, .L44+4
+ 408 0040 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 409              		.loc 1 373 7 discriminator 2 view .LVU108
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccuVRhG5.s 			page 8
+
+
+ 410 0042 2BB3     		cbz	r3, .L29
+ 411              		.loc 1 375 7 is_stmt 1 view .LVU109
+ 412              		.loc 1 375 16 is_stmt 0 view .LVU110
+ 413 0044 424B     		ldr	r3, .L44+4
+ 414 0046 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 415 0048 DBB2     		uxtb	r3, r3
+ 416              		.loc 1 375 9 view .LVU111
+ 417 004a 012B     		cmp	r3, #1
+ 418 004c 30D0     		beq	.L39
+ 419              		.loc 1 406 12 is_stmt 1 view .LVU112
+ 420              		.loc 1 406 21 is_stmt 0 view .LVU113
+ 421 004e 404B     		ldr	r3, .L44+4
+ 422 0050 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 423 0052 DBB2     		uxtb	r3, r3
+ 424              		.loc 1 406 14 view .LVU114
+ 425 0054 022B     		cmp	r3, #2
+ 426 0056 4AD0     		beq	.L40
+ 427              		.loc 1 429 9 is_stmt 1 view .LVU115
+ 428              		.loc 1 429 15 is_stmt 0 view .LVU116
+ 429 0058 3D4B     		ldr	r3, .L44+4
+ 430 005a 5A68     		ldr	r2, [r3, #4]
+ 431              		.loc 1 429 29 view .LVU117
+ 432 005c 013A     		subs	r2, r2, #1
+ 433 005e 5A60     		str	r2, [r3, #4]
+ 434              		.loc 1 432 9 is_stmt 1 view .LVU118
+ 435              		.loc 1 432 18 is_stmt 0 view .LVU119
+ 436 0060 5B68     		ldr	r3, [r3, #4]
+ 437              		.loc 1 432 11 view .LVU120
+ 438 0062 002B     		cmp	r3, #0
+ 439 0064 4FD1     		bne	.L41
+ 440              		.loc 1 451 11 is_stmt 1 view .LVU121
+ 441              		.loc 1 451 21 is_stmt 0 view .LVU122
+ 442 0066 3A4B     		ldr	r3, .L44+4
+ 443 0068 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 444 006a DBB2     		uxtb	r3, r3
+ 445              		.loc 1 451 14 view .LVU123
+ 446 006c 032B     		cmp	r3, #3
+ 447 006e 62D0     		beq	.L42
+ 448              		.loc 1 455 16 is_stmt 1 view .LVU124
+ 449              		.loc 1 455 26 is_stmt 0 view .LVU125
+ 450 0070 374B     		ldr	r3, .L44+4
+ 451 0072 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 452 0074 DBB2     		uxtb	r3, r3
+ 453              		.loc 1 455 19 view .LVU126
+ 454 0076 042B     		cmp	r3, #4
+ 455 0078 62D0     		beq	.L43
+ 456              		.loc 1 461 13 is_stmt 1 view .LVU127
+ 457              		.loc 1 461 52 is_stmt 0 view .LVU128
+ 458 007a 354B     		ldr	r3, .L44+4
+ 459 007c 9868     		ldr	r0, [r3, #8]
+ 460              		.loc 1 461 13 view .LVU129
+ 461 007e 0638     		subs	r0, r0, #6
+ 462 0080 364B     		ldr	r3, .L44+16
+ 463 0082 9847     		blx	r3
+ 464              	.LVL22:
+ 465              	.L35:
+ 466              		.loc 1 465 11 is_stmt 1 view .LVU130
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccuVRhG5.s 			page 9
+
+
+ 467              		.loc 1 465 26 is_stmt 0 view .LVU131
+ 468 0084 324B     		ldr	r3, .L44+4
+ 469 0086 4FF0FF32 		mov	r2, #-1
+ 470 008a 9A60     		str	r2, [r3, #8]
+ 471              		.loc 1 466 11 is_stmt 1 view .LVU132
+ 472              		.loc 1 466 35 is_stmt 0 view .LVU133
+ 473 008c 0022     		movs	r2, #0
+ 474 008e 1A70     		strb	r2, [r3]
+ 475              	.L29:
+ 476              		.loc 1 575 3 is_stmt 1 view .LVU134
+ 477              		.loc 1 575 12 is_stmt 0 view .LVU135
+ 478 0090 2F4B     		ldr	r3, .L44+4
+ 479 0092 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 480              		.loc 1 575 5 view .LVU136
+ 481 0094 5BB9     		cbnz	r3, .L26
+ 482              		.loc 1 586 5 is_stmt 1 view .LVU137
+ 483 0096 2D4B     		ldr	r3, .L44
+ 484 0098 1A69     		ldr	r2, [r3, #16]
+ 485 009a 22F00702 		bic	r2, r2, #7
+ 486 009e 1A61     		str	r2, [r3, #16]
+ 487              		.loc 1 589 5 view .LVU138
+ 488 00a0 1A69     		ldr	r2, [r3, #16]
+ 489 00a2 22F4A052 		bic	r2, r2, #5120
+ 490 00a6 1A61     		str	r2, [r3, #16]
+ 491              		.loc 1 593 5 view .LVU139
+ 492              		.loc 1 593 5 view .LVU140
+ 493 00a8 294B     		ldr	r3, .L44+4
+ 494 00aa 0022     		movs	r2, #0
+ 495 00ac 1A76     		strb	r2, [r3, #24]
+ 496              		.loc 1 593 5 view .LVU141
+ 497              	.L26:
+ 498              		.loc 1 595 1 is_stmt 0 view .LVU142
+ 499 00ae F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 500              	.L39:
+ 501              		.loc 1 378 9 is_stmt 1 view .LVU143
+ 502              		.loc 1 378 15 is_stmt 0 view .LVU144
+ 503 00b0 274B     		ldr	r3, .L44+4
+ 504 00b2 5A68     		ldr	r2, [r3, #4]
+ 505              		.loc 1 378 29 view .LVU145
+ 506 00b4 013A     		subs	r2, r2, #1
+ 507 00b6 5A60     		str	r2, [r3, #4]
+ 508              		.loc 1 381 9 is_stmt 1 view .LVU146
+ 509              		.loc 1 381 18 is_stmt 0 view .LVU147
+ 510 00b8 5B68     		ldr	r3, [r3, #4]
+ 511              		.loc 1 381 11 view .LVU148
+ 512 00ba 7BB1     		cbz	r3, .L31
+ 513              		.loc 1 383 11 is_stmt 1 view .LVU149
+ 514              		.loc 1 383 22 is_stmt 0 view .LVU150
+ 515 00bc 244C     		ldr	r4, .L44+4
+ 516 00be A068     		ldr	r0, [r4, #8]
+ 517              	.LVL23:
+ 518              		.loc 1 385 11 is_stmt 1 view .LVU151
+ 519 00c0 264B     		ldr	r3, .L44+16
+ 520 00c2 9847     		blx	r3
+ 521              	.LVL24:
+ 522              		.loc 1 388 11 view .LVU152
+ 523              		.loc 1 388 30 is_stmt 0 view .LVU153
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccuVRhG5.s 			page 10
+
+
+ 524 00c4 A068     		ldr	r0, [r4, #8]
+ 525              		.loc 1 388 22 view .LVU154
+ 526 00c6 00F58060 		add	r0, r0, #1024
+ 527              	.LVL25:
+ 528              		.loc 1 389 11 is_stmt 1 view .LVU155
+ 529              		.loc 1 389 26 is_stmt 0 view .LVU156
+ 530 00ca A060     		str	r0, [r4, #8]
+ 531              		.loc 1 392 11 is_stmt 1 view .LVU157
+ 532 00cc 1F4A     		ldr	r2, .L44
+ 533 00ce 1369     		ldr	r3, [r2, #16]
+ 534 00d0 23F00203 		bic	r3, r3, #2
+ 535 00d4 1361     		str	r3, [r2, #16]
+ 536              		.loc 1 394 11 view .LVU158
+ 537 00d6 224B     		ldr	r3, .L44+20
+ 538 00d8 9847     		blx	r3
+ 539              	.LVL26:
+ 540              		.loc 1 394 11 is_stmt 0 view .LVU159
+ 541 00da D9E7     		b	.L29
+ 542              	.L31:
+ 543              		.loc 1 400 11 is_stmt 1 view .LVU160
+ 544              	.LVL27:
+ 545              		.loc 1 400 26 is_stmt 0 view .LVU161
+ 546 00dc 1C4B     		ldr	r3, .L44+4
+ 547 00de 4FF0FF30 		mov	r0, #-1
+ 548 00e2 9860     		str	r0, [r3, #8]
+ 549              		.loc 1 401 11 is_stmt 1 view .LVU162
+ 550              		.loc 1 401 35 is_stmt 0 view .LVU163
+ 551 00e4 0022     		movs	r2, #0
+ 552 00e6 1A70     		strb	r2, [r3]
+ 553              		.loc 1 403 11 is_stmt 1 view .LVU164
+ 554 00e8 1C4B     		ldr	r3, .L44+16
+ 555 00ea 9847     		blx	r3
+ 556              	.LVL28:
+ 557 00ec D0E7     		b	.L29
+ 558              	.LVL29:
+ 559              	.L40:
+ 560              		.loc 1 409 9 view .LVU165
+ 561 00ee 174A     		ldr	r2, .L44
+ 562 00f0 1369     		ldr	r3, [r2, #16]
+ 563 00f2 23F00403 		bic	r3, r3, #4
+ 564 00f6 1361     		str	r3, [r2, #16]
+ 565              		.loc 1 418 11 view .LVU166
+ 566 00f8 0020     		movs	r0, #0
+ 567 00fa 184B     		ldr	r3, .L44+16
+ 568 00fc 9847     		blx	r3
+ 569              	.LVL30:
+ 570              		.loc 1 421 11 view .LVU167
+ 571              		.loc 1 421 35 is_stmt 0 view .LVU168
+ 572 00fe 144B     		ldr	r3, .L44+4
+ 573 0100 0022     		movs	r2, #0
+ 574 0102 1A70     		strb	r2, [r3]
+ 575 0104 C4E7     		b	.L29
+ 576              	.L41:
+ 577              		.loc 1 435 11 is_stmt 1 view .LVU169
+ 578              		.loc 1 435 26 is_stmt 0 view .LVU170
+ 579 0106 124B     		ldr	r3, .L44+4
+ 580 0108 9A68     		ldr	r2, [r3, #8]
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccuVRhG5.s 			page 11
+
+
+ 581 010a 0232     		adds	r2, r2, #2
+ 582 010c 9A60     		str	r2, [r3, #8]
+ 583              		.loc 1 436 11 is_stmt 1 view .LVU171
+ 584              		.loc 1 436 22 is_stmt 0 view .LVU172
+ 585 010e 9868     		ldr	r0, [r3, #8]
+ 586              	.LVL31:
+ 587              		.loc 1 439 11 is_stmt 1 view .LVU173
+ 588              		.loc 1 439 32 is_stmt 0 view .LVU174
+ 589 0110 D3E90467 		ldrd	r6, [r3, #16]
+ 590              		.loc 1 439 38 view .LVU175
+ 591 0114 340C     		lsrs	r4, r6, #16
+ 592 0116 44EA0744 		orr	r4, r4, r7, lsl #16
+ 593 011a 3D0C     		lsrs	r5, r7, #16
+ 594              		.loc 1 439 23 view .LVU176
+ 595 011c C3E90445 		strd	r4, [r3, #16]
+ 596              		.loc 1 442 11 is_stmt 1 view .LVU177
+ 597 0120 0A49     		ldr	r1, .L44
+ 598 0122 0A69     		ldr	r2, [r1, #16]
+ 599 0124 22F00102 		bic	r2, r2, #1
+ 600 0128 0A61     		str	r2, [r1, #16]
+ 601              		.loc 1 445 11 view .LVU178
+ 602              		.loc 1 445 62 is_stmt 0 view .LVU179
+ 603 012a D3E90423 		ldrd	r2, [r3, #16]
+ 604              		.loc 1 445 11 view .LVU180
+ 605 012e 91B2     		uxth	r1, r2
+ 606 0130 0C4B     		ldr	r3, .L44+24
+ 607 0132 9847     		blx	r3
+ 608              	.LVL32:
+ 609              		.loc 1 445 11 view .LVU181
+ 610 0134 ACE7     		b	.L29
+ 611              	.L42:
+ 612              		.loc 1 453 13 is_stmt 1 view .LVU182
+ 613 0136 064B     		ldr	r3, .L44+4
+ 614 0138 9868     		ldr	r0, [r3, #8]
+ 615 013a 084B     		ldr	r3, .L44+16
+ 616 013c 9847     		blx	r3
+ 617              	.LVL33:
+ 618 013e A1E7     		b	.L35
+ 619              	.L43:
+ 620              		.loc 1 457 13 view .LVU183
+ 621              		.loc 1 457 52 is_stmt 0 view .LVU184
+ 622 0140 034B     		ldr	r3, .L44+4
+ 623 0142 9868     		ldr	r0, [r3, #8]
+ 624              		.loc 1 457 13 view .LVU185
+ 625 0144 0238     		subs	r0, r0, #2
+ 626 0146 054B     		ldr	r3, .L44+16
+ 627 0148 9847     		blx	r3
+ 628              	.LVL34:
+ 629 014a 9BE7     		b	.L35
+ 630              	.L45:
+ 631              		.align	2
+ 632              	.L44:
+ 633 014c 00200240 		.word	1073881088
+ 634 0150 00000000 		.word	.LANCHOR0
+ 635 0154 00000000 		.word	FLASH_SetErrorCode
+ 636 0158 00000000 		.word	HAL_FLASH_OperationErrorCallback
+ 637 015c 00000000 		.word	HAL_FLASH_EndOfOperationCallback
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccuVRhG5.s 			page 12
+
+
+ 638 0160 00000000 		.word	FLASH_PageErase
+ 639 0164 00000000 		.word	FLASH_Program_HalfWord
+ 640              		.cfi_endproc
+ 641              	.LFE67:
+ 643              		.section	.text.HAL_FLASH_Unlock,"ax",%progbits
+ 644              		.align	1
+ 645              		.global	HAL_FLASH_Unlock
+ 646              		.syntax unified
+ 647              		.thumb
+ 648              		.thumb_func
+ 649              		.fpu softvfp
+ 651              	HAL_FLASH_Unlock:
+ 652              	.LFB70:
+ 653              		.loc 1 658 1 is_stmt 1 view -0
+ 654              		.cfi_startproc
+ 655              		@ args = 0, pretend = 0, frame = 0
+ 656              		@ frame_needed = 0, uses_anonymous_args = 0
+ 657              		@ link register save eliminated.
+ 658              		.loc 1 659 3 view .LVU187
+ 659              	.LVL35:
+ 660              		.loc 1 661 3 view .LVU188
+ 661              		.loc 1 661 6 is_stmt 0 view .LVU189
+ 662 0000 0A4B     		ldr	r3, .L50
+ 663 0002 1B69     		ldr	r3, [r3, #16]
+ 664              		.loc 1 661 5 view .LVU190
+ 665 0004 13F0800F 		tst	r3, #128
+ 666 0008 0BD0     		beq	.L48
+ 667              		.loc 1 664 5 is_stmt 1 view .LVU191
+ 668 000a 084B     		ldr	r3, .L50
+ 669 000c 084A     		ldr	r2, .L50+4
+ 670 000e 5A60     		str	r2, [r3, #4]
+ 671              		.loc 1 665 5 view .LVU192
+ 672 0010 02F18832 		add	r2, r2, #-2004318072
+ 673 0014 5A60     		str	r2, [r3, #4]
+ 674              		.loc 1 668 5 view .LVU193
+ 675              		.loc 1 668 8 is_stmt 0 view .LVU194
+ 676 0016 1B69     		ldr	r3, [r3, #16]
+ 677              		.loc 1 668 7 view .LVU195
+ 678 0018 13F0800F 		tst	r3, #128
+ 679 001c 03D1     		bne	.L49
+ 680              		.loc 1 659 21 view .LVU196
+ 681 001e 0020     		movs	r0, #0
+ 682 0020 7047     		bx	lr
+ 683              	.L48:
+ 684 0022 0020     		movs	r0, #0
+ 685 0024 7047     		bx	lr
+ 686              	.L49:
+ 687              		.loc 1 670 14 view .LVU197
+ 688 0026 0120     		movs	r0, #1
+ 689              	.LVL36:
+ 690              		.loc 1 688 3 is_stmt 1 view .LVU198
+ 691              		.loc 1 689 1 is_stmt 0 view .LVU199
+ 692 0028 7047     		bx	lr
+ 693              	.L51:
+ 694 002a 00BF     		.align	2
+ 695              	.L50:
+ 696 002c 00200240 		.word	1073881088
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccuVRhG5.s 			page 13
+
+
+ 697 0030 23016745 		.word	1164378403
+ 698              		.cfi_endproc
+ 699              	.LFE70:
+ 701              		.section	.text.HAL_FLASH_Lock,"ax",%progbits
+ 702              		.align	1
+ 703              		.global	HAL_FLASH_Lock
+ 704              		.syntax unified
+ 705              		.thumb
+ 706              		.thumb_func
+ 707              		.fpu softvfp
+ 709              	HAL_FLASH_Lock:
+ 710              	.LFB71:
+ 711              		.loc 1 696 1 is_stmt 1 view -0
+ 712              		.cfi_startproc
+ 713              		@ args = 0, pretend = 0, frame = 0
+ 714              		@ frame_needed = 0, uses_anonymous_args = 0
+ 715              		@ link register save eliminated.
+ 716              		.loc 1 698 3 view .LVU201
+ 717 0000 034A     		ldr	r2, .L53
+ 718 0002 1369     		ldr	r3, [r2, #16]
+ 719 0004 43F08003 		orr	r3, r3, #128
+ 720 0008 1361     		str	r3, [r2, #16]
+ 721              		.loc 1 705 3 view .LVU202
+ 722              		.loc 1 706 1 is_stmt 0 view .LVU203
+ 723 000a 0020     		movs	r0, #0
+ 724 000c 7047     		bx	lr
+ 725              	.L54:
+ 726 000e 00BF     		.align	2
+ 727              	.L53:
+ 728 0010 00200240 		.word	1073881088
+ 729              		.cfi_endproc
+ 730              	.LFE71:
+ 732              		.section	.text.HAL_FLASH_OB_Unlock,"ax",%progbits
+ 733              		.align	1
+ 734              		.global	HAL_FLASH_OB_Unlock
+ 735              		.syntax unified
+ 736              		.thumb
+ 737              		.thumb_func
+ 738              		.fpu softvfp
+ 740              	HAL_FLASH_OB_Unlock:
+ 741              	.LFB72:
+ 742              		.loc 1 713 1 is_stmt 1 view -0
+ 743              		.cfi_startproc
+ 744              		@ args = 0, pretend = 0, frame = 0
+ 745              		@ frame_needed = 0, uses_anonymous_args = 0
+ 746              		@ link register save eliminated.
+ 747              		.loc 1 714 3 view .LVU205
+ 748              		.loc 1 714 7 is_stmt 0 view .LVU206
+ 749 0000 074B     		ldr	r3, .L58
+ 750 0002 1B69     		ldr	r3, [r3, #16]
+ 751              		.loc 1 714 6 view .LVU207
+ 752 0004 13F4007F 		tst	r3, #512
+ 753 0008 07D1     		bne	.L57
+ 754              		.loc 1 717 5 is_stmt 1 view .LVU208
+ 755 000a 054B     		ldr	r3, .L58
+ 756 000c 054A     		ldr	r2, .L58+4
+ 757 000e 9A60     		str	r2, [r3, #8]
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccuVRhG5.s 			page 14
+
+
+ 758              		.loc 1 718 5 view .LVU209
+ 759 0010 02F18832 		add	r2, r2, #-2004318072
+ 760 0014 9A60     		str	r2, [r3, #8]
+ 761              		.loc 1 725 3 view .LVU210
+ 762              		.loc 1 725 10 is_stmt 0 view .LVU211
+ 763 0016 0020     		movs	r0, #0
+ 764 0018 7047     		bx	lr
+ 765              	.L57:
+ 766              		.loc 1 722 12 view .LVU212
+ 767 001a 0120     		movs	r0, #1
+ 768              		.loc 1 726 1 view .LVU213
+ 769 001c 7047     		bx	lr
+ 770              	.L59:
+ 771 001e 00BF     		.align	2
+ 772              	.L58:
+ 773 0020 00200240 		.word	1073881088
+ 774 0024 23016745 		.word	1164378403
+ 775              		.cfi_endproc
+ 776              	.LFE72:
+ 778              		.section	.text.HAL_FLASH_OB_Lock,"ax",%progbits
+ 779              		.align	1
+ 780              		.global	HAL_FLASH_OB_Lock
+ 781              		.syntax unified
+ 782              		.thumb
+ 783              		.thumb_func
+ 784              		.fpu softvfp
+ 786              	HAL_FLASH_OB_Lock:
+ 787              	.LFB73:
+ 788              		.loc 1 733 1 is_stmt 1 view -0
+ 789              		.cfi_startproc
+ 790              		@ args = 0, pretend = 0, frame = 0
+ 791              		@ frame_needed = 0, uses_anonymous_args = 0
+ 792              		@ link register save eliminated.
+ 793              		.loc 1 735 3 view .LVU215
+ 794 0000 034A     		ldr	r2, .L61
+ 795 0002 1369     		ldr	r3, [r2, #16]
+ 796 0004 23F40073 		bic	r3, r3, #512
+ 797 0008 1361     		str	r3, [r2, #16]
+ 798              		.loc 1 737 3 view .LVU216
+ 799              		.loc 1 738 1 is_stmt 0 view .LVU217
+ 800 000a 0020     		movs	r0, #0
+ 801 000c 7047     		bx	lr
+ 802              	.L62:
+ 803 000e 00BF     		.align	2
+ 804              	.L61:
+ 805 0010 00200240 		.word	1073881088
+ 806              		.cfi_endproc
+ 807              	.LFE73:
+ 809              		.section	.text.HAL_FLASH_OB_Launch,"ax",%progbits
+ 810              		.align	1
+ 811              		.global	HAL_FLASH_OB_Launch
+ 812              		.syntax unified
+ 813              		.thumb
+ 814              		.thumb_func
+ 815              		.fpu softvfp
+ 817              	HAL_FLASH_OB_Launch:
+ 818              	.LFB74:
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccuVRhG5.s 			page 15
+
+
+ 819              		.loc 1 746 1 is_stmt 1 view -0
+ 820              		.cfi_startproc
+ 821              		@ args = 0, pretend = 0, frame = 0
+ 822              		@ frame_needed = 0, uses_anonymous_args = 0
+ 823 0000 08B5     		push	{r3, lr}
+ 824              	.LCFI2:
+ 825              		.cfi_def_cfa_offset 8
+ 826              		.cfi_offset 3, -8
+ 827              		.cfi_offset 14, -4
+ 828              		.loc 1 748 3 view .LVU219
+ 829 0002 014B     		ldr	r3, .L65
+ 830 0004 9847     		blx	r3
+ 831              	.LVL37:
+ 832              		.loc 1 749 1 is_stmt 0 view .LVU220
+ 833 0006 08BD     		pop	{r3, pc}
+ 834              	.L66:
+ 835              		.align	2
+ 836              	.L65:
+ 837 0008 00000000 		.word	HAL_NVIC_SystemReset
+ 838              		.cfi_endproc
+ 839              	.LFE74:
+ 841              		.section	.text.HAL_FLASH_GetError,"ax",%progbits
+ 842              		.align	1
+ 843              		.global	HAL_FLASH_GetError
+ 844              		.syntax unified
+ 845              		.thumb
+ 846              		.thumb_func
+ 847              		.fpu softvfp
+ 849              	HAL_FLASH_GetError:
+ 850              	.LFB75:
+ 851              		.loc 1 775 1 is_stmt 1 view -0
+ 852              		.cfi_startproc
+ 853              		@ args = 0, pretend = 0, frame = 0
+ 854              		@ frame_needed = 0, uses_anonymous_args = 0
+ 855              		@ link register save eliminated.
+ 856              		.loc 1 776 4 view .LVU222
+ 857              		.loc 1 776 17 is_stmt 0 view .LVU223
+ 858 0000 014B     		ldr	r3, .L68
+ 859 0002 D869     		ldr	r0, [r3, #28]
+ 860              		.loc 1 777 1 view .LVU224
+ 861 0004 7047     		bx	lr
+ 862              	.L69:
+ 863 0006 00BF     		.align	2
+ 864              	.L68:
+ 865 0008 00000000 		.word	.LANCHOR0
+ 866              		.cfi_endproc
+ 867              	.LFE75:
+ 869              		.section	.text.FLASH_WaitForLastOperation,"ax",%progbits
+ 870              		.align	1
+ 871              		.global	FLASH_WaitForLastOperation
+ 872              		.syntax unified
+ 873              		.thumb
+ 874              		.thumb_func
+ 875              		.fpu softvfp
+ 877              	FLASH_WaitForLastOperation:
+ 878              	.LVL38:
+ 879              	.LFB77:
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccuVRhG5.s 			page 16
+
+
+ 880              		.loc 1 827 1 is_stmt 1 view -0
+ 881              		.cfi_startproc
+ 882              		@ args = 0, pretend = 0, frame = 0
+ 883              		@ frame_needed = 0, uses_anonymous_args = 0
+ 884              		.loc 1 827 1 is_stmt 0 view .LVU226
+ 885 0000 38B5     		push	{r3, r4, r5, lr}
+ 886              	.LCFI3:
+ 887              		.cfi_def_cfa_offset 16
+ 888              		.cfi_offset 3, -16
+ 889              		.cfi_offset 4, -12
+ 890              		.cfi_offset 5, -8
+ 891              		.cfi_offset 14, -4
+ 892 0002 0446     		mov	r4, r0
+ 893              		.loc 1 832 3 is_stmt 1 view .LVU227
+ 894              		.loc 1 832 24 is_stmt 0 view .LVU228
+ 895 0004 174B     		ldr	r3, .L81
+ 896 0006 9847     		blx	r3
+ 897              	.LVL39:
+ 898              		.loc 1 832 24 view .LVU229
+ 899 0008 0546     		mov	r5, r0
+ 900              	.LVL40:
+ 901              		.loc 1 834 3 is_stmt 1 view .LVU230
+ 902              	.L72:
+ 903              		.loc 1 834 8 view .LVU231
+ 904              		.loc 1 834 9 is_stmt 0 view .LVU232
+ 905 000a 174B     		ldr	r3, .L81+4
+ 906 000c DB68     		ldr	r3, [r3, #12]
+ 907              		.loc 1 834 8 view .LVU233
+ 908 000e 13F0010F 		tst	r3, #1
+ 909 0012 0AD0     		beq	.L80
+ 910              		.loc 1 836 5 is_stmt 1 view .LVU234
+ 911              		.loc 1 836 8 is_stmt 0 view .LVU235
+ 912 0014 B4F1FF3F 		cmp	r4, #-1
+ 913 0018 F7D0     		beq	.L72
+ 914              		.loc 1 838 7 is_stmt 1 view .LVU236
+ 915              		.loc 1 838 9 is_stmt 0 view .LVU237
+ 916 001a 24B1     		cbz	r4, .L73
+ 917              		.loc 1 838 31 discriminator 1 view .LVU238
+ 918 001c 114B     		ldr	r3, .L81
+ 919 001e 9847     		blx	r3
+ 920              	.LVL41:
+ 921              		.loc 1 838 44 discriminator 1 view .LVU239
+ 922 0020 401B     		subs	r0, r0, r5
+ 923              		.loc 1 838 26 discriminator 1 view .LVU240
+ 924 0022 A042     		cmp	r0, r4
+ 925 0024 F1D9     		bls	.L72
+ 926              	.L73:
+ 927              		.loc 1 840 9 is_stmt 1 view .LVU241
+ 928              		.loc 1 840 16 is_stmt 0 view .LVU242
+ 929 0026 0320     		movs	r0, #3
+ 930 0028 1BE0     		b	.L74
+ 931              	.L80:
+ 932              		.loc 1 846 3 is_stmt 1 view .LVU243
+ 933              		.loc 1 846 7 is_stmt 0 view .LVU244
+ 934 002a 0F4B     		ldr	r3, .L81+4
+ 935 002c DB68     		ldr	r3, [r3, #12]
+ 936              		.loc 1 846 6 view .LVU245
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccuVRhG5.s 			page 17
+
+
+ 937 002e 13F0200F 		tst	r3, #32
+ 938 0032 02D0     		beq	.L76
+ 939              		.loc 1 849 5 is_stmt 1 discriminator 2 view .LVU246
+ 940              		.loc 1 849 5 discriminator 2 view .LVU247
+ 941              		.loc 1 849 5 discriminator 2 view .LVU248
+ 942 0034 0C4B     		ldr	r3, .L81+4
+ 943 0036 2022     		movs	r2, #32
+ 944 0038 DA60     		str	r2, [r3, #12]
+ 945              	.L76:
+ 946              		.loc 1 849 5 discriminator 4 view .LVU249
+ 947              		.loc 1 852 3 discriminator 4 view .LVU250
+ 948              		.loc 1 852 6 is_stmt 0 discriminator 4 view .LVU251
+ 949 003a 0B4B     		ldr	r3, .L81+4
+ 950 003c DB68     		ldr	r3, [r3, #12]
+ 951              		.loc 1 852 5 discriminator 4 view .LVU252
+ 952 003e 13F0100F 		tst	r3, #16
+ 953 0042 0BD1     		bne	.L77
+ 954              		.loc 1 853 6 discriminator 1 view .LVU253
+ 955 0044 084B     		ldr	r3, .L81+4
+ 956 0046 DB69     		ldr	r3, [r3, #28]
+ 957              		.loc 1 852 47 discriminator 1 view .LVU254
+ 958 0048 13F0010F 		tst	r3, #1
+ 959 004c 06D1     		bne	.L77
+ 960              		.loc 1 854 6 view .LVU255
+ 961 004e 064B     		ldr	r3, .L81+4
+ 962 0050 DB68     		ldr	r3, [r3, #12]
+ 963              		.loc 1 853 47 view .LVU256
+ 964 0052 13F0040F 		tst	r3, #4
+ 965 0056 01D1     		bne	.L77
+ 966              		.loc 1 862 10 view .LVU257
+ 967 0058 0020     		movs	r0, #0
+ 968 005a 02E0     		b	.L74
+ 969              	.L77:
+ 970              		.loc 1 857 5 is_stmt 1 view .LVU258
+ 971 005c 034B     		ldr	r3, .L81+8
+ 972 005e 9847     		blx	r3
+ 973              	.LVL42:
+ 974              		.loc 1 858 5 view .LVU259
+ 975              		.loc 1 858 12 is_stmt 0 view .LVU260
+ 976 0060 0120     		movs	r0, #1
+ 977              	.L74:
+ 978              		.loc 1 863 1 view .LVU261
+ 979 0062 38BD     		pop	{r3, r4, r5, pc}
+ 980              	.LVL43:
+ 981              	.L82:
+ 982              		.loc 1 863 1 view .LVU262
+ 983              		.align	2
+ 984              	.L81:
+ 985 0064 00000000 		.word	HAL_GetTick
+ 986 0068 00200240 		.word	1073881088
+ 987 006c 00000000 		.word	FLASH_SetErrorCode
+ 988              		.cfi_endproc
+ 989              	.LFE77:
+ 991              		.section	.text.HAL_FLASH_Program,"ax",%progbits
+ 992              		.align	1
+ 993              		.global	HAL_FLASH_Program
+ 994              		.syntax unified
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccuVRhG5.s 			page 18
+
+
+ 995              		.thumb
+ 996              		.thumb_func
+ 997              		.fpu softvfp
+ 999              	HAL_FLASH_Program:
+ 1000              	.LVL44:
+ 1001              	.LFB65:
+ 1002              		.loc 1 169 1 is_stmt 1 view -0
+ 1003              		.cfi_startproc
+ 1004              		@ args = 0, pretend = 0, frame = 0
+ 1005              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1006              		.loc 1 169 1 is_stmt 0 view .LVU264
+ 1007 0000 2DE9F843 		push	{r3, r4, r5, r6, r7, r8, r9, lr}
+ 1008              	.LCFI4:
+ 1009              		.cfi_def_cfa_offset 32
+ 1010              		.cfi_offset 3, -32
+ 1011              		.cfi_offset 4, -28
+ 1012              		.cfi_offset 5, -24
+ 1013              		.cfi_offset 6, -20
+ 1014              		.cfi_offset 7, -16
+ 1015              		.cfi_offset 8, -12
+ 1016              		.cfi_offset 9, -8
+ 1017              		.cfi_offset 14, -4
+ 1018 0004 1E46     		mov	r6, r3
+ 1019              		.loc 1 170 3 is_stmt 1 view .LVU265
+ 1020              	.LVL45:
+ 1021              		.loc 1 171 3 view .LVU266
+ 1022              		.loc 1 172 3 view .LVU267
+ 1023              		.loc 1 175 3 view .LVU268
+ 1024              		.loc 1 175 3 view .LVU269
+ 1025 0006 244B     		ldr	r3, .L95
+ 1026 0008 1B7E     		ldrb	r3, [r3, #24]	@ zero_extendqisi2
+ 1027 000a 012B     		cmp	r3, #1
+ 1028 000c 41D0     		beq	.L89
+ 1029 000e 0446     		mov	r4, r0
+ 1030 0010 0F46     		mov	r7, r1
+ 1031 0012 9046     		mov	r8, r2
+ 1032              		.loc 1 175 3 discriminator 2 view .LVU270
+ 1033 0014 204B     		ldr	r3, .L95
+ 1034 0016 0122     		movs	r2, #1
+ 1035              	.LVL46:
+ 1036              		.loc 1 175 3 is_stmt 0 discriminator 2 view .LVU271
+ 1037 0018 1A76     		strb	r2, [r3, #24]
+ 1038              		.loc 1 175 3 is_stmt 1 discriminator 2 view .LVU272
+ 1039              		.loc 1 178 3 discriminator 2 view .LVU273
+ 1040              		.loc 1 179 3 discriminator 2 view .LVU274
+ 1041              		.loc 1 186 5 discriminator 2 view .LVU275
+ 1042              		.loc 1 186 14 is_stmt 0 discriminator 2 view .LVU276
+ 1043 001a 4CF25030 		movw	r0, #50000
+ 1044              	.LVL47:
+ 1045              		.loc 1 186 14 discriminator 2 view .LVU277
+ 1046 001e 1F4B     		ldr	r3, .L95+4
+ 1047 0020 9847     		blx	r3
+ 1048              	.LVL48:
+ 1049              		.loc 1 196 3 is_stmt 1 discriminator 2 view .LVU278
+ 1050              		.loc 1 196 5 is_stmt 0 discriminator 2 view .LVU279
+ 1051 0022 0346     		mov	r3, r0
+ 1052 0024 78BB     		cbnz	r0, .L85
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccuVRhG5.s 			page 19
+
+
+ 1053              		.loc 1 198 5 is_stmt 1 view .LVU280
+ 1054              		.loc 1 198 7 is_stmt 0 view .LVU281
+ 1055 0026 012C     		cmp	r4, #1
+ 1056 0028 08D0     		beq	.L90
+ 1057              		.loc 1 203 10 is_stmt 1 view .LVU282
+ 1058              		.loc 1 203 12 is_stmt 0 view .LVU283
+ 1059 002a 022C     		cmp	r4, #2
+ 1060 002c 03D0     		beq	.L93
+ 1061              		.loc 1 211 20 view .LVU284
+ 1062 002e 4FF00409 		mov	r9, #4
+ 1063              	.L86:
+ 1064              	.LVL49:
+ 1065              		.loc 1 214 5 is_stmt 1 view .LVU285
+ 1066              		.loc 1 214 16 is_stmt 0 view .LVU286
+ 1067 0032 1C46     		mov	r4, r3
+ 1068              	.LVL50:
+ 1069              		.loc 1 214 5 view .LVU287
+ 1070 0034 07E0     		b	.L87
+ 1071              	.LVL51:
+ 1072              	.L93:
+ 1073              		.loc 1 206 20 view .LVU288
+ 1074 0036 4FF00209 		mov	r9, #2
+ 1075 003a FAE7     		b	.L86
+ 1076              	.L90:
+ 1077              		.loc 1 201 20 view .LVU289
+ 1078 003c 4FF00109 		mov	r9, #1
+ 1079 0040 F7E7     		b	.L86
+ 1080              	.LVL52:
+ 1081              	.L94:
+ 1082              		.loc 1 214 44 is_stmt 1 discriminator 2 view .LVU290
+ 1083              		.loc 1 214 49 is_stmt 0 discriminator 2 view .LVU291
+ 1084 0042 0134     		adds	r4, r4, #1
+ 1085              	.LVL53:
+ 1086              		.loc 1 214 49 discriminator 2 view .LVU292
+ 1087 0044 E4B2     		uxtb	r4, r4
+ 1088              	.LVL54:
+ 1089              	.L87:
+ 1090              		.loc 1 214 22 is_stmt 1 discriminator 1 view .LVU293
+ 1091              		.loc 1 214 5 is_stmt 0 discriminator 1 view .LVU294
+ 1092 0046 4C45     		cmp	r4, r9
+ 1093 0048 1DD2     		bcs	.L85
+ 1094              		.loc 1 216 7 is_stmt 1 view .LVU295
+ 1095              		.loc 1 216 77 is_stmt 0 view .LVU296
+ 1096 004a 2101     		lsls	r1, r4, #4
+ 1097              		.loc 1 216 70 view .LVU297
+ 1098 004c C1F12002 		rsb	r2, r1, #32
+ 1099 0050 A1F12003 		sub	r3, r1, #32
+ 1100              	.LVL55:
+ 1101              		.loc 1 216 70 view .LVU298
+ 1102 0054 28FA01F1 		lsr	r1, r8, r1
+ 1103 0058 06FA02F2 		lsl	r2, r6, r2
+ 1104 005c 1143     		orrs	r1, r1, r2
+ 1105 005e 26FA03F3 		lsr	r3, r6, r3
+ 1106 0062 1943     		orrs	r1, r1, r3
+ 1107              		.loc 1 216 7 view .LVU299
+ 1108 0064 89B2     		uxth	r1, r1
+ 1109 0066 07EB4400 		add	r0, r7, r4, lsl #1
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccuVRhG5.s 			page 20
+
+
+ 1110 006a 0D4B     		ldr	r3, .L95+8
+ 1111 006c 9847     		blx	r3
+ 1112              	.LVL56:
+ 1113              		.loc 1 223 9 is_stmt 1 view .LVU300
+ 1114              		.loc 1 223 18 is_stmt 0 view .LVU301
+ 1115 006e 4CF25030 		movw	r0, #50000
+ 1116 0072 0A4B     		ldr	r3, .L95+4
+ 1117 0074 9847     		blx	r3
+ 1118              	.LVL57:
+ 1119              		.loc 1 226 9 is_stmt 1 view .LVU302
+ 1120 0076 0B4B     		ldr	r3, .L95+12
+ 1121 0078 1D69     		ldr	r5, [r3, #16]
+ 1122 007a 25F00105 		bic	r5, r5, #1
+ 1123 007e 1D61     		str	r5, [r3, #16]
+ 1124              		.loc 1 239 7 view .LVU303
+ 1125              		.loc 1 239 10 is_stmt 0 view .LVU304
+ 1126 0080 0346     		mov	r3, r0
+ 1127 0082 0028     		cmp	r0, #0
+ 1128 0084 DDD0     		beq	.L94
+ 1129              	.LVL58:
+ 1130              	.L85:
+ 1131              		.loc 1 247 3 is_stmt 1 view .LVU305
+ 1132              		.loc 1 247 3 view .LVU306
+ 1133 0086 044A     		ldr	r2, .L95
+ 1134 0088 0021     		movs	r1, #0
+ 1135 008a 1176     		strb	r1, [r2, #24]
+ 1136              		.loc 1 247 3 view .LVU307
+ 1137              		.loc 1 249 3 view .LVU308
+ 1138              	.LVL59:
+ 1139              	.L84:
+ 1140              		.loc 1 250 1 is_stmt 0 view .LVU309
+ 1141 008c 1846     		mov	r0, r3
+ 1142 008e BDE8F883 		pop	{r3, r4, r5, r6, r7, r8, r9, pc}
+ 1143              	.LVL60:
+ 1144              	.L89:
+ 1145              		.loc 1 175 3 view .LVU310
+ 1146 0092 0223     		movs	r3, #2
+ 1147 0094 FAE7     		b	.L84
+ 1148              	.L96:
+ 1149 0096 00BF     		.align	2
+ 1150              	.L95:
+ 1151 0098 00000000 		.word	.LANCHOR0
+ 1152 009c 00000000 		.word	FLASH_WaitForLastOperation
+ 1153 00a0 00000000 		.word	FLASH_Program_HalfWord
+ 1154 00a4 00200240 		.word	1073881088
+ 1155              		.cfi_endproc
+ 1156              	.LFE65:
+ 1158              		.global	pFlash
+ 1159              		.section	.bss.pFlash,"aw",%nobits
+ 1160              		.align	3
+ 1161              		.set	.LANCHOR0,. + 0
+ 1164              	pFlash:
+ 1165 0000 00000000 		.space	32
+ 1165      00000000 
+ 1165      00000000 
+ 1165      00000000 
+ 1165      00000000 
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccuVRhG5.s 			page 21
+
+
+ 1166              		.text
+ 1167              	.Letext0:
+ 1168              		.file 2 "../c:\\users\\test\\desktop\\gnu mcu\\arm-none-eabi-gcc-10.2.1-1.1\\arm-none-eabi\\includ
+ 1169              		.file 3 "../c:\\users\\test\\desktop\\gnu mcu\\arm-none-eabi-gcc-10.2.1-1.1\\arm-none-eabi\\includ
+ 1170              		.file 4 "../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103x6.h"
+ 1171              		.file 5 "../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h"
+ 1172              		.file 6 "../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
+ 1173              		.file 7 "../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h"
+ 1174              		.file 8 "../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
+ 1175              		.file 9 "../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h"
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccuVRhG5.s 			page 22
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 stm32f1xx_hal_flash.c
+C:\Users\Test\AppData\Local\Temp\ccuVRhG5.s:16     .text.FLASH_Program_HalfWord:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\ccuVRhG5.s:23     .text.FLASH_Program_HalfWord:0000000000000000 FLASH_Program_HalfWord
+C:\Users\Test\AppData\Local\Temp\ccuVRhG5.s:50     .text.FLASH_Program_HalfWord:0000000000000014 $d
+C:\Users\Test\AppData\Local\Temp\ccuVRhG5.s:56     .text.FLASH_SetErrorCode:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\ccuVRhG5.s:62     .text.FLASH_SetErrorCode:0000000000000000 FLASH_SetErrorCode
+C:\Users\Test\AppData\Local\Temp\ccuVRhG5.s:153    .text.FLASH_SetErrorCode:0000000000000068 $d
+C:\Users\Test\AppData\Local\Temp\ccuVRhG5.s:159    .text.HAL_FLASH_Program_IT:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\ccuVRhG5.s:166    .text.HAL_FLASH_Program_IT:0000000000000000 HAL_FLASH_Program_IT
+C:\Users\Test\AppData\Local\Temp\ccuVRhG5.s:278    .text.HAL_FLASH_Program_IT:0000000000000064 $d
+C:\Users\Test\AppData\Local\Temp\ccuVRhG5.s:285    .text.HAL_FLASH_EndOfOperationCallback:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\ccuVRhG5.s:292    .text.HAL_FLASH_EndOfOperationCallback:0000000000000000 HAL_FLASH_EndOfOperationCallback
+C:\Users\Test\AppData\Local\Temp\ccuVRhG5.s:307    .text.HAL_FLASH_OperationErrorCallback:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\ccuVRhG5.s:314    .text.HAL_FLASH_OperationErrorCallback:0000000000000000 HAL_FLASH_OperationErrorCallback
+C:\Users\Test\AppData\Local\Temp\ccuVRhG5.s:329    .text.HAL_FLASH_IRQHandler:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\ccuVRhG5.s:336    .text.HAL_FLASH_IRQHandler:0000000000000000 HAL_FLASH_IRQHandler
+C:\Users\Test\AppData\Local\Temp\ccuVRhG5.s:633    .text.HAL_FLASH_IRQHandler:000000000000014c $d
+C:\Users\Test\AppData\Local\Temp\ccuVRhG5.s:644    .text.HAL_FLASH_Unlock:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\ccuVRhG5.s:651    .text.HAL_FLASH_Unlock:0000000000000000 HAL_FLASH_Unlock
+C:\Users\Test\AppData\Local\Temp\ccuVRhG5.s:696    .text.HAL_FLASH_Unlock:000000000000002c $d
+C:\Users\Test\AppData\Local\Temp\ccuVRhG5.s:702    .text.HAL_FLASH_Lock:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\ccuVRhG5.s:709    .text.HAL_FLASH_Lock:0000000000000000 HAL_FLASH_Lock
+C:\Users\Test\AppData\Local\Temp\ccuVRhG5.s:728    .text.HAL_FLASH_Lock:0000000000000010 $d
+C:\Users\Test\AppData\Local\Temp\ccuVRhG5.s:733    .text.HAL_FLASH_OB_Unlock:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\ccuVRhG5.s:740    .text.HAL_FLASH_OB_Unlock:0000000000000000 HAL_FLASH_OB_Unlock
+C:\Users\Test\AppData\Local\Temp\ccuVRhG5.s:773    .text.HAL_FLASH_OB_Unlock:0000000000000020 $d
+C:\Users\Test\AppData\Local\Temp\ccuVRhG5.s:779    .text.HAL_FLASH_OB_Lock:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\ccuVRhG5.s:786    .text.HAL_FLASH_OB_Lock:0000000000000000 HAL_FLASH_OB_Lock
+C:\Users\Test\AppData\Local\Temp\ccuVRhG5.s:805    .text.HAL_FLASH_OB_Lock:0000000000000010 $d
+C:\Users\Test\AppData\Local\Temp\ccuVRhG5.s:810    .text.HAL_FLASH_OB_Launch:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\ccuVRhG5.s:817    .text.HAL_FLASH_OB_Launch:0000000000000000 HAL_FLASH_OB_Launch
+C:\Users\Test\AppData\Local\Temp\ccuVRhG5.s:837    .text.HAL_FLASH_OB_Launch:0000000000000008 $d
+C:\Users\Test\AppData\Local\Temp\ccuVRhG5.s:842    .text.HAL_FLASH_GetError:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\ccuVRhG5.s:849    .text.HAL_FLASH_GetError:0000000000000000 HAL_FLASH_GetError
+C:\Users\Test\AppData\Local\Temp\ccuVRhG5.s:865    .text.HAL_FLASH_GetError:0000000000000008 $d
+C:\Users\Test\AppData\Local\Temp\ccuVRhG5.s:870    .text.FLASH_WaitForLastOperation:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\ccuVRhG5.s:877    .text.FLASH_WaitForLastOperation:0000000000000000 FLASH_WaitForLastOperation
+C:\Users\Test\AppData\Local\Temp\ccuVRhG5.s:985    .text.FLASH_WaitForLastOperation:0000000000000064 $d
+C:\Users\Test\AppData\Local\Temp\ccuVRhG5.s:992    .text.HAL_FLASH_Program:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\ccuVRhG5.s:999    .text.HAL_FLASH_Program:0000000000000000 HAL_FLASH_Program
+C:\Users\Test\AppData\Local\Temp\ccuVRhG5.s:1151   .text.HAL_FLASH_Program:0000000000000098 $d
+C:\Users\Test\AppData\Local\Temp\ccuVRhG5.s:1164   .bss.pFlash:0000000000000000 pFlash
+C:\Users\Test\AppData\Local\Temp\ccuVRhG5.s:1160   .bss.pFlash:0000000000000000 $d
+
+UNDEFINED SYMBOLS
+FLASH_PageErase
+HAL_NVIC_SystemReset
+HAL_GetTick

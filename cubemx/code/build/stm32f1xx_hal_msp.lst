@@ -1,0 +1,128 @@
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccSuirZp.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 1
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"stm32f1xx_hal_msp.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.HAL_MspInit,"ax",%progbits
+  16              		.align	1
+  17              		.global	HAL_MspInit
+  18              		.arch armv7-m
+  19              		.syntax unified
+  20              		.thumb
+  21              		.thumb_func
+  22              		.fpu softvfp
+  24              	HAL_MspInit:
+  25              	.LFB65:
+  26              		.file 1 "../Core/Src/stm32f1xx_hal_msp.c"
+   1:../Core/Src/stm32f1xx_hal_msp.c **** 
+  27              		.loc 1 64 1 view -0
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 8
+  30              		@ frame_needed = 0, uses_anonymous_args = 0
+  31 0000 00B5     		push	{lr}
+  32              	.LCFI0:
+  33              		.cfi_def_cfa_offset 4
+  34              		.cfi_offset 14, -4
+  35 0002 83B0     		sub	sp, sp, #12
+  36              	.LCFI1:
+  37              		.cfi_def_cfa_offset 16
+  38              		.loc 1 69 3 view .LVU1
+  39              	.LBB2:
+  40              		.loc 1 69 3 view .LVU2
+  41              		.loc 1 69 3 view .LVU3
+  42 0004 114B     		ldr	r3, .L3
+  43 0006 9A69     		ldr	r2, [r3, #24]
+  44 0008 42F00102 		orr	r2, r2, #1
+  45 000c 9A61     		str	r2, [r3, #24]
+  46              		.loc 1 69 3 view .LVU4
+  47 000e 9A69     		ldr	r2, [r3, #24]
+  48 0010 02F00102 		and	r2, r2, #1
+  49 0014 0092     		str	r2, [sp]
+  50              		.loc 1 69 3 view .LVU5
+  51 0016 009A     		ldr	r2, [sp]
+  52              	.LBE2:
+  53              		.loc 1 69 3 view .LVU6
+  54              		.loc 1 70 3 view .LVU7
+  55              	.LBB3:
+  56              		.loc 1 70 3 view .LVU8
+  57              		.loc 1 70 3 view .LVU9
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccSuirZp.s 			page 2
+
+
+  58 0018 DA69     		ldr	r2, [r3, #28]
+  59 001a 42F08052 		orr	r2, r2, #268435456
+  60 001e DA61     		str	r2, [r3, #28]
+  61              		.loc 1 70 3 view .LVU10
+  62 0020 DB69     		ldr	r3, [r3, #28]
+  63 0022 03F08053 		and	r3, r3, #268435456
+  64 0026 0193     		str	r3, [sp, #4]
+  65              		.loc 1 70 3 view .LVU11
+  66 0028 019B     		ldr	r3, [sp, #4]
+  67              	.LBE3:
+  68              		.loc 1 70 3 view .LVU12
+  69              		.loc 1 74 3 view .LVU13
+  70 002a 0022     		movs	r2, #0
+  71 002c 0F21     		movs	r1, #15
+  72 002e 6FF00100 		mvn	r0, #1
+  73 0032 074B     		ldr	r3, .L3+4
+  74 0034 9847     		blx	r3
+  75              	.LVL0:
+  76              		.loc 1 78 3 view .LVU14
+  77              	.LBB4:
+  78              		.loc 1 78 3 view .LVU15
+  79 0036 074A     		ldr	r2, .L3+8
+  80 0038 5368     		ldr	r3, [r2, #4]
+  81              	.LVL1:
+  82              		.loc 1 78 3 view .LVU16
+  83 003a 23F0E063 		bic	r3, r3, #117440512
+  84              	.LVL2:
+  85              		.loc 1 78 3 view .LVU17
+  86 003e 43F08063 		orr	r3, r3, #67108864
+  87              	.LVL3:
+  88              		.loc 1 78 3 view .LVU18
+  89 0042 5360     		str	r3, [r2, #4]
+  90              	.LBE4:
+  91              		.loc 1 78 3 view .LVU19
+  92              		.loc 1 83 1 is_stmt 0 view .LVU20
+  93 0044 03B0     		add	sp, sp, #12
+  94              	.LCFI2:
+  95              		.cfi_def_cfa_offset 4
+  96              		@ sp needed
+  97 0046 5DF804FB 		ldr	pc, [sp], #4
+  98              	.L4:
+  99 004a 00BF     		.align	2
+ 100              	.L3:
+ 101 004c 00100240 		.word	1073876992
+ 102 0050 00000000 		.word	HAL_NVIC_SetPriority
+ 103 0054 00000140 		.word	1073807360
+ 104              		.cfi_endproc
+ 105              	.LFE65:
+ 107              		.text
+ 108              	.Letext0:
+ 109              		.file 2 "../c:\\users\\test\\desktop\\gnu mcu\\arm-none-eabi-gcc-10.2.1-1.1\\arm-none-eabi\\includ
+ 110              		.file 3 "../c:\\users\\test\\desktop\\gnu mcu\\arm-none-eabi-gcc-10.2.1-1.1\\arm-none-eabi\\includ
+ 111              		.file 4 "../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103x6.h"
+ 112              		.file 5 "../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h"
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccSuirZp.s 			page 3
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 stm32f1xx_hal_msp.c
+C:\Users\Test\AppData\Local\Temp\ccSuirZp.s:16     .text.HAL_MspInit:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\ccSuirZp.s:24     .text.HAL_MspInit:0000000000000000 HAL_MspInit
+C:\Users\Test\AppData\Local\Temp\ccSuirZp.s:101    .text.HAL_MspInit:000000000000004c $d
+
+UNDEFINED SYMBOLS
+HAL_NVIC_SetPriority

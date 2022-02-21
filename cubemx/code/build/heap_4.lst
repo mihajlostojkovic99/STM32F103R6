@@ -1,0 +1,921 @@
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccfvAyKt.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 1
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"heap_4.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.prvHeapInit,"ax",%progbits
+  16              		.align	1
+  17              		.arch armv7-m
+  18              		.syntax unified
+  19              		.thumb
+  20              		.thumb_func
+  21              		.fpu softvfp
+  23              	prvHeapInit:
+  24              	.LFB9:
+  25              		.file 1 "../Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c"
+   1:../Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** 
+  26              		.loc 1 330 1 view -0
+  27              		.cfi_startproc
+  28              		@ args = 0, pretend = 0, frame = 0
+  29              		@ frame_needed = 0, uses_anonymous_args = 0
+  30              		@ link register save eliminated.
+  31              		.loc 1 331 1 view .LVU1
+  32              		.loc 1 332 1 view .LVU2
+  33              		.loc 1 333 1 view .LVU3
+  34              		.loc 1 334 1 view .LVU4
+  35              	.LVL0:
+  36              		.loc 1 337 2 view .LVU5
+  37              		.loc 1 337 12 is_stmt 0 view .LVU6
+  38 0000 124A     		ldr	r2, .L4
+  39              	.LVL1:
+  40              		.loc 1 339 2 is_stmt 1 view .LVU7
+  41              		.loc 1 339 4 is_stmt 0 view .LVU8
+  42 0002 12F0070F 		tst	r2, #7
+  43 0006 1ED0     		beq	.L3
+  44              		.loc 1 341 3 is_stmt 1 view .LVU9
+  45              		.loc 1 341 13 is_stmt 0 view .LVU10
+  46 0008 D11D     		adds	r1, r2, #7
+  47              	.LVL2:
+  48              		.loc 1 342 3 is_stmt 1 view .LVU11
+  49              		.loc 1 342 13 is_stmt 0 view .LVU12
+  50 000a 21F00701 		bic	r1, r1, #7
+  51              	.LVL3:
+  52              		.loc 1 343 3 is_stmt 1 view .LVU13
+  53              		.loc 1 343 18 is_stmt 0 view .LVU14
+  54 000e C1F54063 		rsb	r3, r1, #3072
+  55 0012 1344     		add	r3, r3, r2
+  56              	.LVL4:
+  57              		.loc 1 342 13 view .LVU15
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccfvAyKt.s 			page 2
+
+
+  58 0014 0A46     		mov	r2, r1
+  59              	.LVL5:
+  60              	.L2:
+  61              		.loc 1 346 2 is_stmt 1 view .LVU16
+  62              		.loc 1 350 2 view .LVU17
+  63              		.loc 1 350 25 is_stmt 0 view .LVU18
+  64 0016 0E48     		ldr	r0, .L4+4
+  65 0018 0260     		str	r2, [r0]
+  66              		.loc 1 351 2 is_stmt 1 view .LVU19
+  67              		.loc 1 351 20 is_stmt 0 view .LVU20
+  68 001a 0021     		movs	r1, #0
+  69 001c 4160     		str	r1, [r0, #4]
+  70              		.loc 1 355 2 is_stmt 1 view .LVU21
+  71              		.loc 1 355 12 is_stmt 0 view .LVU22
+  72 001e 1344     		add	r3, r3, r2
+  73              	.LVL6:
+  74              		.loc 1 356 2 is_stmt 1 view .LVU23
+  75              		.loc 1 356 12 is_stmt 0 view .LVU24
+  76 0020 083B     		subs	r3, r3, #8
+  77              	.LVL7:
+  78              		.loc 1 357 2 is_stmt 1 view .LVU25
+  79              		.loc 1 357 12 is_stmt 0 view .LVU26
+  80 0022 23F00703 		bic	r3, r3, #7
+  81              	.LVL8:
+  82              		.loc 1 358 2 is_stmt 1 view .LVU27
+  83              		.loc 1 358 8 is_stmt 0 view .LVU28
+  84 0026 0B48     		ldr	r0, .L4+8
+  85 0028 0360     		str	r3, [r0]
+  86              		.loc 1 359 2 is_stmt 1 view .LVU29
+  87              		.loc 1 359 20 is_stmt 0 view .LVU30
+  88 002a 5960     		str	r1, [r3, #4]
+  89              		.loc 1 360 2 is_stmt 1 view .LVU31
+  90              		.loc 1 360 25 is_stmt 0 view .LVU32
+  91 002c 1960     		str	r1, [r3]
+  92              		.loc 1 364 2 is_stmt 1 view .LVU33
+  93              	.LVL9:
+  94              		.loc 1 365 2 view .LVU34
+  95              		.loc 1 365 43 is_stmt 0 view .LVU35
+  96 002e 991A     		subs	r1, r3, r2
+  97              		.loc 1 365 31 view .LVU36
+  98 0030 5160     		str	r1, [r2, #4]
+  99              		.loc 1 366 2 is_stmt 1 view .LVU37
+ 100              		.loc 1 366 36 is_stmt 0 view .LVU38
+ 101 0032 1360     		str	r3, [r2]
+ 102              		.loc 1 369 2 is_stmt 1 view .LVU39
+ 103              		.loc 1 369 33 is_stmt 0 view .LVU40
+ 104 0034 084B     		ldr	r3, .L4+12
+ 105              	.LVL10:
+ 106              		.loc 1 369 33 view .LVU41
+ 107 0036 1960     		str	r1, [r3]
+ 108              		.loc 1 370 2 is_stmt 1 view .LVU42
+ 109              		.loc 1 370 22 is_stmt 0 view .LVU43
+ 110 0038 084B     		ldr	r3, .L4+16
+ 111 003a 1960     		str	r1, [r3]
+ 112              		.loc 1 373 2 is_stmt 1 view .LVU44
+ 113              		.loc 1 373 21 is_stmt 0 view .LVU45
+ 114 003c 084B     		ldr	r3, .L4+20
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccfvAyKt.s 			page 3
+
+
+ 115 003e 4FF00042 		mov	r2, #-2147483648
+ 116              	.LVL11:
+ 117              		.loc 1 373 21 view .LVU46
+ 118 0042 1A60     		str	r2, [r3]
+ 119              		.loc 1 374 1 view .LVU47
+ 120 0044 7047     		bx	lr
+ 121              	.LVL12:
+ 122              	.L3:
+ 123              		.loc 1 334 8 view .LVU48
+ 124 0046 4FF44063 		mov	r3, #3072
+ 125 004a E4E7     		b	.L2
+ 126              	.L5:
+ 127              		.align	2
+ 128              	.L4:
+ 129 004c 00000000 		.word	.LANCHOR0
+ 130 0050 00000000 		.word	.LANCHOR1
+ 131 0054 00000000 		.word	.LANCHOR2
+ 132 0058 00000000 		.word	.LANCHOR3
+ 133 005c 00000000 		.word	.LANCHOR4
+ 134 0060 00000000 		.word	.LANCHOR5
+ 135              		.cfi_endproc
+ 136              	.LFE9:
+ 138              		.section	.text.prvInsertBlockIntoFreeList,"ax",%progbits
+ 139              		.align	1
+ 140              		.syntax unified
+ 141              		.thumb
+ 142              		.thumb_func
+ 143              		.fpu softvfp
+ 145              	prvInsertBlockIntoFreeList:
+ 146              	.LVL13:
+ 147              	.LFB10:
+ 148              		.loc 1 378 1 is_stmt 1 view -0
+ 149              		.cfi_startproc
+ 150              		@ args = 0, pretend = 0, frame = 0
+ 151              		@ frame_needed = 0, uses_anonymous_args = 0
+ 152              		@ link register save eliminated.
+ 153              		.loc 1 379 1 view .LVU50
+ 154              		.loc 1 380 1 view .LVU51
+ 155              		.loc 1 384 2 view .LVU52
+ 156              		.loc 1 384 18 is_stmt 0 view .LVU53
+ 157 0000 154B     		ldr	r3, .L21
+ 158              	.LVL14:
+ 159              	.L7:
+ 160              		.loc 1 384 29 is_stmt 1 discriminator 1 view .LVU54
+ 161 0002 1A46     		mov	r2, r3
+ 162              		.loc 1 384 39 is_stmt 0 discriminator 1 view .LVU55
+ 163 0004 1B68     		ldr	r3, [r3]
+ 164              	.LVL15:
+ 165              		.loc 1 384 2 discriminator 1 view .LVU56
+ 166 0006 8342     		cmp	r3, r0
+ 167 0008 FBD3     		bcc	.L7
+ 168              		.loc 1 391 2 is_stmt 1 view .LVU57
+ 169              	.LVL16:
+ 170              		.loc 1 392 2 view .LVU58
+ 171              		.loc 1 392 24 is_stmt 0 view .LVU59
+ 172 000a 5168     		ldr	r1, [r2, #4]
+ 173              		.loc 1 392 12 view .LVU60
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccfvAyKt.s 			page 4
+
+
+ 174 000c 02EB010C 		add	ip, r2, r1
+ 175              		.loc 1 392 4 view .LVU61
+ 176 0010 8445     		cmp	ip, r0
+ 177 0012 09D0     		beq	.L19
+ 178              	.L8:
+ 179              		.loc 1 399 27 is_stmt 1 view .LVU62
+ 180              		.loc 1 404 2 view .LVU63
+ 181              	.LVL17:
+ 182              		.loc 1 405 2 view .LVU64
+ 183              		.loc 1 405 29 is_stmt 0 view .LVU65
+ 184 0014 4168     		ldr	r1, [r0, #4]
+ 185              		.loc 1 405 12 view .LVU66
+ 186 0016 00EB010C 		add	ip, r0, r1
+ 187              		.loc 1 405 4 view .LVU67
+ 188 001a 6345     		cmp	r3, ip
+ 189 001c 09D0     		beq	.L20
+ 190              		.loc 1 420 3 is_stmt 1 view .LVU68
+ 191              		.loc 1 420 36 is_stmt 0 view .LVU69
+ 192 001e 0360     		str	r3, [r0]
+ 193              		.loc 1 427 2 is_stmt 1 view .LVU70
+ 194              		.loc 1 427 4 is_stmt 0 view .LVU71
+ 195 0020 9042     		cmp	r0, r2
+ 196 0022 18D0     		beq	.L16
+ 197              		.loc 1 429 3 is_stmt 1 view .LVU72
+ 198              		.loc 1 429 31 is_stmt 0 view .LVU73
+ 199 0024 1060     		str	r0, [r2]
+ 200              		.loc 1 433 27 is_stmt 1 view .LVU74
+ 201 0026 7047     		bx	lr
+ 202              	.LVL18:
+ 203              	.L19:
+ 204              		.loc 1 394 3 view .LVU75
+ 205              		.loc 1 394 44 is_stmt 0 view .LVU76
+ 206 0028 4068     		ldr	r0, [r0, #4]
+ 207              	.LVL19:
+ 208              		.loc 1 394 26 view .LVU77
+ 209 002a 0144     		add	r1, r1, r0
+ 210 002c 5160     		str	r1, [r2, #4]
+ 211              		.loc 1 395 3 is_stmt 1 view .LVU78
+ 212              	.LVL20:
+ 213              		.loc 1 395 19 is_stmt 0 view .LVU79
+ 214 002e 1046     		mov	r0, r2
+ 215 0030 F0E7     		b	.L8
+ 216              	.LVL21:
+ 217              	.L20:
+ 218              		.loc 1 378 1 view .LVU80
+ 219 0032 10B4     		push	{r4}
+ 220              	.LCFI0:
+ 221              		.cfi_def_cfa_offset 4
+ 222              		.cfi_offset 4, -4
+ 223              		.loc 1 407 3 is_stmt 1 view .LVU81
+ 224              		.loc 1 407 35 is_stmt 0 view .LVU82
+ 225 0034 094C     		ldr	r4, .L21+4
+ 226 0036 2468     		ldr	r4, [r4]
+ 227              		.loc 1 407 5 view .LVU83
+ 228 0038 A342     		cmp	r3, r4
+ 229 003a 0AD0     		beq	.L10
+ 230              		.loc 1 410 4 is_stmt 1 view .LVU84
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccfvAyKt.s 			page 5
+
+
+ 231              		.loc 1 410 62 is_stmt 0 view .LVU85
+ 232 003c 5B68     		ldr	r3, [r3, #4]
+ 233              		.loc 1 410 32 view .LVU86
+ 234 003e 1944     		add	r1, r1, r3
+ 235 0040 4160     		str	r1, [r0, #4]
+ 236              		.loc 1 411 4 is_stmt 1 view .LVU87
+ 237              		.loc 1 411 49 is_stmt 0 view .LVU88
+ 238 0042 1368     		ldr	r3, [r2]
+ 239              		.loc 1 411 66 view .LVU89
+ 240 0044 1B68     		ldr	r3, [r3]
+ 241              		.loc 1 411 37 view .LVU90
+ 242 0046 0360     		str	r3, [r0]
+ 243              	.L11:
+ 244              		.loc 1 427 2 is_stmt 1 view .LVU91
+ 245              		.loc 1 427 4 is_stmt 0 view .LVU92
+ 246 0048 9042     		cmp	r0, r2
+ 247 004a 00D0     		beq	.L6
+ 248              		.loc 1 429 3 is_stmt 1 view .LVU93
+ 249              		.loc 1 429 31 is_stmt 0 view .LVU94
+ 250 004c 1060     		str	r0, [r2]
+ 251              		.loc 1 433 27 is_stmt 1 view .LVU95
+ 252              	.L6:
+ 253              		.loc 1 435 1 is_stmt 0 view .LVU96
+ 254 004e 10BC     		pop	{r4}
+ 255              	.LCFI1:
+ 256              		.cfi_remember_state
+ 257              		.cfi_restore 4
+ 258              		.cfi_def_cfa_offset 0
+ 259 0050 7047     		bx	lr
+ 260              	.L10:
+ 261              	.LCFI2:
+ 262              		.cfi_restore_state
+ 263              		.loc 1 415 4 is_stmt 1 view .LVU97
+ 264              		.loc 1 415 37 is_stmt 0 view .LVU98
+ 265 0052 0460     		str	r4, [r0]
+ 266 0054 F8E7     		b	.L11
+ 267              	.L16:
+ 268              	.LCFI3:
+ 269              		.cfi_def_cfa_offset 0
+ 270              		.cfi_restore 4
+ 271              		.loc 1 415 37 view .LVU99
+ 272 0056 7047     		bx	lr
+ 273              	.L22:
+ 274              		.align	2
+ 275              	.L21:
+ 276 0058 00000000 		.word	.LANCHOR1
+ 277 005c 00000000 		.word	.LANCHOR2
+ 278              		.cfi_endproc
+ 279              	.LFE10:
+ 281              		.section	.text.pvPortMalloc,"ax",%progbits
+ 282              		.align	1
+ 283              		.global	pvPortMalloc
+ 284              		.syntax unified
+ 285              		.thumb
+ 286              		.thumb_func
+ 287              		.fpu softvfp
+ 289              	pvPortMalloc:
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccfvAyKt.s 			page 6
+
+
+ 290              	.LVL22:
+ 291              	.LFB4:
+ 292              		.loc 1 114 1 is_stmt 1 view -0
+ 293              		.cfi_startproc
+ 294              		@ args = 0, pretend = 0, frame = 0
+ 295              		@ frame_needed = 0, uses_anonymous_args = 0
+ 296              		.loc 1 114 1 is_stmt 0 view .LVU101
+ 297 0000 70B5     		push	{r4, r5, r6, lr}
+ 298              	.LCFI4:
+ 299              		.cfi_def_cfa_offset 16
+ 300              		.cfi_offset 4, -16
+ 301              		.cfi_offset 5, -12
+ 302              		.cfi_offset 6, -8
+ 303              		.cfi_offset 14, -4
+ 304 0002 0546     		mov	r5, r0
+ 305              		.loc 1 115 1 is_stmt 1 view .LVU102
+ 306              		.loc 1 116 1 view .LVU103
+ 307              	.LVL23:
+ 308              		.loc 1 118 2 view .LVU104
+ 309 0004 354B     		ldr	r3, .L42
+ 310 0006 9847     		blx	r3
+ 311              	.LVL24:
+ 312              		.loc 1 122 3 view .LVU105
+ 313              		.loc 1 122 13 is_stmt 0 view .LVU106
+ 314 0008 354B     		ldr	r3, .L42+4
+ 315 000a 1B68     		ldr	r3, [r3]
+ 316              		.loc 1 122 5 view .LVU107
+ 317 000c A3B1     		cbz	r3, .L41
+ 318              	.L24:
+ 319              		.loc 1 128 28 is_stmt 1 view .LVU108
+ 320              		.loc 1 135 3 view .LVU109
+ 321              		.loc 1 135 21 is_stmt 0 view .LVU110
+ 322 000e 354B     		ldr	r3, .L42+8
+ 323 0010 1B68     		ldr	r3, [r3]
+ 324              		.loc 1 135 5 view .LVU111
+ 325 0012 1D42     		tst	r5, r3
+ 326 0014 4AD1     		bne	.L35
+ 327              		.loc 1 139 4 is_stmt 1 view .LVU112
+ 328              		.loc 1 139 6 is_stmt 0 view .LVU113
+ 329 0016 35B1     		cbz	r5, .L26
+ 330              		.loc 1 141 5 is_stmt 1 view .LVU114
+ 331              		.loc 1 141 17 is_stmt 0 view .LVU115
+ 332 0018 0835     		adds	r5, r5, #8
+ 333              	.LVL25:
+ 334              		.loc 1 145 5 is_stmt 1 view .LVU116
+ 335              		.loc 1 145 7 is_stmt 0 view .LVU117
+ 336 001a 15F0070F 		tst	r5, #7
+ 337 001e 02D0     		beq	.L26
+ 338              		.loc 1 148 6 is_stmt 1 view .LVU118
+ 339              		.loc 1 148 18 is_stmt 0 view .LVU119
+ 340 0020 25F00705 		bic	r5, r5, #7
+ 341              	.LVL26:
+ 342              		.loc 1 148 18 view .LVU120
+ 343 0024 0835     		adds	r5, r5, #8
+ 344              	.LVL27:
+ 345              		.loc 1 149 6 is_stmt 1 view .LVU121
+ 346              	.L26:
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccfvAyKt.s 			page 7
+
+
+ 347              		.loc 1 158 29 view .LVU122
+ 348              		.loc 1 161 4 view .LVU123
+ 349              		.loc 1 161 6 is_stmt 0 view .LVU124
+ 350 0026 002D     		cmp	r5, #0
+ 351 0028 42D0     		beq	.L36
+ 352              		.loc 1 161 45 discriminator 1 view .LVU125
+ 353 002a 2F4B     		ldr	r3, .L42+12
+ 354 002c 1B68     		ldr	r3, [r3]
+ 355              		.loc 1 161 28 discriminator 1 view .LVU126
+ 356 002e AB42     		cmp	r3, r5
+ 357 0030 4DD3     		bcc	.L37
+ 358              		.loc 1 165 5 is_stmt 1 view .LVU127
+ 359              	.LVL28:
+ 360              		.loc 1 166 5 view .LVU128
+ 361              		.loc 1 166 13 is_stmt 0 view .LVU129
+ 362 0032 2E4A     		ldr	r2, .L42+16
+ 363 0034 1468     		ldr	r4, [r2]
+ 364              	.LVL29:
+ 365              		.loc 1 167 5 is_stmt 1 view .LVU130
+ 366              		.loc 1 167 10 is_stmt 0 view .LVU131
+ 367 0036 04E0     		b	.L28
+ 368              	.LVL30:
+ 369              	.L41:
+ 370              		.loc 1 124 4 is_stmt 1 view .LVU132
+ 371 0038 2D4B     		ldr	r3, .L42+20
+ 372 003a 9847     		blx	r3
+ 373              	.LVL31:
+ 374 003c E7E7     		b	.L24
+ 375              	.LVL32:
+ 376              	.L38:
+ 377              		.loc 1 169 22 is_stmt 0 view .LVU133
+ 378 003e 2246     		mov	r2, r4
+ 379              	.LVL33:
+ 380              		.loc 1 170 14 view .LVU134
+ 381 0040 1C46     		mov	r4, r3
+ 382              	.LVL34:
+ 383              	.L28:
+ 384              		.loc 1 167 10 is_stmt 1 view .LVU135
+ 385              		.loc 1 167 21 is_stmt 0 view .LVU136
+ 386 0042 6368     		ldr	r3, [r4, #4]
+ 387              		.loc 1 167 10 view .LVU137
+ 388 0044 AB42     		cmp	r3, r5
+ 389 0046 02D2     		bcs	.L27
+ 390              		.loc 1 167 62 discriminator 1 view .LVU138
+ 391 0048 2368     		ldr	r3, [r4]
+ 392              		.loc 1 167 50 discriminator 1 view .LVU139
+ 393 004a 002B     		cmp	r3, #0
+ 394 004c F7D1     		bne	.L38
+ 395              	.L27:
+ 396              		.loc 1 175 5 is_stmt 1 view .LVU140
+ 397              		.loc 1 175 17 is_stmt 0 view .LVU141
+ 398 004e 244B     		ldr	r3, .L42+4
+ 399 0050 1B68     		ldr	r3, [r3]
+ 400              		.loc 1 175 7 view .LVU142
+ 401 0052 A342     		cmp	r3, r4
+ 402 0054 3DD0     		beq	.L39
+ 403              		.loc 1 179 6 is_stmt 1 view .LVU143
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccfvAyKt.s 			page 8
+
+
+ 404              		.loc 1 179 61 is_stmt 0 view .LVU144
+ 405 0056 1668     		ldr	r6, [r2]
+ 406              		.loc 1 179 15 view .LVU145
+ 407 0058 0836     		adds	r6, r6, #8
+ 408              	.LVL35:
+ 409              		.loc 1 183 6 is_stmt 1 view .LVU146
+ 410              		.loc 1 183 48 is_stmt 0 view .LVU147
+ 411 005a 2368     		ldr	r3, [r4]
+ 412              		.loc 1 183 39 view .LVU148
+ 413 005c 1360     		str	r3, [r2]
+ 414              		.loc 1 187 6 is_stmt 1 view .LVU149
+ 415              		.loc 1 187 19 is_stmt 0 view .LVU150
+ 416 005e 6368     		ldr	r3, [r4, #4]
+ 417              		.loc 1 187 32 view .LVU151
+ 418 0060 5B1B     		subs	r3, r3, r5
+ 419              		.loc 1 187 8 view .LVU152
+ 420 0062 102B     		cmp	r3, #16
+ 421 0064 10D9     		bls	.L29
+ 422              		.loc 1 193 7 is_stmt 1 view .LVU153
+ 423              		.loc 1 193 22 is_stmt 0 view .LVU154
+ 424 0066 6019     		adds	r0, r4, r5
+ 425              	.LVL36:
+ 426              		.loc 1 194 7 is_stmt 1 view .LVU155
+ 427 0068 10F0070F 		tst	r0, #7
+ 428 006c 08D0     		beq	.L30
+ 429              		.loc 1 194 7 view .LVU156
+ 430              	.LBB12:
+ 431              	.LBI12:
+ 432              		.file 2 "../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/portmacro.h"
+   1:../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/portmacro.h **** 
+ 433              		.loc 2 191 30 view .LVU157
+ 434              	.LBB13:
+ 435              		.loc 2 193 1 view .LVU158
+ 436              		.loc 2 195 2 view .LVU159
+ 437              		.syntax unified
+ 438              	@ 195 "Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/portmacro.h" 1
+ 439 006e 4FF05003 			mov r3, #80												
+ 440 0072 83F31188 		msr basepri, r3											
+ 441 0076 BFF36F8F 		isb														
+ 442 007a BFF34F8F 		dsb														
+ 443              	
+ 444              	@ 0 "" 2
+ 445              	.LVL37:
+ 446              		.thumb
+ 447              		.syntax unified
+ 448              	.L31:
+ 449              		.loc 2 195 2 is_stmt 0 view .LVU160
+ 450              	.LBE13:
+ 451              	.LBE12:
+ 452              		.loc 1 194 7 is_stmt 1 discriminator 3 view .LVU161
+ 453              		.loc 1 194 7 discriminator 3 view .LVU162
+ 454              		.loc 1 194 7 discriminator 3 view .LVU163
+ 455 007e FEE7     		b	.L31
+ 456              	.L30:
+ 457              		.loc 1 194 87 discriminator 2 view .LVU164
+ 458              		.loc 1 198 7 discriminator 2 view .LVU165
+ 459              		.loc 1 198 34 is_stmt 0 discriminator 2 view .LVU166
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccfvAyKt.s 			page 9
+
+
+ 460 0080 4360     		str	r3, [r0, #4]
+ 461              		.loc 1 199 7 is_stmt 1 discriminator 2 view .LVU167
+ 462              		.loc 1 199 27 is_stmt 0 discriminator 2 view .LVU168
+ 463 0082 6560     		str	r5, [r4, #4]
+ 464              		.loc 1 202 7 is_stmt 1 discriminator 2 view .LVU169
+ 465 0084 1B4B     		ldr	r3, .L42+24
+ 466 0086 9847     		blx	r3
+ 467              	.LVL38:
+ 468              	.L29:
+ 469              		.loc 1 206 31 view .LVU170
+ 470              		.loc 1 209 6 view .LVU171
+ 471              		.loc 1 209 36 is_stmt 0 view .LVU172
+ 472 0088 6268     		ldr	r2, [r4, #4]
+ 473              		.loc 1 209 26 view .LVU173
+ 474 008a 1749     		ldr	r1, .L42+12
+ 475 008c 0B68     		ldr	r3, [r1]
+ 476 008e 9B1A     		subs	r3, r3, r2
+ 477 0090 0B60     		str	r3, [r1]
+ 478              		.loc 1 211 6 is_stmt 1 view .LVU174
+ 479              		.loc 1 211 30 is_stmt 0 view .LVU175
+ 480 0092 1949     		ldr	r1, .L42+28
+ 481 0094 0968     		ldr	r1, [r1]
+ 482              		.loc 1 211 8 view .LVU176
+ 483 0096 8B42     		cmp	r3, r1
+ 484 0098 01D2     		bcs	.L32
+ 485              		.loc 1 213 7 is_stmt 1 view .LVU177
+ 486              		.loc 1 213 38 is_stmt 0 view .LVU178
+ 487 009a 1749     		ldr	r1, .L42+28
+ 488 009c 0B60     		str	r3, [r1]
+ 489              	.L32:
+ 490              		.loc 1 217 31 is_stmt 1 view .LVU179
+ 491              		.loc 1 222 6 view .LVU180
+ 492              		.loc 1 222 26 is_stmt 0 view .LVU181
+ 493 009e 114B     		ldr	r3, .L42+8
+ 494 00a0 1B68     		ldr	r3, [r3]
+ 495 00a2 1343     		orrs	r3, r3, r2
+ 496 00a4 6360     		str	r3, [r4, #4]
+ 497              		.loc 1 223 6 is_stmt 1 view .LVU182
+ 498              		.loc 1 223 31 is_stmt 0 view .LVU183
+ 499 00a6 0023     		movs	r3, #0
+ 500 00a8 2360     		str	r3, [r4]
+ 501 00aa 02E0     		b	.L25
+ 502              	.LVL39:
+ 503              	.L35:
+ 504              		.loc 1 116 7 view .LVU184
+ 505 00ac 0026     		movs	r6, #0
+ 506 00ae 00E0     		b	.L25
+ 507              	.L36:
+ 508              		.loc 1 116 7 view .LVU185
+ 509 00b0 0026     		movs	r6, #0
+ 510              	.LVL40:
+ 511              	.L25:
+ 512              		.loc 1 237 28 is_stmt 1 view .LVU186
+ 513              		.loc 1 240 39 view .LVU187
+ 514              		.loc 1 242 2 view .LVU188
+ 515              		.loc 1 242 11 is_stmt 0 view .LVU189
+ 516 00b2 124B     		ldr	r3, .L42+32
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccfvAyKt.s 			page 10
+
+
+ 517 00b4 9847     		blx	r3
+ 518              	.LVL41:
+ 519              		.loc 1 258 2 is_stmt 1 view .LVU190
+ 520 00b6 16F0070F 		tst	r6, #7
+ 521 00ba 0CD0     		beq	.L23
+ 522              		.loc 1 258 2 view .LVU191
+ 523              	.LBB14:
+ 524              	.LBI14:
+ 525              		.loc 2 191 30 view .LVU192
+ 526              	.LBB15:
+ 527              		.loc 2 193 1 view .LVU193
+ 528              		.loc 2 195 2 view .LVU194
+ 529              		.syntax unified
+ 530              	@ 195 "Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/portmacro.h" 1
+ 531 00bc 4FF05003 			mov r3, #80												
+ 532 00c0 83F31188 		msr basepri, r3											
+ 533 00c4 BFF36F8F 		isb														
+ 534 00c8 BFF34F8F 		dsb														
+ 535              	
+ 536              	@ 0 "" 2
+ 537              	.LVL42:
+ 538              		.thumb
+ 539              		.syntax unified
+ 540              	.L34:
+ 541              		.loc 2 195 2 is_stmt 0 view .LVU195
+ 542              	.LBE15:
+ 543              	.LBE14:
+ 544              		.loc 1 258 2 is_stmt 1 discriminator 5 view .LVU196
+ 545              		.loc 1 258 2 discriminator 5 view .LVU197
+ 546              		.loc 1 258 2 discriminator 5 view .LVU198
+ 547 00cc FEE7     		b	.L34
+ 548              	.LVL43:
+ 549              	.L37:
+ 550              		.loc 1 116 7 is_stmt 0 view .LVU199
+ 551 00ce 0026     		movs	r6, #0
+ 552 00d0 EFE7     		b	.L25
+ 553              	.LVL44:
+ 554              	.L39:
+ 555              		.loc 1 116 7 view .LVU200
+ 556 00d2 0026     		movs	r6, #0
+ 557 00d4 EDE7     		b	.L25
+ 558              	.LVL45:
+ 559              	.L23:
+ 560              		.loc 1 260 1 view .LVU201
+ 561 00d6 3046     		mov	r0, r6
+ 562 00d8 70BD     		pop	{r4, r5, r6, pc}
+ 563              	.LVL46:
+ 564              	.L43:
+ 565              		.loc 1 260 1 view .LVU202
+ 566 00da 00BF     		.align	2
+ 567              	.L42:
+ 568 00dc 00000000 		.word	vTaskSuspendAll
+ 569 00e0 00000000 		.word	.LANCHOR2
+ 570 00e4 00000000 		.word	.LANCHOR5
+ 571 00e8 00000000 		.word	.LANCHOR4
+ 572 00ec 00000000 		.word	.LANCHOR1
+ 573 00f0 00000000 		.word	prvHeapInit
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccfvAyKt.s 			page 11
+
+
+ 574 00f4 00000000 		.word	prvInsertBlockIntoFreeList
+ 575 00f8 00000000 		.word	.LANCHOR3
+ 576 00fc 00000000 		.word	xTaskResumeAll
+ 577              		.cfi_endproc
+ 578              	.LFE4:
+ 580              		.section	.text.vPortFree,"ax",%progbits
+ 581              		.align	1
+ 582              		.global	vPortFree
+ 583              		.syntax unified
+ 584              		.thumb
+ 585              		.thumb_func
+ 586              		.fpu softvfp
+ 588              	vPortFree:
+ 589              	.LVL47:
+ 590              	.LFB5:
+ 591              		.loc 1 264 1 is_stmt 1 view -0
+ 592              		.cfi_startproc
+ 593              		@ args = 0, pretend = 0, frame = 0
+ 594              		@ frame_needed = 0, uses_anonymous_args = 0
+ 595              		.loc 1 265 1 view .LVU204
+ 596              		.loc 1 266 1 view .LVU205
+ 597              		.loc 1 268 2 view .LVU206
+ 598              		.loc 1 268 4 is_stmt 0 view .LVU207
+ 599 0000 0028     		cmp	r0, #0
+ 600 0002 30D0     		beq	.L51
+ 601              		.loc 1 264 1 view .LVU208
+ 602 0004 38B5     		push	{r3, r4, r5, lr}
+ 603              	.LCFI5:
+ 604              		.cfi_def_cfa_offset 16
+ 605              		.cfi_offset 3, -16
+ 606              		.cfi_offset 4, -12
+ 607              		.cfi_offset 5, -8
+ 608              		.cfi_offset 14, -4
+ 609 0006 0446     		mov	r4, r0
+ 610              		.loc 1 272 3 is_stmt 1 view .LVU209
+ 611              		.loc 1 272 7 is_stmt 0 view .LVU210
+ 612 0008 A0F10805 		sub	r5, r0, #8
+ 613              	.LVL48:
+ 614              		.loc 1 275 3 is_stmt 1 view .LVU211
+ 615              		.loc 1 278 3 view .LVU212
+ 616 000c 50F8043C 		ldr	r3, [r0, #-4]
+ 617 0010 154A     		ldr	r2, .L54
+ 618 0012 1268     		ldr	r2, [r2]
+ 619 0014 1342     		tst	r3, r2
+ 620 0016 08D1     		bne	.L46
+ 621              		.loc 1 278 3 view .LVU213
+ 622              	.LBB16:
+ 623              	.LBI16:
+ 624              		.loc 2 191 30 view .LVU214
+ 625              	.LBB17:
+ 626              		.loc 2 193 1 view .LVU215
+ 627              		.loc 2 195 2 view .LVU216
+ 628              		.syntax unified
+ 629              	@ 195 "Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/portmacro.h" 1
+ 630 0018 4FF05003 			mov r3, #80												
+ 631 001c 83F31188 		msr basepri, r3											
+ 632 0020 BFF36F8F 		isb														
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccfvAyKt.s 			page 12
+
+
+ 633 0024 BFF34F8F 		dsb														
+ 634              	
+ 635              	@ 0 "" 2
+ 636              	.LVL49:
+ 637              		.thumb
+ 638              		.syntax unified
+ 639              	.L47:
+ 640              		.loc 2 195 2 is_stmt 0 view .LVU217
+ 641              	.LBE17:
+ 642              	.LBE16:
+ 643              		.loc 1 278 3 is_stmt 1 discriminator 1 view .LVU218
+ 644              		.loc 1 278 3 discriminator 1 view .LVU219
+ 645              		.loc 1 278 3 discriminator 1 view .LVU220
+ 646 0028 FEE7     		b	.L47
+ 647              	.L46:
+ 648              		.loc 1 278 67 discriminator 2 view .LVU221
+ 649              		.loc 1 279 3 discriminator 2 view .LVU222
+ 650 002a 50F8081C 		ldr	r1, [r0, #-8]
+ 651 002e 41B1     		cbz	r1, .L48
+ 652              		.loc 1 279 3 view .LVU223
+ 653              	.LBB18:
+ 654              	.LBI18:
+ 655              		.loc 2 191 30 view .LVU224
+ 656              	.LBB19:
+ 657              		.loc 2 193 1 view .LVU225
+ 658              		.loc 2 195 2 view .LVU226
+ 659              		.syntax unified
+ 660              	@ 195 "Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/portmacro.h" 1
+ 661 0030 4FF05003 			mov r3, #80												
+ 662 0034 83F31188 		msr basepri, r3											
+ 663 0038 BFF36F8F 		isb														
+ 664 003c BFF34F8F 		dsb														
+ 665              	
+ 666              	@ 0 "" 2
+ 667              	.LVL50:
+ 668              		.thumb
+ 669              		.syntax unified
+ 670              	.L49:
+ 671              		.loc 2 195 2 is_stmt 0 view .LVU227
+ 672              	.LBE19:
+ 673              	.LBE18:
+ 674              		.loc 1 279 3 is_stmt 1 discriminator 2 view .LVU228
+ 675              		.loc 1 279 3 discriminator 2 view .LVU229
+ 676              		.loc 1 279 3 discriminator 2 view .LVU230
+ 677 0040 FEE7     		b	.L49
+ 678              	.L48:
+ 679              		.loc 1 279 50 view .LVU231
+ 680              		.loc 1 281 3 view .LVU232
+ 681              		.loc 1 283 4 view .LVU233
+ 682              		.loc 1 287 5 view .LVU234
+ 683              		.loc 1 287 24 is_stmt 0 view .LVU235
+ 684 0042 23EA0203 		bic	r3, r3, r2
+ 685 0046 40F8043C 		str	r3, [r0, #-4]
+ 686              		.loc 1 289 5 is_stmt 1 view .LVU236
+ 687 004a 084B     		ldr	r3, .L54+4
+ 688 004c 9847     		blx	r3
+ 689              	.LVL51:
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccfvAyKt.s 			page 13
+
+
+ 690              		.loc 1 292 6 view .LVU237
+ 691              		.loc 1 292 35 is_stmt 0 view .LVU238
+ 692 004e 54F8041C 		ldr	r1, [r4, #-4]
+ 693              		.loc 1 292 26 view .LVU239
+ 694 0052 074A     		ldr	r2, .L54+8
+ 695 0054 1368     		ldr	r3, [r2]
+ 696 0056 0B44     		add	r3, r3, r1
+ 697 0058 1360     		str	r3, [r2]
+ 698              		.loc 1 293 41 is_stmt 1 view .LVU240
+ 699              		.loc 1 294 6 view .LVU241
+ 700 005a 2846     		mov	r0, r5
+ 701 005c 054B     		ldr	r3, .L54+12
+ 702 005e 9847     		blx	r3
+ 703              	.LVL52:
+ 704              		.loc 1 296 5 view .LVU242
+ 705              		.loc 1 296 14 is_stmt 0 view .LVU243
+ 706 0060 054B     		ldr	r3, .L54+16
+ 707 0062 9847     		blx	r3
+ 708              	.LVL53:
+ 709              		.loc 1 305 28 is_stmt 1 view .LVU244
+ 710              		.loc 1 308 1 is_stmt 0 view .LVU245
+ 711 0064 38BD     		pop	{r3, r4, r5, pc}
+ 712              	.LVL54:
+ 713              	.L51:
+ 714              	.LCFI6:
+ 715              		.cfi_def_cfa_offset 0
+ 716              		.cfi_restore 3
+ 717              		.cfi_restore 4
+ 718              		.cfi_restore 5
+ 719              		.cfi_restore 14
+ 720              		.loc 1 308 1 view .LVU246
+ 721 0066 7047     		bx	lr
+ 722              	.L55:
+ 723              		.align	2
+ 724              	.L54:
+ 725 0068 00000000 		.word	.LANCHOR5
+ 726 006c 00000000 		.word	vTaskSuspendAll
+ 727 0070 00000000 		.word	.LANCHOR4
+ 728 0074 00000000 		.word	prvInsertBlockIntoFreeList
+ 729 0078 00000000 		.word	xTaskResumeAll
+ 730              		.cfi_endproc
+ 731              	.LFE5:
+ 733              		.section	.text.xPortGetFreeHeapSize,"ax",%progbits
+ 734              		.align	1
+ 735              		.global	xPortGetFreeHeapSize
+ 736              		.syntax unified
+ 737              		.thumb
+ 738              		.thumb_func
+ 739              		.fpu softvfp
+ 741              	xPortGetFreeHeapSize:
+ 742              	.LFB6:
+ 743              		.loc 1 312 1 is_stmt 1 view -0
+ 744              		.cfi_startproc
+ 745              		@ args = 0, pretend = 0, frame = 0
+ 746              		@ frame_needed = 0, uses_anonymous_args = 0
+ 747              		@ link register save eliminated.
+ 748              		.loc 1 313 2 view .LVU248
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccfvAyKt.s 			page 14
+
+
+ 749              		.loc 1 314 1 is_stmt 0 view .LVU249
+ 750 0000 014B     		ldr	r3, .L57
+ 751 0002 1868     		ldr	r0, [r3]
+ 752 0004 7047     		bx	lr
+ 753              	.L58:
+ 754 0006 00BF     		.align	2
+ 755              	.L57:
+ 756 0008 00000000 		.word	.LANCHOR4
+ 757              		.cfi_endproc
+ 758              	.LFE6:
+ 760              		.section	.text.xPortGetMinimumEverFreeHeapSize,"ax",%progbits
+ 761              		.align	1
+ 762              		.global	xPortGetMinimumEverFreeHeapSize
+ 763              		.syntax unified
+ 764              		.thumb
+ 765              		.thumb_func
+ 766              		.fpu softvfp
+ 768              	xPortGetMinimumEverFreeHeapSize:
+ 769              	.LFB7:
+ 770              		.loc 1 318 1 is_stmt 1 view -0
+ 771              		.cfi_startproc
+ 772              		@ args = 0, pretend = 0, frame = 0
+ 773              		@ frame_needed = 0, uses_anonymous_args = 0
+ 774              		@ link register save eliminated.
+ 775              		.loc 1 319 2 view .LVU251
+ 776              		.loc 1 320 1 is_stmt 0 view .LVU252
+ 777 0000 014B     		ldr	r3, .L60
+ 778 0002 1868     		ldr	r0, [r3]
+ 779 0004 7047     		bx	lr
+ 780              	.L61:
+ 781 0006 00BF     		.align	2
+ 782              	.L60:
+ 783 0008 00000000 		.word	.LANCHOR3
+ 784              		.cfi_endproc
+ 785              	.LFE7:
+ 787              		.section	.text.vPortInitialiseBlocks,"ax",%progbits
+ 788              		.align	1
+ 789              		.global	vPortInitialiseBlocks
+ 790              		.syntax unified
+ 791              		.thumb
+ 792              		.thumb_func
+ 793              		.fpu softvfp
+ 795              	vPortInitialiseBlocks:
+ 796              	.LFB8:
+ 797              		.loc 1 324 1 is_stmt 1 view -0
+ 798              		.cfi_startproc
+ 799              		@ args = 0, pretend = 0, frame = 0
+ 800              		@ frame_needed = 0, uses_anonymous_args = 0
+ 801              		@ link register save eliminated.
+ 802              		.loc 1 326 1 view .LVU254
+ 803 0000 7047     		bx	lr
+ 804              		.cfi_endproc
+ 805              	.LFE8:
+ 807              		.section	.bss.pxEnd,"aw",%nobits
+ 808              		.align	2
+ 809              		.set	.LANCHOR2,. + 0
+ 812              	pxEnd:
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccfvAyKt.s 			page 15
+
+
+ 813 0000 00000000 		.space	4
+ 814              		.section	.bss.ucHeap,"aw",%nobits
+ 815              		.align	2
+ 816              		.set	.LANCHOR0,. + 0
+ 819              	ucHeap:
+ 820 0000 00000000 		.space	3072
+ 820      00000000 
+ 820      00000000 
+ 820      00000000 
+ 820      00000000 
+ 821              		.section	.bss.xBlockAllocatedBit,"aw",%nobits
+ 822              		.align	2
+ 823              		.set	.LANCHOR5,. + 0
+ 826              	xBlockAllocatedBit:
+ 827 0000 00000000 		.space	4
+ 828              		.section	.bss.xFreeBytesRemaining,"aw",%nobits
+ 829              		.align	2
+ 830              		.set	.LANCHOR4,. + 0
+ 833              	xFreeBytesRemaining:
+ 834 0000 00000000 		.space	4
+ 835              		.section	.bss.xMinimumEverFreeBytesRemaining,"aw",%nobits
+ 836              		.align	2
+ 837              		.set	.LANCHOR3,. + 0
+ 840              	xMinimumEverFreeBytesRemaining:
+ 841 0000 00000000 		.space	4
+ 842              		.section	.bss.xStart,"aw",%nobits
+ 843              		.align	2
+ 844              		.set	.LANCHOR1,. + 0
+ 847              	xStart:
+ 848 0000 00000000 		.space	8
+ 848      00000000 
+ 849              		.text
+ 850              	.Letext0:
+ 851              		.file 3 "../c:\\users\\test\\desktop\\gnu mcu\\arm-none-eabi-gcc-10.2.1-1.1\\lib\\gcc\\arm-none-ea
+ 852              		.file 4 "../c:\\users\\test\\desktop\\gnu mcu\\arm-none-eabi-gcc-10.2.1-1.1\\arm-none-eabi\\includ
+ 853              		.file 5 "../c:\\users\\test\\desktop\\gnu mcu\\arm-none-eabi-gcc-10.2.1-1.1\\arm-none-eabi\\includ
+ 854              		.file 6 "../Middlewares/Third_Party/FreeRTOS/Source/include/task.h"
+ARM GAS  C:\Users\Test\AppData\Local\Temp\ccfvAyKt.s 			page 16
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 heap_4.c
+C:\Users\Test\AppData\Local\Temp\ccfvAyKt.s:16     .text.prvHeapInit:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\ccfvAyKt.s:23     .text.prvHeapInit:0000000000000000 prvHeapInit
+C:\Users\Test\AppData\Local\Temp\ccfvAyKt.s:129    .text.prvHeapInit:000000000000004c $d
+C:\Users\Test\AppData\Local\Temp\ccfvAyKt.s:139    .text.prvInsertBlockIntoFreeList:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\ccfvAyKt.s:145    .text.prvInsertBlockIntoFreeList:0000000000000000 prvInsertBlockIntoFreeList
+C:\Users\Test\AppData\Local\Temp\ccfvAyKt.s:276    .text.prvInsertBlockIntoFreeList:0000000000000058 $d
+C:\Users\Test\AppData\Local\Temp\ccfvAyKt.s:282    .text.pvPortMalloc:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\ccfvAyKt.s:289    .text.pvPortMalloc:0000000000000000 pvPortMalloc
+C:\Users\Test\AppData\Local\Temp\ccfvAyKt.s:568    .text.pvPortMalloc:00000000000000dc $d
+C:\Users\Test\AppData\Local\Temp\ccfvAyKt.s:581    .text.vPortFree:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\ccfvAyKt.s:588    .text.vPortFree:0000000000000000 vPortFree
+C:\Users\Test\AppData\Local\Temp\ccfvAyKt.s:725    .text.vPortFree:0000000000000068 $d
+C:\Users\Test\AppData\Local\Temp\ccfvAyKt.s:734    .text.xPortGetFreeHeapSize:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\ccfvAyKt.s:741    .text.xPortGetFreeHeapSize:0000000000000000 xPortGetFreeHeapSize
+C:\Users\Test\AppData\Local\Temp\ccfvAyKt.s:756    .text.xPortGetFreeHeapSize:0000000000000008 $d
+C:\Users\Test\AppData\Local\Temp\ccfvAyKt.s:761    .text.xPortGetMinimumEverFreeHeapSize:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\ccfvAyKt.s:768    .text.xPortGetMinimumEverFreeHeapSize:0000000000000000 xPortGetMinimumEverFreeHeapSize
+C:\Users\Test\AppData\Local\Temp\ccfvAyKt.s:783    .text.xPortGetMinimumEverFreeHeapSize:0000000000000008 $d
+C:\Users\Test\AppData\Local\Temp\ccfvAyKt.s:788    .text.vPortInitialiseBlocks:0000000000000000 $t
+C:\Users\Test\AppData\Local\Temp\ccfvAyKt.s:795    .text.vPortInitialiseBlocks:0000000000000000 vPortInitialiseBlocks
+C:\Users\Test\AppData\Local\Temp\ccfvAyKt.s:808    .bss.pxEnd:0000000000000000 $d
+C:\Users\Test\AppData\Local\Temp\ccfvAyKt.s:812    .bss.pxEnd:0000000000000000 pxEnd
+C:\Users\Test\AppData\Local\Temp\ccfvAyKt.s:815    .bss.ucHeap:0000000000000000 $d
+C:\Users\Test\AppData\Local\Temp\ccfvAyKt.s:819    .bss.ucHeap:0000000000000000 ucHeap
+C:\Users\Test\AppData\Local\Temp\ccfvAyKt.s:822    .bss.xBlockAllocatedBit:0000000000000000 $d
+C:\Users\Test\AppData\Local\Temp\ccfvAyKt.s:826    .bss.xBlockAllocatedBit:0000000000000000 xBlockAllocatedBit
+C:\Users\Test\AppData\Local\Temp\ccfvAyKt.s:829    .bss.xFreeBytesRemaining:0000000000000000 $d
+C:\Users\Test\AppData\Local\Temp\ccfvAyKt.s:833    .bss.xFreeBytesRemaining:0000000000000000 xFreeBytesRemaining
+C:\Users\Test\AppData\Local\Temp\ccfvAyKt.s:836    .bss.xMinimumEverFreeBytesRemaining:0000000000000000 $d
+C:\Users\Test\AppData\Local\Temp\ccfvAyKt.s:840    .bss.xMinimumEverFreeBytesRemaining:0000000000000000 xMinimumEverFreeBytesRemaining
+C:\Users\Test\AppData\Local\Temp\ccfvAyKt.s:843    .bss.xStart:0000000000000000 $d
+C:\Users\Test\AppData\Local\Temp\ccfvAyKt.s:847    .bss.xStart:0000000000000000 xStart
+
+UNDEFINED SYMBOLS
+vTaskSuspendAll
+xTaskResumeAll
